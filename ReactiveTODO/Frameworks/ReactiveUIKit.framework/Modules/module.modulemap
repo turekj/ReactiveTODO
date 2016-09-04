@@ -1,0 +1,10 @@
+framework module ReactiveUIKit {
+  umbrella header "ReactiveUIKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ReactiveUIKit.Swift {
+    header "ReactiveUIKit-Swift.h"
+}
