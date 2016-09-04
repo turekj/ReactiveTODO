@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3267215ED90AF8E6EBFBAE71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326722FBC47DF00BFF4CC7B8 /* Main.storyboard */; };
-		3267238371BE882239963CD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CD0373ECB272D34AE27 /* ViewController.swift */; };
-		3267267672292ECFD250214F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32672E16E7C5C1BDA22B4E35 /* Info.plist */; };
-		3267281B4EF7F5CBE18A5057 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3267258FC8DA739BAEC6F884 /* Info.plist */; };
-		3267298A3DD85D2AABF1D7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326727820D6C1EBEC4EA72DF /* LaunchScreen.storyboard */; };
-		32672BC963446F4EE790A97F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326726CDAFFD162D13E39C31 /* Assets.xcassets */; };
-		32672DD09E4CC88CD5AF43DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267272B6FCD9F3281A1C818 /* AppDelegate.swift */; };
-		32672FE49EC66B84AC279911 /* ReactiveTODOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672FAB36AD4ADA59C8A262 /* ReactiveTODOTests.swift */; };
+		326722619B358CFA1A7416A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727205B801E54BCE5B53B /* ViewController.swift */; };
+		326728BEC7FC06E6BAB94FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267254A700732E0F7ECE16A /* AppDelegate.swift */; };
+		32672BE525505499B93B6080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32672C015827A997F3A7A88B /* Main.storyboard */; };
+		32672C8010CC7686BBF05F1E /* ReactiveTODOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326728CECB1A9FF4F5CB04FC /* ReactiveTODOTests.swift */; };
+		32672D2181F7C465E9E8BCC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32672C4DBBC6D0EEF5F930C4 /* LaunchScreen.storyboard */; };
+		32672DBB64DE52D6BCA39C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326723C3D3503E6FBE853AC3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +27,15 @@
 
 /* Begin PBXFileReference section */
 		3267203EAD80184782276607 /* ReactiveTODOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveTODOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3267206366B6ED49C3F8FD6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		3267208B8CA9F5341B3906A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3267215445410D82B1F61A1B /* ReactiveTODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3267258FC8DA739BAEC6F884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		326726CDAFFD162D13E39C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3267272B6FCD9F3281A1C818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		32672A1CA878A325310F1AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		32672B243C4FA50DA00E5556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		32672CD0373ECB272D34AE27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		32672E16E7C5C1BDA22B4E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		32672FAB36AD4ADA59C8A262 /* ReactiveTODOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTODOTests.swift; sourceTree = "<group>"; };
+		3267220B0AD5CA8B78F5D603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		326723C3D3503E6FBE853AC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3267254A700732E0F7ECE16A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		326727205B801E54BCE5B53B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		326728CECB1A9FF4F5CB04FC /* ReactiveTODOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTODOTests.swift; sourceTree = "<group>"; };
+		32672F9D7B0CF0D962B4D82C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +56,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		326720561232AFAAD8A65A81 /* PropertyList */ = {
+			isa = PBXGroup;
+			children = (
+				3267206366B6ED49C3F8FD6C /* Info.plist */,
+			);
+			path = PropertyList;
+			sourceTree = "<group>";
+		};
+		3267219F0B9991808A94BBCD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				326720561232AFAAD8A65A81 /* PropertyList */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32672247FECDBC7F3A70458E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				326728CECB1A9FF4F5CB04FC /* ReactiveTODOTests.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		326722FBAB0DC1760569764F /* ReactiveTODOTests */ = {
 			isa = PBXGroup;
 			children = (
-				3267258FC8DA739BAEC6F884 /* Info.plist */,
-				32672FAB36AD4ADA59C8A262 /* ReactiveTODOTests.swift */,
+				32672247FECDBC7F3A70458E /* Classes */,
+				3267219F0B9991808A94BBCD /* Resources */,
 			);
 			path = ReactiveTODOTests;
 			sourceTree = "<group>";
@@ -74,6 +96,39 @@
 				326725CA2B5B8659334C7D4F /* ReactiveTODO */,
 				326722FBAB0DC1760569764F /* ReactiveTODOTests */,
 			);
+			sourceTree = "<group>";
+		};
+		32672452B880A85BB8A859D0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				326723C3D3503E6FBE853AC3 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3267245B6D2A34D5D2F099D7 /* PropertyList */ = {
+			isa = PBXGroup;
+			children = (
+				32672F9D7B0CF0D962B4D82C /* Info.plist */,
+			);
+			path = PropertyList;
+			sourceTree = "<group>";
+		};
+		32672462D9A26D20FD049FDF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				32672C4DBBC6D0EEF5F930C4 /* LaunchScreen.storyboard */,
+				32672C015827A997F3A7A88B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3267247F96619D83700AE735 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3267254A700732E0F7ECE16A /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		3267249B668CB59FAAD92AD5 /* Products */ = {
@@ -88,14 +143,37 @@
 		326725CA2B5B8659334C7D4F /* ReactiveTODO */ = {
 			isa = PBXGroup;
 			children = (
-				32672E16E7C5C1BDA22B4E35 /* Info.plist */,
-				326726CDAFFD162D13E39C31 /* Assets.xcassets */,
-				326727820D6C1EBEC4EA72DF /* LaunchScreen.storyboard */,
-				3267272B6FCD9F3281A1C818 /* AppDelegate.swift */,
-				326722FBC47DF00BFF4CC7B8 /* Main.storyboard */,
-				32672CD0373ECB272D34AE27 /* ViewController.swift */,
+				32672EC3F7626F0D6B31A3A3 /* Classes */,
+				32672A8931BD05ACF302A029 /* Resources */,
 			);
 			path = ReactiveTODO;
+			sourceTree = "<group>";
+		};
+		32672648D3B5E7825D712C31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				326727205B801E54BCE5B53B /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		32672A8931BD05ACF302A029 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32672452B880A85BB8A859D0 /* Assets */,
+				3267245B6D2A34D5D2F099D7 /* PropertyList */,
+				32672462D9A26D20FD049FDF /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32672EC3F7626F0D6B31A3A3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3267247F96619D83700AE735 /* AppDelegate */,
+				32672648D3B5E7825D712C31 /* ViewControllers */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +220,13 @@
 		32672F0F676FCAFE4CC16F1F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				ORGANIZATIONNAME = "Jakub Turek";
+				TargetAttributes = {
+					326721E6F05AB6D8F268C03B = {
+						TestTargetID = 32672DB98FB712F5CE411E68;
+					};
+				};
 			};
 			buildConfigurationList = 326727BBECEA0F5962FDBCE5 /* Build configuration list for PBXProject "ReactiveTODO" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -167,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3267281B4EF7F5CBE18A5057 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,10 +258,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3267267672292ECFD250214F /* Info.plist in Resources */,
-				32672BC963446F4EE790A97F /* Assets.xcassets in Resources */,
-				3267298A3DD85D2AABF1D7DB /* LaunchScreen.storyboard in Resources */,
-				3267215ED90AF8E6EBFBAE71 /* Main.storyboard in Resources */,
+				32672DBB64DE52D6BCA39C5D /* Assets.xcassets in Resources */,
+				32672BE525505499B93B6080 /* Main.storyboard in Resources */,
+				32672D2181F7C465E9E8BCC7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32672FE49EC66B84AC279911 /* ReactiveTODOTests.swift in Sources */,
+				32672C8010CC7686BBF05F1E /* ReactiveTODOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32672DD09E4CC88CD5AF43DE /* AppDelegate.swift in Sources */,
-				3267238371BE882239963CD1 /* ViewController.swift in Sources */,
+				326728BEC7FC06E6BAB94FE0 /* AppDelegate.swift in Sources */,
+				326722619B358CFA1A7416A3 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,20 +295,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		326722FBC47DF00BFF4CC7B8 /* Main.storyboard */ = {
+		32672C015827A997F3A7A88B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				32672B243C4FA50DA00E5556 /* Base */,
+				3267208B8CA9F5341B3906A9 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
-		326727820D6C1EBEC4EA72DF /* LaunchScreen.storyboard */ = {
+		32672C4DBBC6D0EEF5F930C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				32672A1CA878A325310F1AF7 /* Base */,
+				3267220B0AD5CA8B78F5D603 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -236,7 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ReactiveTODO/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ReactiveTODO/Resources/PropertyList/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,12 +369,12 @@
 		32672568B18CD69E25EA9B94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/";
-				INFOPLIST_FILE = ReactiveTODOTests/Info.plist;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReactiveTODOTests/Resources/PropertyList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODOTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveTODO.app/ReactiveTODO";
 			};
 			name = Release;
 		};
@@ -343,12 +427,12 @@
 		32672D9240C6B0CB1BF89455 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/";
-				INFOPLIST_FILE = ReactiveTODOTests/Info.plist;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReactiveTODOTests/Resources/PropertyList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODOTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveTODO.app/ReactiveTODO";
 			};
 			name = Debug;
 		};
@@ -356,7 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ReactiveTODO/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ReactiveTODO/Resources/PropertyList/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,6 +457,7 @@
 				32672DC9F9D624D0AEA4D28B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3267272714FC39A697BF6E57 /* Build configuration list for PBXNativeTarget "ReactiveTODOTests" */ = {
 			isa = XCConfigurationList;
@@ -381,6 +466,7 @@
 				32672568B18CD69E25EA9B94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		326727BBECEA0F5962FDBCE5 /* Build configuration list for PBXProject "ReactiveTODO" */ = {
 			isa = XCConfigurationList;
