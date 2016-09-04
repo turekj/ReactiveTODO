@@ -25,24 +25,15 @@ class TODONoteSpec: QuickSpec {
                 expect(sut.date).to(equal(NSDate(timeIntervalSince1970: 1)))
             }
             
-            it("Should have priorityRaw property") {
-                let sut = TODONote()
-                
-                expect(sut.priorityRaw).to(equal(""))
-            }
-            
             it("Should have priority property") {
-                let sut = TODONote()
-                sut.priority = .Urgent
+                let urgentNote = TODONote()
+                urgentNote.priority = .Urgent
                 
-                expect(sut.priority).to(equal(Priority.Urgent))
-            }
-            
-            it("Should map priority property to priorityRaw") {
-                let sut = TODONote()
-                sut.priority = .High
+                let notImportantNote = TODONote()
+                notImportantNote.priority = .Low
                 
-                expect(sut.priorityRaw).to(equal(Priority.High.rawValue))
+                expect(urgentNote.priority).to(equal(Priority.Urgent))
+                expect(notImportantNote.priority).to(equal(Priority.Low))
             }
             
             it("Should have primary key set") {
