@@ -250,9 +250,9 @@
 		326727858CBE873CA2368147 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C6035E51D7C68850042C487 /* Priority.swift */,
 				32672013E77A7E4A0F60C948 /* TODONote.swift */,
 				8C6035DC1D7C60A90042C487 /* TODONoteFactory.swift */,
-				8C6035E51D7C68850042C487 /* Priority.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
