@@ -22,6 +22,7 @@ class TODONoteFactory: TODONoteFactoryProtocol {
         let note = TODONote()
         note.date = self.dateResolver.now()
         note.guid = self.guidGenerator.generateGUID()
+        note.priority = Priority.Low
         
         return note
     }
