@@ -1,0 +1,6 @@
+github "Quick/Nimble" "v4.1.0"
+github "Quick/Quick" "v0.9.3"
+github "ReactiveKit/ReactiveKit" "v2.1.1"
+github "Swinject/Swinject" "1.1.3"
+github "realm/realm-cocoa" "v1.0.2"
+github "ReactiveKit/ReactiveUIKit" "v2.0.1"
