@@ -150,8 +150,8 @@
 		32672247FECDBC7F3A70458E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8C6035E01D7C61840042C487 /* Mocks */,
 				8C6035D11D7C5DD40042C487 /* Logic */,
+				8C6035E01D7C61840042C487 /* Mocks */,
 				326725489E3C0BA1E43B9611 /* Models */,
 			);
 			path = Classes;
@@ -221,8 +221,8 @@
 		326725489E3C0BA1E43B9611 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */,
 				8C6035DE1D7C60F90042C487 /* TODONoteFactorySpec.swift */,
+				32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,8 +267,8 @@
 		32672EC3F7626F0D6B31A3A3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8C6035CE1D7C5D770042C487 /* Logic */,
 				3267247F96619D83700AE735 /* AppDelegate */,
+				8C6035CE1D7C5D770042C487 /* Logic */,
 				326727858CBE873CA2368147 /* Models */,
 				32672648D3B5E7825D712C31 /* ViewControllers */,
 			);
@@ -299,19 +299,19 @@
 		8C6035CE1D7C5D770042C487 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				8C6035D61D7C5F6A0042C487 /* Identifiers */,
 				8C6035D31D7C5DDC0042C487 /* Dates */,
+				8C6035D61D7C5F6A0042C487 /* Identifiers */,
 			);
-			name = Logic;
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		8C6035D11D7C5DD40042C487 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				8C6035D91D7C5F9D0042C487 /* Identifiers */,
 				8C6035D21D7C5DD80042C487 /* Dates */,
+				8C6035D91D7C5F9D0042C487 /* Identifiers */,
 			);
-			name = Logic;
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		8C6035D21D7C5DD80042C487 /* Dates */ = {
@@ -319,7 +319,7 @@
 			children = (
 				8C6035D41D7C5DF10042C487 /* DateResolverSpec.swift */,
 			);
-			name = Dates;
+			path = Dates;
 			sourceTree = "<group>";
 		};
 		8C6035D31D7C5DDC0042C487 /* Dates */ = {
@@ -327,7 +327,7 @@
 			children = (
 				8C6035CF1D7C5D860042C487 /* DateResolver.swift */,
 			);
-			name = Dates;
+			path = Dates;
 			sourceTree = "<group>";
 		};
 		8C6035D61D7C5F6A0042C487 /* Identifiers */ = {
@@ -335,7 +335,7 @@
 			children = (
 				8C6035D71D7C5F7D0042C487 /* GUIDGenerator.swift */,
 			);
-			name = Identifiers;
+			path = Identifiers;
 			sourceTree = "<group>";
 		};
 		8C6035D91D7C5F9D0042C487 /* Identifiers */ = {
@@ -343,7 +343,7 @@
 			children = (
 				8C6035DA1D7C5FAA0042C487 /* GUIDGeneratorSpec.swift */,
 			);
-			name = Identifiers;
+			path = Identifiers;
 			sourceTree = "<group>";
 		};
 		8C6035E01D7C61840042C487 /* Mocks */ = {
@@ -352,7 +352,7 @@
 				8C6035E11D7C618D0042C487 /* DateResolverMock.swift */,
 				8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */,
 			);
-			name = Mocks;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
