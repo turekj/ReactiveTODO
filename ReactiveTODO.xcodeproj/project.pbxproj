@@ -30,6 +30,8 @@
 		8C6035CD1D7C5C260042C487 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C36EB771D7C54B5002F5735 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C6035D01D7C5D860042C487 /* DateResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035CF1D7C5D860042C487 /* DateResolver.swift */; };
 		8C6035D51D7C5DF10042C487 /* DateResolverSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035D41D7C5DF10042C487 /* DateResolverSpec.swift */; };
+		8C6035D81D7C5F7D0042C487 /* GUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035D71D7C5F7D0042C487 /* GUIDGenerator.swift */; };
+		8C6035DB1D7C5FAA0042C487 /* GUIDGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035DA1D7C5FAA0042C487 /* GUIDGeneratorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		8C36EB771D7C54B5002F5735 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
 		8C6035CF1D7C5D860042C487 /* DateResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateResolver.swift; sourceTree = "<group>"; };
 		8C6035D41D7C5DF10042C487 /* DateResolverSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateResolverSpec.swift; sourceTree = "<group>"; };
+		8C6035D71D7C5F7D0042C487 /* GUIDGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GUIDGenerator.swift; sourceTree = "<group>"; };
+		8C6035DA1D7C5FAA0042C487 /* GUIDGeneratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GUIDGeneratorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,7 @@
 		8C6035CE1D7C5D770042C487 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				8C6035D61D7C5F6A0042C487 /* Identifiers */,
 				8C6035D31D7C5DDC0042C487 /* Dates */,
 			);
 			name = Logic;
@@ -292,6 +297,7 @@
 		8C6035D11D7C5DD40042C487 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				8C6035D91D7C5F9D0042C487 /* Identifiers */,
 				8C6035D21D7C5DD80042C487 /* Dates */,
 			);
 			name = Logic;
@@ -311,6 +317,22 @@
 				8C6035CF1D7C5D860042C487 /* DateResolver.swift */,
 			);
 			name = Dates;
+			sourceTree = "<group>";
+		};
+		8C6035D61D7C5F6A0042C487 /* Identifiers */ = {
+			isa = PBXGroup;
+			children = (
+				8C6035D71D7C5F7D0042C487 /* GUIDGenerator.swift */,
+			);
+			name = Identifiers;
+			sourceTree = "<group>";
+		};
+		8C6035D91D7C5F9D0042C487 /* Identifiers */ = {
+			isa = PBXGroup;
+			children = (
+				8C6035DA1D7C5FAA0042C487 /* GUIDGeneratorSpec.swift */,
+			);
+			name = Identifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C6035D51D7C5DF10042C487 /* DateResolverSpec.swift in Sources */,
+				8C6035DB1D7C5FAA0042C487 /* GUIDGeneratorSpec.swift in Sources */,
 				32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6035D81D7C5F7D0042C487 /* GUIDGenerator.swift in Sources */,
 				326728BEC7FC06E6BAB94FE0 /* AppDelegate.swift in Sources */,
 				8C6035D01D7C5D860042C487 /* DateResolver.swift in Sources */,
 				326722619B358CFA1A7416A3 /* ViewController.swift in Sources */,
