@@ -21,6 +21,10 @@ class TODONoteFactorySpec: QuickSpec {
                 it("Should set unique GUID") {
                     expect(note.guid).to(equal("generated_guid"))
                 }
+                
+                it("Should set low priority") {
+                    expect(note.priority).to(equal(Priority.Low))
+                }
             }
         }
     }

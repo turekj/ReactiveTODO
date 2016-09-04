@@ -36,6 +36,7 @@
 		8C6035DF1D7C60F90042C487 /* TODONoteFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035DE1D7C60F90042C487 /* TODONoteFactorySpec.swift */; };
 		8C6035E21D7C618D0042C487 /* DateResolverMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035E11D7C618D0042C487 /* DateResolverMock.swift */; };
 		8C6035E41D7C61CD0042C487 /* GUIDGeneratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */; };
+		8C6035E61D7C68850042C487 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035E51D7C68850042C487 /* Priority.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		8C6035DE1D7C60F90042C487 /* TODONoteFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteFactorySpec.swift; sourceTree = "<group>"; };
 		8C6035E11D7C618D0042C487 /* DateResolverMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateResolverMock.swift; sourceTree = "<group>"; };
 		8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GUIDGeneratorMock.swift; sourceTree = "<group>"; };
+		8C6035E51D7C68850042C487 /* Priority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 		326727858CBE873CA2368147 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C6035E51D7C68850042C487 /* Priority.swift */,
 				32672013E77A7E4A0F60C948 /* TODONote.swift */,
 				8C6035DC1D7C60A90042C487 /* TODONoteFactory.swift */,
 			);
@@ -467,6 +470,7 @@
 			files = (
 				8C6035DD1D7C60A90042C487 /* TODONoteFactory.swift in Sources */,
 				8C6035D81D7C5F7D0042C487 /* GUIDGenerator.swift in Sources */,
+				8C6035E61D7C68850042C487 /* Priority.swift in Sources */,
 				326728BEC7FC06E6BAB94FE0 /* AppDelegate.swift in Sources */,
 				8C6035D01D7C5D860042C487 /* DateResolver.swift in Sources */,
 				326722619B358CFA1A7416A3 /* ViewController.swift in Sources */,
