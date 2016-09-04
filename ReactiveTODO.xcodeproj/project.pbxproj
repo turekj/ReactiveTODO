@@ -28,6 +28,8 @@
 		8C6035CA1D7C5B630042C487 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6F1D7C54AD002F5735 /* Swinject.framework */; };
 		8C6035CC1D7C5BD60042C487 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C36EB761D7C54B5002F5735 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C6035CD1D7C5C260042C487 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C36EB771D7C54B5002F5735 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C6035D01D7C5D860042C487 /* DateResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035CF1D7C5D860042C487 /* DateResolver.swift */; };
+		8C6035D51D7C5DF10042C487 /* DateResolverSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035D41D7C5DF10042C487 /* DateResolverSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		8C36EB6F1D7C54AD002F5735 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
 		8C36EB761D7C54B5002F5735 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		8C36EB771D7C54B5002F5735 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		8C6035CF1D7C5D860042C487 /* DateResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateResolver.swift; sourceTree = "<group>"; };
+		8C6035D41D7C5DF10042C487 /* DateResolverSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateResolverSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 		32672247FECDBC7F3A70458E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8C6035D11D7C5DD40042C487 /* Logic */,
 				326725489E3C0BA1E43B9611 /* Models */,
 			);
 			path = Classes;
@@ -247,6 +252,7 @@
 		32672EC3F7626F0D6B31A3A3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8C6035CE1D7C5D770042C487 /* Logic */,
 				3267247F96619D83700AE735 /* AppDelegate */,
 				326727858CBE873CA2368147 /* Models */,
 				32672648D3B5E7825D712C31 /* ViewControllers */,
@@ -273,6 +279,38 @@
 				8C36EB771D7C54B5002F5735 /* Quick.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C6035CE1D7C5D770042C487 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				8C6035D31D7C5DDC0042C487 /* Dates */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		8C6035D11D7C5DD40042C487 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				8C6035D21D7C5DD80042C487 /* Dates */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		8C6035D21D7C5DD80042C487 /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				8C6035D41D7C5DF10042C487 /* DateResolverSpec.swift */,
+			);
+			name = Dates;
+			sourceTree = "<group>";
+		};
+		8C6035D31D7C5DDC0042C487 /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				8C6035CF1D7C5D860042C487 /* DateResolver.swift */,
+			);
+			name = Dates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6035D51D7C5DF10042C487 /* DateResolverSpec.swift in Sources */,
 				32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				326728BEC7FC06E6BAB94FE0 /* AppDelegate.swift in Sources */,
+				8C6035D01D7C5D860042C487 /* DateResolver.swift in Sources */,
 				326722619B358CFA1A7416A3 /* ViewController.swift in Sources */,
 				32672CCCA1AB530F10BC849E /* TODONote.swift in Sources */,
 			);
