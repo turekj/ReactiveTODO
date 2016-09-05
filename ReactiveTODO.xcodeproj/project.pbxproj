@@ -14,10 +14,12 @@
 		326728BEC7FC06E6BAB94FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267254A700732E0F7ECE16A /* AppDelegate.swift */; };
 		32672978BE265735998536FE /* ResultsProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326729049AD95D343E71F359 /* ResultsProperty.swift */; };
 		32672BE525505499B93B6080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32672C015827A997F3A7A88B /* Main.storyboard */; };
+		32672C79145D3AA8FFBA8542 /* RelativeDateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672C8C3FA9160B4BCFB9FA /* RelativeDateFormatterSpec.swift */; };
 		32672CCCA1AB530F10BC849E /* TODONote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672013E77A7E4A0F60C948 /* TODONote.swift */; };
 		32672D2181F7C465E9E8BCC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32672C4DBBC6D0EEF5F930C4 /* LaunchScreen.storyboard */; };
 		32672DBB64DE52D6BCA39C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326723C3D3503E6FBE853AC3 /* Assets.xcassets */; };
 		32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */; };
+		32672DFF2C2F6A291A8BC1CD /* RelativeDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326726F939845DBC325338AD /* RelativeDateFormatter.swift */; };
 		8C36EB781D7C54B5002F5735 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB761D7C54B5002F5735 /* Nimble.framework */; };
 		8C36EB791D7C54B5002F5735 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB771D7C54B5002F5735 /* Quick.framework */; };
 		8C6035BC1D7C5B520042C487 /* ReactiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6B1D7C54AD002F5735 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -93,8 +95,10 @@
 		3267254A700732E0F7ECE16A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32672592B6F473FE03A93D52 /* DelaySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelaySpec.swift; sourceTree = "<group>"; };
 		326725C0EED3220DFCC25645 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		326726F939845DBC325338AD /* RelativeDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativeDateFormatter.swift; sourceTree = "<group>"; };
 		326727205B801E54BCE5B53B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		326729049AD95D343E71F359 /* ResultsProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsProperty.swift; sourceTree = "<group>"; };
+		32672C8C3FA9160B4BCFB9FA /* RelativeDateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativeDateFormatterSpec.swift; sourceTree = "<group>"; };
 		32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteSpec.swift; sourceTree = "<group>"; };
 		32672EFEDA4D23F628BFD697 /* ResultsPropertySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsPropertySpec.swift; sourceTree = "<group>"; };
 		32672F9D7B0CF0D962B4D82C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -271,12 +275,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		3267267573DBC47C586761BF /* Delay */ = {
+		3267267573DBC47C586761BF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				32672592B6F473FE03A93D52 /* DelaySpec.swift */,
 			);
-			path = Delay;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		326727858CBE873CA2368147 /* Models */ = {
@@ -355,7 +359,7 @@
 			children = (
 				32672476D456A1C7571A19ED /* Collections */,
 				8C6035D21D7C5DD80042C487 /* Dates */,
-				3267267573DBC47C586761BF /* Delay */,
+				3267267573DBC47C586761BF /* Utilities */,
 				8C6035D91D7C5F9D0042C487 /* Identifiers */,
 			);
 			path = Logic;
@@ -365,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				8C6035D41D7C5DF10042C487 /* DateResolverSpec.swift */,
+				32672C8C3FA9160B4BCFB9FA /* RelativeDateFormatterSpec.swift */,
 			);
 			path = Dates;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				8C6035CF1D7C5D860042C487 /* DateResolver.swift */,
+				326726F939845DBC325338AD /* RelativeDateFormatter.swift */,
 			);
 			path = Dates;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				8C6035E21D7C618D0042C487 /* DateResolverMock.swift in Sources */,
 				32672406F7278C5A01E43579 /* ResultsPropertySpec.swift in Sources */,
 				326722D9D1B950DFDC487D2D /* DelaySpec.swift in Sources */,
+				32672C79145D3AA8FFBA8542 /* RelativeDateFormatterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +530,7 @@
 				32672CCCA1AB530F10BC849E /* TODONote.swift in Sources */,
 				32672978BE265735998536FE /* ResultsProperty.swift in Sources */,
 				32672357C48C6D6227248589 /* Delay.swift in Sources */,
+				32672DFF2C2F6A291A8BC1CD /* RelativeDateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
