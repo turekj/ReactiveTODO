@@ -2,10 +2,11 @@
 import Nimble
 import Quick
 
+
 class AggregateFlowConfiguratorSpec: QuickSpec {
 
     override func spec() {
-        describe("AggregateFlowConfiguratorSpec") {
+        describe("AggregateFlowConfigurator") {
             it("Should call configurators passing controller") {
                 let controller = UIViewController()
                 let firstConfigurator = FlowConfiguratorMock()
