@@ -1,3 +1,4 @@
+github "robb/Cartography" "0.6.0"
 github "Quick/Nimble" "v4.1.0"
 github "Quick/Quick" "v0.9.3"
 github "ReactiveKit/ReactiveKit" "v2.1.1"
