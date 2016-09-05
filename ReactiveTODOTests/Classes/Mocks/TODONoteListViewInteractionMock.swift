@@ -4,4 +4,6 @@ import UIKit
 
 class TODONoteListViewInteractionMock: UIViewController,
         TODONoteListViewControllerProtocol {
+
+    var onAddTODO: (Void -> Void)?
 }

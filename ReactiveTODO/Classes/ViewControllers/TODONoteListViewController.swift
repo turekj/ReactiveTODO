@@ -11,6 +11,8 @@ class TODONoteListViewController: UIViewController,
     let viewModel: TODONoteListViewModel
     let cellFactory: TODONoteListCellFactoryProtocol
 
+    var onAddTODO: (Void -> Void)?
+
     init(view: TODONoteListView, viewModel: TODONoteListViewModel,
          cellFactory: TODONoteListCellFactoryProtocol) {
         self.notesView = view
