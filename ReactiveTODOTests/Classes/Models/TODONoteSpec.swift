@@ -21,7 +21,7 @@ class TODONoteSpec: QuickSpec {
             
             it("Should have date property") {
                 let sut = TODONote()
-                
+
                 expect(sut.date).to(equal(NSDate(timeIntervalSince1970: 1)))
             }
             
