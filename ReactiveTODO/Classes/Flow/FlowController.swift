@@ -23,7 +23,7 @@ class FlowController: FlowControllerProtocol {
             return
         }
 
-        self.configurator.configureFlow(controller)
+        self.configurator.configureFlow(controller, flowController: self)
         self.rootController.pushViewController(controller, animated: animated)
     }
 

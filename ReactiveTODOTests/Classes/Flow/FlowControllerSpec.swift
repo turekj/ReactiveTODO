@@ -26,8 +26,17 @@ class FlowControllerSpec: QuickSpec {
                 sut.navigateTo(ViewControllerMock.self, animated: true)
 
                 it("Should call configurator for a view controller") {
-                    expect(configurator.calledWith).toNot(beNil())
-                    expect(configurator.calledWith).to(be(controller))
+                    expect(configurator.calledWithViewController)
+                        .toNot(beNil())
+                    expect(configurator.calledWithViewController)
+                        .to(be(controller))
+                }
+
+                it("Should pass self as a flow controller") {
+                    expect(configurator.calledWithFlowController)
+                        .toNot(beNil())
+                    expect(configurator.calledWithFlowController
+                        as? FlowController).to(be(sut))
                 }
 
                 it("Should push controller on a stack") {

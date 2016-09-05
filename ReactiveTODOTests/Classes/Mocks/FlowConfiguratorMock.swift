@@ -5,10 +5,13 @@ import UIKit
 class FlowConfiguratorMock: FlowConfigurator {
 
     var configureFlowReturnValue = false
-    var calledWith: UIViewController?
+    var calledWithViewController: UIViewController?
+    var calledWithFlowController: FlowControllerProtocol?
 
-    func configureFlow(controller: UIViewController) -> Bool {
-        self.calledWith = controller
+    func configureFlow(controller: UIViewController,
+                       flowController: FlowControllerProtocol) -> Bool {
+        self.calledWithViewController = controller
+        self.calledWithFlowController = flowController
         return self.configureFlowReturnValue
     }
 }
