@@ -4,7 +4,8 @@ import ReactiveUIKit
 import UIKit
 
 
-class TODONoteListViewController: UIViewController {
+class TODONoteListViewController: UIViewController,
+        TODONoteListViewControllerProtocol {
 
     let notesView: TODONoteListView
     let viewModel: TODONoteListViewModel
