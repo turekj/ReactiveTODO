@@ -24,6 +24,9 @@
 		32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */; };
 		8C36EB781D7C54B5002F5735 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB761D7C54B5002F5735 /* Nimble.framework */; };
 		8C36EB791D7C54B5002F5735 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB771D7C54B5002F5735 /* Quick.framework */; };
+		8C5195901D7D8F9600F9638D /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51958F1D7D8F9600F9638D /* Cartography.framework */; };
+		8C5195911D7D8FB200F9638D /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51958F1D7D8F9600F9638D /* Cartography.framework */; };
+		8C5195921D7D8FB200F9638D /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51958F1D7D8F9600F9638D /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C6035BC1D7C5B520042C487 /* ReactiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6B1D7C54AD002F5735 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C6035BE1D7C5B520042C487 /* ReactiveUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6C1D7C54AD002F5735 /* ReactiveUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C6035C01D7C5B520042C487 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6D1D7C54AD002F5735 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -69,6 +72,7 @@
 				8C6035C21D7C5B520042C487 /* RealmSwift.framework in Embed Frameworks */,
 				8C6035C41D7C5B530042C487 /* Swinject.framework in Embed Frameworks */,
 				8C6035BC1D7C5B520042C487 /* ReactiveKit.framework in Embed Frameworks */,
+				8C5195921D7D8FB200F9638D /* Cartography.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +117,7 @@
 		8C36EB6F1D7C54AD002F5735 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
 		8C36EB761D7C54B5002F5735 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		8C36EB771D7C54B5002F5735 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		8C51958F1D7D8F9600F9638D /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cartography.framework; sourceTree = "<group>"; };
 		8C6035CF1D7C5D860042C487 /* DateResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateResolver.swift; sourceTree = "<group>"; };
 		8C6035D41D7C5DF10042C487 /* DateResolverSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateResolverSpec.swift; sourceTree = "<group>"; };
 		8C6035D71D7C5F7D0042C487 /* GUIDGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GUIDGenerator.swift; sourceTree = "<group>"; };
@@ -138,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5195901D7D8F9600F9638D /* Cartography.framework in Frameworks */,
+				8C5195911D7D8FB200F9638D /* Cartography.framework in Frameworks */,
 				8C6035C61D7C5B630042C487 /* ReactiveKit.framework in Frameworks */,
 				8C6035C71D7C5B630042C487 /* ReactiveUIKit.framework in Frameworks */,
 				8C6035C81D7C5B630042C487 /* Realm.framework in Frameworks */,
@@ -185,10 +192,10 @@
 		32672247FECDBC7F3A70458E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				32672D75AC2B6F2F40E11F32 /* Formatters */,
 				8C6035D11D7C5DD40042C487 /* Logic */,
 				8C6035E01D7C61840042C487 /* Mocks */,
 				326725489E3C0BA1E43B9611 /* Models */,
-				32672D75AC2B6F2F40E11F32 /* Formatters */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -370,10 +377,10 @@
 			isa = PBXGroup;
 			children = (
 				3267247F96619D83700AE735 /* AppDelegate */,
+				326720F27B5E61147A33F4D8 /* Formatters */,
 				8C6035CE1D7C5D770042C487 /* Logic */,
 				326727858CBE873CA2368147 /* Models */,
 				32672648D3B5E7825D712C31 /* ViewControllers */,
-				326720F27B5E61147A33F4D8 /* Formatters */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -381,6 +388,7 @@
 		8C36EB6A1D7C54AD002F5735 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C51958F1D7D8F9600F9638D /* Cartography.framework */,
 				8C36EB6B1D7C54AD002F5735 /* ReactiveKit.framework */,
 				8C36EB6C1D7C54AD002F5735 /* ReactiveUIKit.framework */,
 				8C36EB6D1D7C54AD002F5735 /* Realm.framework */,
@@ -415,8 +423,8 @@
 			children = (
 				32672476D456A1C7571A19ED /* Collections */,
 				8C6035D21D7C5DD80042C487 /* Dates */,
-				3267267573DBC47C586761BF /* Utilities */,
 				8C6035D91D7C5F9D0042C487 /* Identifiers */,
+				3267267573DBC47C586761BF /* Utilities */,
 			);
 			path = Logic;
 			sourceTree = "<group>";

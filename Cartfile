@@ -12,3 +12,6 @@ github "Quick/Nimble" ~> 4.1
 # Swinject
 github "Swinject/Swinject" ~> 1.1.0
 
+# Carthography
+github "robb/Cartography" ~> 0.6
+
