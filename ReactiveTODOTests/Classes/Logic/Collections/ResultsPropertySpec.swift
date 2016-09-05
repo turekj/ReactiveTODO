@@ -21,7 +21,7 @@ class ResultsPropertySpec: QuickSpec {
                 }
             }
 
-            it("Should notify about collection changes") {
+            it("Should subscribe to update event") {
                 let realm = try! Realm()
                 let results = realm.objects(TODONote.self)
                 var inserts: [Int] = []
@@ -37,15 +37,30 @@ class ResultsPropertySpec: QuickSpec {
                     inserts.appendContentsOf(c.inserts)
                     updates.appendContentsOf(c.updates)
                     deletes.appendContentsOf(c.deletes)
-                }.disposeIn(self.rBag)
+                }.disposeIn(firstTodo.rBag)
 
-                try! realm.write {
-                    realm.add(firstTodo)
-                    realm.add(secondTodo)
+                delay(0.1) {
+                    try! realm.write {
+                        realm.add(firstTodo)
+                    }
+                }
 
-                    secondTodo.priority = .High
+                delay(0.2) {
+                    try! realm.write {
+                        realm.add(secondTodo)
+                    }
+                }
 
-                    realm.delete(firstTodo)
+                delay(0.3) {
+                    try! realm.write {
+                        secondTodo.priority = .High
+                    }
+                }
+
+                delay(0.4) {
+                    try! realm.write {
+                        realm.delete(firstTodo)
+                    }
                 }
 
                 expect(inserts).toEventually(equal([0, 1]))
