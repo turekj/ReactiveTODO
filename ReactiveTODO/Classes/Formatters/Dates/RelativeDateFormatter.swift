@@ -1,13 +1,7 @@
 import Foundation
 
 
-protocol RelativeDateFormatterProtocol {
-
-    func format(date: NSDate) -> String
-}
-
-
-class RelativeDateFormatter: RelativeDateFormatterProtocol {
+class RelativeDateFormatter: DateFormatterProtocol {
 
     func format(date: NSDate) -> String {
         let formatter = NSDateFormatter()

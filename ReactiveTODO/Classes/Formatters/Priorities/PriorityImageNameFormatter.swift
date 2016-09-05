@@ -1,12 +1,6 @@
 import Foundation
 
 
-protocol PriorityImageNameFormatterProtocol {
-
-    func format(priority: Priority) -> String
-}
-
-
 class PriorityImageNameFormatter: PriorityImageNameFormatterProtocol {
 
     func format(priority: Priority) -> String {
