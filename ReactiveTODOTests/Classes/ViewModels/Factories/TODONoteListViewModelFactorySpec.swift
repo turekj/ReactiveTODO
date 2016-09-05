@@ -38,7 +38,7 @@ class TODONoteListViewModelFactorySpec: QuickSpec {
             }
 
             context("When creating a view model") {
-                
+
                 it("Should fetch all notes") {
                     let viewModel = sut.createViewModel()
                     let notes = viewModel.notes.collection
