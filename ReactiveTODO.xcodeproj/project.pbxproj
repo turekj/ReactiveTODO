@@ -261,8 +261,8 @@
 				8C6035D11D7C5DD40042C487 /* Logic */,
 				8C6035E01D7C61840042C487 /* Mocks */,
 				326725489E3C0BA1E43B9611 /* Models */,
-				3267268CE2C764764DD97E95 /* Views */,
 				32672ACEE73C83BA34657217 /* ViewModels */,
+				3267268CE2C764764DD97E95 /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -374,8 +374,8 @@
 		326724B3500DD039E4FF4B6B /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				32672FA9A05827562B9D7E32 /* TODONoteListViewModelFactoryProtocol.swift */,
 				32672AFBFF6DB3DDDC60EACE /* TODONoteListViewModelFactory.swift */,
+				32672FA9A05827562B9D7E32 /* TODONoteListViewModelFactoryProtocol.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -466,8 +466,8 @@
 		326728F65B701316054A9D0E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				326723D9FD84134D4638FD12 /* TODONoteListViewModel.swift */,
 				326724B3500DD039E4FF4B6B /* Factories */,
+				326723D9FD84134D4638FD12 /* TODONoteListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -553,6 +553,7 @@
 			isa = PBXGroup;
 			children = (
 				3267247F96619D83700AE735 /* AppDelegate */,
+				326721DF6459A4A210841AE4 /* Assemblies */,
 				32672649C1DC77116E4C819B /* Flow */,
 				326720F27B5E61147A33F4D8 /* Formatters */,
 				8C6035CE1D7C5D770042C487 /* Logic */,
@@ -560,7 +561,6 @@
 				32672648D3B5E7825D712C31 /* ViewControllers */,
 				326728F65B701316054A9D0E /* ViewModels */,
 				3267274006D002E764A3153B /* Views */,
-				326721DF6459A4A210841AE4 /* Assemblies */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
