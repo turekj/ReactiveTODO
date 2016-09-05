@@ -38,7 +38,7 @@ class TODONoteListViewController: UIViewController,
     }
 
     func bindViewModel() {
-        self.viewModel.notes.bindTo(self.notesView) {
+        self.viewModel.notes.bindTo(self.notesView.list) {
                 [unowned self] indexPath, notes, list in
             let note = notes[indexPath.row]
             let cell = list.dequeueReusableCellWithIdentifier(

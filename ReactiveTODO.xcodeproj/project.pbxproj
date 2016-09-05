@@ -29,6 +29,7 @@
 		3267263BC7F0166CD764FC38 /* RelativeDateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326721A53A8885D20C22B35B /* RelativeDateFormatterSpec.swift */; };
 		32672675BB4D83FD59E61398 /* TODONoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */; };
 		326726E9868926FD0A50DA91 /* AggregateFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AF22BDCDFCE80DEC8C5 /* AggregateFlowConfigurator.swift */; };
+		3267273844694BA9AAF212EF /* AddTODOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727409ABD83AABF88A6E1 /* AddTODOButton.swift */; };
 		3267277510A2612D1C24979B /* TODONoteListViewModelFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672FA9A05827562B9D7E32 /* TODONoteListViewModelFactoryProtocol.swift */; };
 		326727B5F9C7CF4596354FC3 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267245D1792372EBF876060 /* FlowController.swift */; };
 		326728224C6388392A53D6DF /* TODONoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CBD5BFF5EBA3A7D9977 /* TODONoteListView.swift */; };
@@ -147,6 +148,7 @@
 		326725CFF549497B382A45E9 /* PriorityImageNameFormatterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatterProtocol.swift; sourceTree = "<group>"; };
 		326726FA2899F8F7AC5BE39C /* TODONoteListCellFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactorySpec.swift; sourceTree = "<group>"; };
 		3267271C6A13E12589223E33 /* PriorityImageNameFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatterSpec.swift; sourceTree = "<group>"; };
+		326727409ABD83AABF88A6E1 /* AddTODOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTODOButton.swift; sourceTree = "<group>"; };
 		326727412471E8721E3DA3EA /* DateFormatterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterProtocol.swift; sourceTree = "<group>"; };
 		32672777F3CD0B54E209D2DA /* TODONoteListCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactory.swift; sourceTree = "<group>"; };
 		326727A9549842AF77E70D29 /* CreateTODONoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewModel.swift; sourceTree = "<group>"; };
@@ -290,6 +292,14 @@
 			path = Configurators;
 			sourceTree = "<group>";
 		};
+		326722EE5A364D3506FC6D16 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				326727409ABD83AABF88A6E1 /* AddTODOButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		326722FBAB0DC1760569764F /* ReactiveTODOTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +358,14 @@
 				32672C4DBBC6D0EEF5F930C4 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		32672464CDC0A0C38CF77F8F /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				326722EE5A364D3506FC6D16 /* Buttons */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		32672476D456A1C7571A19ED /* Collections */ = {
@@ -578,6 +596,7 @@
 				32672648D3B5E7825D712C31 /* ViewControllers */,
 				326728F65B701316054A9D0E /* ViewModels */,
 				3267274006D002E764A3153B /* Views */,
+				32672464CDC0A0C38CF77F8F /* Controls */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -842,6 +861,7 @@
 				326728F89669C05220759D83 /* CreateTODONoteViewModel.swift in Sources */,
 				32672B093B967C6B22586728 /* CreateTODONoteView.swift in Sources */,
 				326720E4B9540C57DF0A3177 /* CreateTODOAssembly.swift in Sources */,
+				3267273844694BA9AAF212EF /* AddTODOButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

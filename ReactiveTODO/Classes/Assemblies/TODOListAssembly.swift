@@ -17,7 +17,7 @@ class TODOListAssembly: AssemblyType {
         }
 
         container.register(TODONoteListView.self) { _ in
-            TODONoteListView(frame: CGRectZero, style: .Plain)
+            TODONoteListView()
         }
 
         container.register(TODONoteListViewModel.self) { r in
