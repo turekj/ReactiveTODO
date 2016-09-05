@@ -35,13 +35,11 @@
 		32672BE525505499B93B6080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32672C015827A997F3A7A88B /* Main.storyboard */; };
 		32672C18A87C16466E320309 /* FlowControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672028E363D148188AEF5E /* FlowControllerProtocol.swift */; };
 		32672CCCA1AB530F10BC849E /* TODONote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672013E77A7E4A0F60C948 /* TODONote.swift */; };
-		32672D1F9D1B64ADFC5C280D /* RootNavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326721ACD1423D774FFD35FD /* RootNavigationControllerProtocol.swift */; };
 		32672D2181F7C465E9E8BCC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32672C4DBBC6D0EEF5F930C4 /* LaunchScreen.storyboard */; };
 		32672D6A95239F143151939F /* UINavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */; };
 		32672DA82A3E01091AC2F7F5 /* TODONoteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672982EA811F78090E22A4 /* TODONoteListCell.swift */; };
 		32672DBB64DE52D6BCA39C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326723C3D3503E6FBE853AC3 /* Assets.xcassets */; };
 		32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */; };
-		32672DF9DE4EDF7CE5D9153A /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672FFE2F411D097241A50C /* RootNavigationController.swift */; };
 		32672F8A706C99AA6AF57A83 /* FlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267224CB7C4089F5829079D /* FlowControllerSpec.swift */; };
 		32672F992AFE11670A3318B9 /* DateFormatterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F46320B93FFDEF9AAC3 /* DateFormatterMock.swift */; };
 		8C36EB781D7C54B5002F5735 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB761D7C54B5002F5735 /* Nimble.framework */; };
@@ -122,7 +120,6 @@
 		3267208B8CA9F5341B3906A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3267215445410D82B1F61A1B /* ReactiveTODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		326721A53A8885D20C22B35B /* RelativeDateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativeDateFormatterSpec.swift; sourceTree = "<group>"; };
-		326721ACD1423D774FFD35FD /* RootNavigationControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationControllerProtocol.swift; sourceTree = "<group>"; };
 		3267220B0AD5CA8B78F5D603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3267224CB7C4089F5829079D /* FlowControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowControllerSpec.swift; sourceTree = "<group>"; };
 		326723C3D3503E6FBE853AC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,7 +151,6 @@
 		32672F46320B93FFDEF9AAC3 /* DateFormatterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterMock.swift; sourceTree = "<group>"; };
 		32672F9D7B0CF0D962B4D82C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		32672FD47B2EEFD830974961 /* FlowConfiguratorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowConfiguratorMock.swift; sourceTree = "<group>"; };
-		32672FFE2F411D097241A50C /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		8C36EB6B1D7C54AD002F5735 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveKit.framework; sourceTree = "<group>"; };
 		8C36EB6C1D7C54AD002F5735 /* ReactiveUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveUIKit.framework; sourceTree = "<group>"; };
 		8C36EB6D1D7C54AD002F5735 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
@@ -383,8 +379,6 @@
 		32672648D3B5E7825D712C31 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				32672FFE2F411D097241A50C /* RootNavigationController.swift */,
-				326721ACD1423D774FFD35FD /* RootNavigationControllerProtocol.swift */,
 				32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */,
 				326727205B801E54BCE5B53B /* ViewController.swift */,
 			);
@@ -761,8 +755,6 @@
 				3267251D2BC77FF19D8D3DEA /* PriorityImageNameFormatterProtocol.swift in Sources */,
 				326723AB82B3846B5B7073FE /* TODONoteListCellFactory.swift in Sources */,
 				326725C97AD80DBDF8AEB312 /* TODONoteListCellFactoryProtocol.swift in Sources */,
-				32672DF9DE4EDF7CE5D9153A /* RootNavigationController.swift in Sources */,
-				32672D1F9D1B64ADFC5C280D /* RootNavigationControllerProtocol.swift in Sources */,
 				32672111415A1C23039A2648 /* FlowConfigurator.swift in Sources */,
 				326726E9868926FD0A50DA91 /* AggregateFlowConfigurator.swift in Sources */,
 				32672C18A87C16466E320309 /* FlowControllerProtocol.swift in Sources */,
