@@ -239,12 +239,12 @@
 		32672247FECDBC7F3A70458E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				326729F410006C130794DA53 /* Flow */,
 				32672D75AC2B6F2F40E11F32 /* Formatters */,
 				8C6035D11D7C5DD40042C487 /* Logic */,
 				8C6035E01D7C61840042C487 /* Mocks */,
 				326725489E3C0BA1E43B9611 /* Models */,
 				3267268CE2C764764DD97E95 /* Views */,
-				326729F410006C130794DA53 /* Flow */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -252,8 +252,8 @@
 		3267225C7F6FAC6217303D33 /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
-				32672BC84FF8E87AB2402029 /* FlowConfigurator.swift */,
 				32672AF22BDCDFCE80DEC8C5 /* AggregateFlowConfigurator.swift */,
+				32672BC84FF8E87AB2402029 /* FlowConfigurator.swift */,
 			);
 			path = Configurators;
 			sourceTree = "<group>";
@@ -383,10 +383,10 @@
 		32672648D3B5E7825D712C31 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */,
-				326727205B801E54BCE5B53B /* ViewController.swift */,
 				32672FFE2F411D097241A50C /* RootNavigationController.swift */,
 				326721ACD1423D774FFD35FD /* RootNavigationControllerProtocol.swift */,
+				32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */,
+				326727205B801E54BCE5B53B /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -395,8 +395,8 @@
 			isa = PBXGroup;
 			children = (
 				3267225C7F6FAC6217303D33 /* Configurators */,
-				32672028E363D148188AEF5E /* FlowControllerProtocol.swift */,
 				3267245D1792372EBF876060 /* FlowController.swift */,
+				32672028E363D148188AEF5E /* FlowControllerProtocol.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -510,13 +510,13 @@
 			isa = PBXGroup;
 			children = (
 				3267247F96619D83700AE735 /* AppDelegate */,
+				32672649C1DC77116E4C819B /* Flow */,
 				326720F27B5E61147A33F4D8 /* Formatters */,
 				8C6035CE1D7C5D770042C487 /* Logic */,
 				326727858CBE873CA2368147 /* Models */,
 				32672648D3B5E7825D712C31 /* ViewControllers */,
 				326728F65B701316054A9D0E /* ViewModels */,
 				3267274006D002E764A3153B /* Views */,
-				32672649C1DC77116E4C819B /* Flow */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -602,9 +602,9 @@
 			children = (
 				32672F46320B93FFDEF9AAC3 /* DateFormatterMock.swift */,
 				8C6035E11D7C618D0042C487 /* DateResolverMock.swift */,
+				32672FD47B2EEFD830974961 /* FlowConfiguratorMock.swift */,
 				8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */,
 				32672BD35F01F0182D0D9D50 /* PriorityImageNameFormatterMock.swift */,
-				32672FD47B2EEFD830974961 /* FlowConfiguratorMock.swift */,
 				32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */,
 				32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */,
 			);
