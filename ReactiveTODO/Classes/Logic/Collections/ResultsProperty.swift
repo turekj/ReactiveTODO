@@ -20,6 +20,16 @@ class ResultsProperty<C: Object>: CollectionProperty<Results<C>> {
         self.notificationToken = self.results.addNotificationBlock { changes in
             switch changes {
             case .Initial:
+                var inserts: [Int] = []
+                inserts += 0..<self.results.count
+
+                let changeset = CollectionChangeset(
+                        collection: self.results,
+                        inserts: inserts,
+                        deletes: [],
+                        updates: [])
+
+                self.update(changeset)
                 break
 
             case .Update(_, let deletes, let inserts, let updates):

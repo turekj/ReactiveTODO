@@ -67,6 +67,41 @@ class ResultsPropertySpec: QuickSpec {
                 expect(updates).toEventually(equal([1]))
                 expect(deletes).toEventually(equal([0]))
             }
+
+            it("Should subscribe to initial event") {
+                let realm = try! Realm()
+                let results = realm.objects(TODONote.self)
+                var inserts: [Int] = []
+                var updates: [Int] = []
+                var deletes: [Int] = []
+                let firstTodo = TODONote()
+                firstTodo.guid = "1st"
+                let secondTodo = TODONote()
+                secondTodo.guid = "2nd"
+
+                let resultsProperty = ResultsProperty(results)
+                resultsProperty.observeNext { c in
+                    inserts.appendContentsOf(c.inserts)
+                    updates.appendContentsOf(c.updates)
+                    deletes.appendContentsOf(c.deletes)
+                }.disposeIn(firstTodo.rBag)
+
+                try! realm.write {
+                    realm.add(firstTodo)
+                }
+
+                try! realm.write {
+                    realm.add(secondTodo)
+                }
+
+                try! realm.write {
+                    realm.delete(firstTodo)
+                }
+
+                expect(inserts).toEventually(equal([0]))
+                expect(updates).toEventually(equal([]))
+                expect(deletes).toEventually(equal([]))
+            }
         }
     }
 }
