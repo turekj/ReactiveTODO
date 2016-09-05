@@ -342,9 +342,9 @@
 		8C6035CE1D7C5D770042C487 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				32672377E65705CF65DB6D65 /* Collections */,
 				8C6035D31D7C5DDC0042C487 /* Dates */,
 				8C6035D61D7C5F6A0042C487 /* Identifiers */,
-				32672377E65705CF65DB6D65 /* Collections */,
 				32672C897E6715AEAE085773 /* Utilities */,
 			);
 			path = Logic;
@@ -353,10 +353,10 @@
 		8C6035D11D7C5DD40042C487 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				8C6035D21D7C5DD80042C487 /* Dates */,
-				8C6035D91D7C5F9D0042C487 /* Identifiers */,
 				32672476D456A1C7571A19ED /* Collections */,
+				8C6035D21D7C5DD80042C487 /* Dates */,
 				3267267573DBC47C586761BF /* Delay */,
+				8C6035D91D7C5F9D0042C487 /* Identifiers */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
