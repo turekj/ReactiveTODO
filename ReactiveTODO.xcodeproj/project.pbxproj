@@ -36,6 +36,7 @@
 		326728CA300344664177C3F7 /* TODONoteListCellFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326726FA2899F8F7AC5BE39C /* TODONoteListCellFactorySpec.swift */; };
 		32672905EA845C5AD9432A5D /* TODONoteListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CB7A3BA680AF28F69AD /* TODONoteListViewControllerProtocol.swift */; };
 		32672978BE265735998536FE /* ResultsProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326729049AD95D343E71F359 /* ResultsProperty.swift */; };
+		32672AE25035DCDF01EF6A91 /* TODONoteListViewModelFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326728D092F53377F64CA633 /* TODONoteListViewModelFactorySpec.swift */; };
 		32672B04EC7A584CD7186EBB /* PriorityImageNameFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267271C6A13E12589223E33 /* PriorityImageNameFormatterSpec.swift */; };
 		32672B34626AA276A5EBED55 /* TODONoteListViewInteractionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */; };
 		32672BE525505499B93B6080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32672C015827A997F3A7A88B /* Main.storyboard */; };
@@ -145,6 +146,7 @@
 		326727205B801E54BCE5B53B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		326727412471E8721E3DA3EA /* DateFormatterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterProtocol.swift; sourceTree = "<group>"; };
 		32672777F3CD0B54E209D2DA /* TODONoteListCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactory.swift; sourceTree = "<group>"; };
+		326728D092F53377F64CA633 /* TODONoteListViewModelFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewModelFactorySpec.swift; sourceTree = "<group>"; };
 		326729049AD95D343E71F359 /* ResultsProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsProperty.swift; sourceTree = "<group>"; };
 		32672982EA811F78090E22A4 /* TODONoteListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCell.swift; sourceTree = "<group>"; };
 		326729DD9B9E467E50B526E7 /* AggregateFlowConfiguratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateFlowConfiguratorSpec.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				8C6035E01D7C61840042C487 /* Mocks */,
 				326725489E3C0BA1E43B9611 /* Models */,
 				3267268CE2C764764DD97E95 /* Views */,
+				32672ACEE73C83BA34657217 /* ViewModels */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -477,6 +480,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		326729374AE986606EC38F72 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				326728D092F53377F64CA633 /* TODONoteListViewModelFactorySpec.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		326729F410006C130794DA53 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +505,14 @@
 				32672462D9A26D20FD049FDF /* Storyboards */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		32672ACEE73C83BA34657217 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				326729374AE986606EC38F72 /* Factories */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		32672B8DF29C48820E4BB7C7 /* Priorities */ = {
@@ -771,6 +790,7 @@
 				326722EB61637854567FE735 /* ViewControllerMock.swift in Sources */,
 				326728B1F7A7BD508263C866 /* TODONoteListFlowConfiguratorSpec.swift in Sources */,
 				32672B34626AA276A5EBED55 /* TODONoteListViewInteractionMock.swift in Sources */,
+				32672AE25035DCDF01EF6A91 /* TODONoteListViewModelFactorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
