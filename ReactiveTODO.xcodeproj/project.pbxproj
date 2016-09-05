@@ -390,8 +390,8 @@
 			isa = PBXGroup;
 			children = (
 				32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */,
-				326727205B801E54BCE5B53B /* ViewController.swift */,
 				32672CB7A3BA680AF28F69AD /* TODONoteListViewControllerProtocol.swift */,
+				326727205B801E54BCE5B53B /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -610,9 +610,9 @@
 				32672FD47B2EEFD830974961 /* FlowConfiguratorMock.swift */,
 				8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */,
 				32672BD35F01F0182D0D9D50 /* PriorityImageNameFormatterMock.swift */,
+				32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */,
 				32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */,
 				32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */,
-				32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
