@@ -59,9 +59,11 @@
 		32672DBB64DE52D6BCA39C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326723C3D3503E6FBE853AC3 /* Assets.xcassets */; };
 		32672DD642CBEF5282AB83C9 /* TODONoteListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326724697DFC8DD976E0A9FB /* TODONoteListViewModelFactory.swift */; };
 		32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */; };
+		32672F12FFEEAB16ABD9F861 /* PriorityPickerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326724696A62843A3DCDAB40 /* PriorityPickerSpec.swift */; };
 		32672F8A706C99AA6AF57A83 /* FlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267224CB7C4089F5829079D /* FlowControllerSpec.swift */; };
 		32672F992AFE11670A3318B9 /* DateFormatterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F46320B93FFDEF9AAC3 /* DateFormatterMock.swift */; };
 		32672FC0D47F2A980D606BED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F7118769359FB6A5518 /* main.swift */; };
+		32672FCB7B473DC6B12AB163 /* PriorityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267283B97D6747BE380E72D /* PriorityPicker.swift */; };
 		32672FD25BDAFD0B60E3B86D /* CreateTODONoteListViewModelFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326720E5CADB574D0EEBBD89 /* CreateTODONoteListViewModelFactoryProtocol.swift */; };
 		8C2B08CB1D7F0808003C5FEF /* FakeRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B08CA1D7F0808003C5FEF /* FakeRealmObject.swift */; };
 		8C36EB781D7C54B5002F5735 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB761D7C54B5002F5735 /* Nimble.framework */; };
@@ -153,6 +155,7 @@
 		326723C3D3503E6FBE853AC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		326723D9FD84134D4638FD12 /* TODONoteListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewModel.swift; sourceTree = "<group>"; };
 		3267245D1792372EBF876060 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		326724696A62843A3DCDAB40 /* PriorityPickerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityPickerSpec.swift; sourceTree = "<group>"; };
 		326724697DFC8DD976E0A9FB /* TODONoteListViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewModelFactory.swift; sourceTree = "<group>"; };
 		3267254A700732E0F7ECE16A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32672592B6F473FE03A93D52 /* DelaySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelaySpec.swift; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 		326727A1E3E971747D875998 /* TODONoteListViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewControllerSpec.swift; sourceTree = "<group>"; };
 		326727A9549842AF77E70D29 /* CreateTODONoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewModel.swift; sourceTree = "<group>"; };
 		3267283919A641954A4B2CB3 /* CreateTODONoteViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewControllerProtocol.swift; sourceTree = "<group>"; };
+		3267283B97D6747BE380E72D /* PriorityPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityPicker.swift; sourceTree = "<group>"; };
 		326729049AD95D343E71F359 /* ResultsProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsProperty.swift; sourceTree = "<group>"; };
 		32672982EA811F78090E22A4 /* TODONoteListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCell.swift; sourceTree = "<group>"; };
 		326729DD9B9E467E50B526E7 /* AggregateFlowConfiguratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateFlowConfiguratorSpec.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 				32672ACEE73C83BA34657217 /* ViewModels */,
 				3267268CE2C764764DD97E95 /* Views */,
 				32672AFCD10A4D8E405CDBDE /* ViewControllers */,
+				326727DB0357BC13FF46DE1A /* Controls */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				326722EE5A364D3506FC6D16 /* Buttons */,
+				32672A30045E04DD4A7438B5 /* SegmentedControls */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -525,6 +531,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		326727A9BC568866AC8283F2 /* SegmentedControls */ = {
+			isa = PBXGroup;
+			children = (
+				326724696A62843A3DCDAB40 /* PriorityPickerSpec.swift */,
+			);
+			path = SegmentedControls;
+			sourceTree = "<group>";
+		};
+		326727DB0357BC13FF46DE1A /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				326727A9BC568866AC8283F2 /* SegmentedControls */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		326728C46FCD79023C808769 /* Impl */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +581,14 @@
 				3267224CB7C4089F5829079D /* FlowControllerSpec.swift */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		32672A30045E04DD4A7438B5 /* SegmentedControls */ = {
+			isa = PBXGroup;
+			children = (
+				3267283B97D6747BE380E72D /* PriorityPicker.swift */,
+			);
+			path = SegmentedControls;
 			sourceTree = "<group>";
 		};
 		32672A8931BD05ACF302A029 /* Resources */ = {
@@ -880,6 +910,7 @@
 				326724EFFDB562D8DAA63B53 /* TODONoteListViewControllerSpec.swift in Sources */,
 				326727D8E7D75AA00DE10355 /* TODONoteListViewModelFactorySpec.swift in Sources */,
 				32672B8E0D069DE29057CE6E /* CreateTODONoteListViewModelFactorySpec.swift in Sources */,
+				32672F12FFEEAB16ABD9F861 /* PriorityPickerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -926,6 +957,7 @@
 				3267235487E22AEF75A6B1F0 /* TestingAppDelegate.swift in Sources */,
 				32672FC0D47F2A980D606BED /* main.swift in Sources */,
 				3267258B3431728AD5C3EACB /* GlobalAssembly.swift in Sources */,
+				32672FCB7B473DC6B12AB163 /* PriorityPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

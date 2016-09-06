@@ -7,7 +7,7 @@ class CreateTODONoteView: UIView {
     let noteLabel = UILabel()
     let noteTextView = UITextView()
     let priorityLabel = UILabel()
-    let priorityPicker = UISegmentedControl(items: [])
+    let priorityPicker = PriorityPicker()
     let dateLabel = UILabel()
     let triggerDatePickerButton = UIButton(type: .Custom)
     let datePicker = UIDatePicker()
