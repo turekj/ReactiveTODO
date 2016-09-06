@@ -269,9 +269,9 @@
 		326720520222307F164DB857 /* Impl */ = {
 			isa = PBXGroup;
 			children = (
-				3267285C8635DF5ECEFB4618 /* PriorityValidator.swift */,
 				326728885C18536021B2BB32 /* DateValidator.swift */,
 				32672B7389F61FF9A6825BB8 /* NoteValidator.swift */,
+				3267285C8635DF5ECEFB4618 /* PriorityValidator.swift */,
 			);
 			path = Impl;
 			sourceTree = "<group>";
@@ -313,10 +313,10 @@
 		326721DF6459A4A210841AE4 /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
-				326720C076541708240B696F /* FlowAssembly.swift */,
-				32672BBC6582F1214549032B /* TODOListAssembly.swift */,
 				32672D241515C544B292653C /* CreateTODOAssembly.swift */,
+				326720C076541708240B696F /* FlowAssembly.swift */,
 				32672BF12639762871798C36 /* GlobalAssembly.swift */,
+				32672BBC6582F1214549032B /* TODOListAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -324,14 +324,14 @@
 		32672247FECDBC7F3A70458E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				326727DB0357BC13FF46DE1A /* Controls */,
 				326729F410006C130794DA53 /* Flow */,
 				8C6035D11D7C5DD40042C487 /* Logic */,
 				8C6035E01D7C61840042C487 /* Mocks */,
 				326725489E3C0BA1E43B9611 /* Models */,
+				32672AFCD10A4D8E405CDBDE /* ViewControllers */,
 				32672ACEE73C83BA34657217 /* ViewModels */,
 				3267268CE2C764764DD97E95 /* Views */,
-				32672AFCD10A4D8E405CDBDE /* ViewControllers */,
-				326727DB0357BC13FF46DE1A /* Controls */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -340,9 +340,9 @@
 			isa = PBXGroup;
 			children = (
 				32672AF22BDCDFCE80DEC8C5 /* AggregateFlowConfigurator.swift */,
+				326723ED6932D2EB0AF289AF /* CreateTODONoteFlowConfigurator.swift */,
 				32672BC84FF8E87AB2402029 /* FlowConfigurator.swift */,
 				3267202567C8BB214EC95B96 /* TODONoteListFlowConfigurator.swift */,
-				326723ED6932D2EB0AF289AF /* CreateTODONoteFlowConfigurator.swift */,
 			);
 			path = Configurators;
 			sourceTree = "<group>";
@@ -452,8 +452,8 @@
 			isa = PBXGroup;
 			children = (
 				326729DD9B9E467E50B526E7 /* AggregateFlowConfiguratorSpec.swift */,
-				326722A59BBC410E360F76E5 /* TODONoteListFlowConfiguratorSpec.swift */,
 				326721AAE94587DB4471BD37 /* CreateTODONoteFlowConfiguratorSpec.swift */,
+				326722A59BBC410E360F76E5 /* TODONoteListFlowConfiguratorSpec.swift */,
 			);
 			path = Configurators;
 			sourceTree = "<group>";
@@ -470,9 +470,9 @@
 		326724B3500DD039E4FF4B6B /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				32672FA9A05827562B9D7E32 /* TODONoteListViewModelFactoryProtocol.swift */,
-				326720E5CADB574D0EEBBD89 /* CreateTODONoteListViewModelFactoryProtocol.swift */,
 				326728C46FCD79023C808769 /* Impl */,
+				326720E5CADB574D0EEBBD89 /* CreateTODONoteListViewModelFactoryProtocol.swift */,
+				32672FA9A05827562B9D7E32 /* TODONoteListViewModelFactoryProtocol.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -507,10 +507,10 @@
 		32672648D3B5E7825D712C31 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */,
-				32672CB7A3BA680AF28F69AD /* TODONoteListViewControllerProtocol.swift */,
 				326723191636737EE2A2433F /* CreateTODONoteViewController.swift */,
 				3267283919A641954A4B2CB3 /* CreateTODONoteViewControllerProtocol.swift */,
+				32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */,
+				32672CB7A3BA680AF28F69AD /* TODONoteListViewControllerProtocol.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -529,8 +529,8 @@
 			isa = PBXGroup;
 			children = (
 				32672D9797D475F117195828 /* DateValidatorSpec.swift */,
-				3267281433D582D5846A320C /* PriorityValidatorSpec.swift */,
 				326723E60013E40271BC5CED /* NoteValidatorSpec.swift */,
+				3267281433D582D5846A320C /* PriorityValidatorSpec.swift */,
 			);
 			path = Impl;
 			sourceTree = "<group>";
@@ -555,9 +555,9 @@
 			isa = PBXGroup;
 			children = (
 				32672E20028EC82E534E0E96 /* Factories */,
+				326722CC4B24F7D9C136D0E4 /* CreateTODONoteView.swift */,
 				32672982EA811F78090E22A4 /* TODONoteListCell.swift */,
 				32672CBD5BFF5EBA3A7D9977 /* TODONoteListView.swift */,
-				326722CC4B24F7D9C136D0E4 /* CreateTODONoteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -591,8 +591,8 @@
 		326728C46FCD79023C808769 /* Impl */ = {
 			isa = PBXGroup;
 			children = (
-				326724697DFC8DD976E0A9FB /* TODONoteListViewModelFactory.swift */,
 				32672AE4F5681606B0175AD2 /* CreateTODONoteListViewModelFactory.swift */,
+				326724697DFC8DD976E0A9FB /* TODONoteListViewModelFactory.swift */,
 			);
 			path = Impl;
 			sourceTree = "<group>";
@@ -601,8 +601,8 @@
 			isa = PBXGroup;
 			children = (
 				326724B3500DD039E4FF4B6B /* Factories */,
-				326723D9FD84134D4638FD12 /* TODONoteListViewModel.swift */,
 				326727A9549842AF77E70D29 /* CreateTODONoteViewModel.swift */,
+				326723D9FD84134D4638FD12 /* TODONoteListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -618,8 +618,8 @@
 		326729CA2AF0562448F81EC2 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				326728D0B4DB6CEE9EF1D9B8 /* ValidatorProtocol.swift */,
 				326720520222307F164DB857 /* Impl */,
+				326728D0B4DB6CEE9EF1D9B8 /* ValidatorProtocol.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -662,8 +662,8 @@
 		32672AFCD10A4D8E405CDBDE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				326727A1E3E971747D875998 /* TODONoteListViewControllerSpec.swift */,
 				32672B8C8588D21D63F16634 /* CreateTODONoteViewControllerSpec.swift */,
+				326727A1E3E971747D875998 /* TODONoteListViewControllerSpec.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -707,14 +707,14 @@
 			children = (
 				3267247F96619D83700AE735 /* AppDelegate */,
 				326721DF6459A4A210841AE4 /* Assemblies */,
+				32672464CDC0A0C38CF77F8F /* Controls */,
 				32672649C1DC77116E4C819B /* Flow */,
 				8C6035CE1D7C5D770042C487 /* Logic */,
+				3267252A74DD4E3459B8E617 /* Main */,
 				326727858CBE873CA2368147 /* Models */,
 				32672648D3B5E7825D712C31 /* ViewControllers */,
 				326728F65B701316054A9D0E /* ViewModels */,
 				3267274006D002E764A3153B /* Views */,
-				32672464CDC0A0C38CF77F8F /* Controls */,
-				3267252A74DD4E3459B8E617 /* Main */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -740,8 +740,8 @@
 		32672F788F8179063A148629 /* Impl */ = {
 			isa = PBXGroup;
 			children = (
-				3267219AF348F7FC5BAE6A80 /* TODONoteListViewModelFactorySpec.swift */,
 				32672C37C5B3E37F269D4586 /* CreateTODONoteListViewModelFactorySpec.swift */,
+				3267219AF348F7FC5BAE6A80 /* TODONoteListViewModelFactorySpec.swift */,
 			);
 			path = Impl;
 			sourceTree = "<group>";
@@ -773,9 +773,9 @@
 			children = (
 				32672377E65705CF65DB6D65 /* Collections */,
 				8C6035D31D7C5DDC0042C487 /* Dates */,
+				326720AF4D106184A24809DF /* Formatters */,
 				8C6035D61D7C5F6A0042C487 /* Identifiers */,
 				32672C897E6715AEAE085773 /* Utilities */,
-				326720AF4D106184A24809DF /* Formatters */,
 				326729CA2AF0562448F81EC2 /* Validators */,
 			);
 			path = Logic;
@@ -786,9 +786,9 @@
 			children = (
 				32672476D456A1C7571A19ED /* Collections */,
 				8C6035D21D7C5DD80042C487 /* Dates */,
+				32672D303EA3427036A9F66A /* Formatters */,
 				8C6035D91D7C5F9D0042C487 /* Identifiers */,
 				3267267573DBC47C586761BF /* Utilities */,
-				32672D303EA3427036A9F66A /* Formatters */,
 				326722D601EF51DD5692CFB6 /* Validators */,
 			);
 			path = Logic;
@@ -829,17 +829,17 @@
 		8C6035E01D7C61840042C487 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				32672A21AA18CA12B5818075 /* CreateTODONoteViewInteractionMock.swift */,
 				32672F46320B93FFDEF9AAC3 /* DateFormatterMock.swift */,
 				8C6035E11D7C618D0042C487 /* DateResolverMock.swift */,
+				8C2B08CA1D7F0808003C5FEF /* FakeRealmObject.swift */,
 				32672FD47B2EEFD830974961 /* FlowConfiguratorMock.swift */,
+				32672A0C85820BA77699B058 /* FlowControllerMock.swift */,
 				8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */,
 				32672BD35F01F0182D0D9D50 /* PriorityImageNameFormatterMock.swift */,
 				32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */,
 				32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */,
 				32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */,
-				32672A0C85820BA77699B058 /* FlowControllerMock.swift */,
-				8C2B08CA1D7F0808003C5FEF /* FakeRealmObject.swift */,
-				32672A21AA18CA12B5818075 /* CreateTODONoteViewInteractionMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
