@@ -13,6 +13,14 @@ class ResultsPropertySpec: QuickSpec {
                 .defaultConfiguration
                 .inMemoryIdentifier = self.name
 
+            beforeEach {
+                let realm = try! Realm()
+
+                try! realm.write {
+                    realm.deleteAll()
+                }
+            }
+
             afterEach {
                 let realm = try! Realm()
 
@@ -23,43 +31,43 @@ class ResultsPropertySpec: QuickSpec {
 
             it("Should subscribe to update event") {
                 let realm = try! Realm()
-                let results = realm.objects(TODONote.self)
+                let results = realm.objects(FakeRealmObject.self)
                 var inserts: [Int] = []
                 var updates: [Int] = []
                 var deletes: [Int] = []
-                let firstTodo = TODONote()
-                firstTodo.guid = "1st"
-                let secondTodo = TODONote()
-                secondTodo.guid = "2nd"
+                let firstObject = FakeRealmObject()
+                firstObject.guid = "1st"
+                let secondObject = FakeRealmObject()
+                secondObject.guid = "2nd"
 
                 let resultsProperty = ResultsProperty(results)
                 resultsProperty.observeNext { c in
                     inserts.appendContentsOf(c.inserts)
                     updates.appendContentsOf(c.updates)
                     deletes.appendContentsOf(c.deletes)
-                }.disposeIn(firstTodo.rBag)
+                }.disposeIn(firstObject.rBag)
 
                 delay(0.1) {
                     try! realm.write {
-                        realm.add(firstTodo)
+                        realm.add(firstObject)
                     }
                 }
 
                 delay(0.2) {
                     try! realm.write {
-                        realm.add(secondTodo)
+                        realm.add(secondObject)
                     }
                 }
 
                 delay(0.3) {
                     try! realm.write {
-                        secondTodo.priority = .High
+                        secondObject.someProperty = "Property"
                     }
                 }
 
                 delay(0.4) {
                     try! realm.write {
-                        realm.delete(firstTodo)
+                        realm.delete(firstObject)
                     }
                 }
 
@@ -70,32 +78,32 @@ class ResultsPropertySpec: QuickSpec {
 
             it("Should subscribe to initial event") {
                 let realm = try! Realm()
-                let results = realm.objects(TODONote.self)
+                let results = realm.objects(FakeRealmObject.self)
                 var inserts: [Int] = []
                 var updates: [Int] = []
                 var deletes: [Int] = []
-                let firstTodo = TODONote()
-                firstTodo.guid = "1st"
-                let secondTodo = TODONote()
-                secondTodo.guid = "2nd"
+                let firstObject = FakeRealmObject()
+                firstObject.guid = "1st"
+                let secondObject = FakeRealmObject()
+                secondObject.guid = "2nd"
 
                 let resultsProperty = ResultsProperty(results)
                 resultsProperty.observeNext { c in
                     inserts.appendContentsOf(c.inserts)
                     updates.appendContentsOf(c.updates)
                     deletes.appendContentsOf(c.deletes)
-                }.disposeIn(firstTodo.rBag)
+                }.disposeIn(firstObject.rBag)
 
                 try! realm.write {
-                    realm.add(firstTodo)
+                    realm.add(firstObject)
                 }
 
                 try! realm.write {
-                    realm.add(secondTodo)
+                    realm.add(secondObject)
                 }
 
                 try! realm.write {
-                    realm.delete(firstTodo)
+                    realm.delete(firstObject)
                 }
 
                 expect(inserts).toEventually(equal([0]))

@@ -17,8 +17,19 @@ class CreateTODOAssembly: AssemblyType {
             CreateTODONoteView()
         }
 
-        container.register(CreateTODONoteViewModel.self) { _ in
-            CreateTODONoteViewModel()
+        container.register(CreateTODONoteViewModel.self) { r in
+            let factory = r.resolve(
+                    CreateTODONoteListViewModelFactoryProtocol.self)!
+
+            return factory.createViewModel()
+        }
+
+        container.register(CreateTODONoteListViewModelFactoryProtocol.self) {
+                r in
+            let dateResolver = r.resolve(DateResolverProtocol.self)!
+
+            return CreateTODONoteListViewModelFactory(
+                    dateResolver: dateResolver)
         }
     }
 }
