@@ -35,6 +35,18 @@ class TODONoteListFlowConfiguratorSpec: QuickSpec {
 
                 expect(controller.title).to(equal("TODOs"))
             }
+
+            it("Should assign on add TODO action") {
+                let controller = TODONoteListViewInteractionMock()
+
+                sut.configureFlow(controller, flowController: flowController)
+                controller.onAddTODO?()
+
+                expect(controller.onAddTODO).toNot(beNil())
+                expect(flowController.lastNavigatedTo).toNot(beNil())
+                expect(flowController.lastNavigatedTo)
+                    .to(be(CreateTODONoteViewController.self))
+            }
         }
     }
 }
