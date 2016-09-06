@@ -72,7 +72,7 @@ class CreateTODONoteView: UIView {
         self.addSubview(self.priorityPicker)
 
         constrain(self.priorityPicker, self.priorityLabel) { p, l in
-            p.height == 50
+            p.height == 28
             p.top == l.bottom + 10
             p.leading == l.leading
             p.trailing == l.trailing
