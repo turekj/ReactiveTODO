@@ -7,7 +7,6 @@ class CreateTODONoteListViewModelFactorySpec: QuickSpec {
 
     override func spec() {
         describe("CreateTODONoteListViewModelFactory") {
-            let dateResolver = DateResolverMock()
             let sut = CreateTODONoteListViewModelFactory()
 
             context("When creating view model") {

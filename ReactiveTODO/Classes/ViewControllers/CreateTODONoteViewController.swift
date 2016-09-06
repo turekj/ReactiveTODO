@@ -8,13 +8,22 @@ class CreateTODONoteViewController: UIViewController,
 
     let createView: CreateTODONoteView
     let viewModel: CreateTODONoteViewModel
+    let dateValidator: Validator<NSDate?>
+    let noteValidator: Validator<String?>
+    let priorityValidator: Validator<Priority?>
 
     var onSave: (Void -> Void)?
 
     init(view: CreateTODONoteView,
-         viewModel: CreateTODONoteViewModel) {
+         viewModel: CreateTODONoteViewModel,
+         dateValidator: Validator<NSDate?>,
+         noteValidator: Validator<String?>,
+         priorityValidator: Validator<Priority?>) {
         self.createView = view
         self.viewModel = viewModel
+        self.dateValidator = dateValidator
+        self.noteValidator = noteValidator
+        self.priorityValidator = priorityValidator
 
         super.init(nibName: nil, bundle: nil)
     }

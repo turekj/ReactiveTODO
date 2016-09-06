@@ -11,8 +11,15 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
             let view = CreateTODONoteView()
             let viewModel = CreateTODONoteViewModel(date: NSDate(),
                     note: nil, priority: nil)
+            let dateValidator = Validator(DateValidatorMock())
+            let noteValidator = Validator(NoteValidatorMock())
+            let priorityValidator = Validator(PriorityValidatorMock())
+
             let sut = CreateTODONoteViewController(view: view,
-                    viewModel: viewModel)
+                    viewModel: viewModel,
+                    dateValidator: dateValidator,
+                    noteValidator: noteValidator,
+                    priorityValidator: priorityValidator)
             sut.viewDidLoad()
 
             it("Should bind datepicker value to view model") {
