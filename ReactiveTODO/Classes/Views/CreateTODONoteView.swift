@@ -9,7 +9,7 @@ class CreateTODONoteView: UIView {
     let priorityLabel = UILabel()
     let priorityPicker = PriorityPicker()
     let dateLabel = UILabel()
-    let triggerDatePickerButton = UIButton(type: .Custom)
+    let triggerPickerButton = UIButton(type: .RoundedRect)
     let datePicker = UIDatePicker()
 
     init() {
@@ -93,12 +93,17 @@ class CreateTODONoteView: UIView {
     }
 
     func configureTriggerDatePickerButton() {
-        self.triggerDatePickerButton.setTitle("Select date", forState: .Normal)
-        self.addSubview(self.triggerDatePickerButton)
+        self.triggerPickerButton.titleEdgeInsets =
+                UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0)
+        self.triggerPickerButton.layer.borderColor = self.tintColor.CGColor
+        self.triggerPickerButton.layer.borderWidth = 1.0
+        self.triggerPickerButton.layer.cornerRadius = 5.0
+        self.triggerPickerButton.setTitle("Select date", forState: .Normal)
+        self.addSubview(self.triggerPickerButton)
 
-        constrain(self.triggerDatePickerButton, self.dateLabel) { b, l in
-            b.width == 150
-            b.height == 50
+        constrain(self.triggerPickerButton, self.dateLabel) { b, l in
+            b.width == 100
+            b.height == 28
             b.leading == l.leading
             b.top == l.bottom + 10
         }
