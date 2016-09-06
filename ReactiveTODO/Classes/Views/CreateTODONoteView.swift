@@ -41,6 +41,7 @@ class CreateTODONoteView: UIView {
     }
 
     func configureNoteTextView() {
+        self.noteTextView.autocorrectionType = .No
         self.noteTextView.layer.borderColor = self.tintColor.CGColor
         self.noteTextView.layer.borderWidth = 1.0
         self.noteTextView.layer.cornerRadius = 5.0

@@ -25,11 +25,8 @@ class CreateTODOAssembly: AssemblyType {
         }
 
         container.register(CreateTODONoteListViewModelFactoryProtocol.self) {
-                r in
-            let dateResolver = r.resolve(DateResolverProtocol.self)!
-
-            return CreateTODONoteListViewModelFactory(
-                    dateResolver: dateResolver)
+                _ in
+            return CreateTODONoteListViewModelFactory()
         }
     }
 }
