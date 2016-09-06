@@ -11,7 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.createFlowController()
 
     private func createAssembler() -> Assembler {
-        let assemblies = [FlowAssembly(), TODOListAssembly()] as [AssemblyType]
+        let assemblies = [CreateTODOAssembly(), FlowAssembly(),
+                          TODOListAssembly()] as [AssemblyType]
         return try! Assembler(assemblies: assemblies)
     }
 

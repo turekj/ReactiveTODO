@@ -9,15 +9,34 @@ class AggregateFlowConfiguratorSpec: QuickSpec {
         describe("AggregateFlowConfigurator") {
             it("Should call configurators passing controller") {
                 let controller = UIViewController()
+                let flowController = FlowControllerMock()
                 let firstConfigurator = FlowConfiguratorMock()
                 let secondConfigurator = FlowConfiguratorMock()
                 let sut = AggregateFlowConfigurator(
                         configurators: [firstConfigurator, secondConfigurator])
 
-                sut.configureFlow(controller)
+                sut.configureFlow(controller, flowController: flowController)
 
-                expect(firstConfigurator.calledWith).to(be(controller))
-                expect(secondConfigurator.calledWith).to(be(controller))
+                expect(firstConfigurator.calledWithViewController)
+                    .to(be(controller))
+                expect(secondConfigurator.calledWithViewController)
+                    .to(be(controller))
+            }
+
+            it("Should call configurators passing flow controller") {
+                let controller = UIViewController()
+                let flowController = FlowControllerMock()
+                let firstConfigurator = FlowConfiguratorMock()
+                let secondConfigurator = FlowConfiguratorMock()
+                let sut = AggregateFlowConfigurator(
+                        configurators: [firstConfigurator, secondConfigurator])
+
+                sut.configureFlow(controller, flowController: flowController)
+
+                expect(firstConfigurator.calledWithFlowController
+                    as? FlowControllerMock).to(be(flowController))
+                expect(secondConfigurator.calledWithFlowController
+                    as? FlowControllerMock).to(be(flowController))
             }
 
             it("Should return false if all children return false") {
@@ -28,7 +47,8 @@ class AggregateFlowConfiguratorSpec: QuickSpec {
                 let sut = AggregateFlowConfigurator(
                         configurators: [firstConfigurator, secondConfigurator])
 
-                let result = sut.configureFlow(UIViewController())
+                let result = sut.configureFlow(UIViewController(),
+                        flowController: FlowControllerMock())
 
                 expect(result).to(beFalse())
             }
@@ -41,7 +61,8 @@ class AggregateFlowConfiguratorSpec: QuickSpec {
                 let sut = AggregateFlowConfigurator(
                         configurators: [firstConfigurator, secondConfigurator])
 
-                let result = sut.configureFlow(UIViewController())
+                let result = sut.configureFlow(UIViewController(),
+                        flowController: FlowControllerMock())
 
                 expect(result).to(beTrue())
             }

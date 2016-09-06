@@ -11,6 +11,8 @@ class TODONoteListViewController: UIViewController,
     let viewModel: TODONoteListViewModel
     let cellFactory: TODONoteListCellFactoryProtocol
 
+    var onAddTODO: (Void -> Void)?
+
     init(view: TODONoteListView, viewModel: TODONoteListViewModel,
          cellFactory: TODONoteListCellFactoryProtocol) {
         self.notesView = view
@@ -38,7 +40,18 @@ class TODONoteListViewController: UIViewController,
     }
 
     func bindViewModel() {
-        self.viewModel.notes.bindTo(self.notesView) {
+        self.bindAddTODONoteButton()
+        self.bindTODONotesList()
+    }
+
+    func bindAddTODONoteButton() {
+        self.notesView.addButton.rTap.observeNext { [unowned self] _ in
+            self.onAddTODO?()
+        }.disposeIn(self.rBag)
+    }
+
+    func bindTODONotesList() {
+        self.viewModel.notes.bindTo(self.notesView.list) {
                 [unowned self] indexPath, notes, list in
             let note = notes[indexPath.row]
             let cell = list.dequeueReusableCellWithIdentifier(

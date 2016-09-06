@@ -9,7 +9,8 @@ class TODONoteFactorySpec: QuickSpec {
         describe("TODONoteFactory") {
             let dateResolver = DateResolverMock()
             let guidGenerator = GUIDGeneratorMock()
-            let sut = TODONoteFactory(dateResolver: dateResolver, guidGenerator: guidGenerator)
+            let sut = TODONoteFactory(dateResolver: dateResolver,
+                    guidGenerator: guidGenerator)
             
             context("When creating a new note") {
                 let note = sut.createTODONote()

@@ -9,9 +9,11 @@ class AggregateFlowConfigurator: FlowConfigurator {
         self.configurators = configurators
     }
 
-    func configureFlow(controller: UIViewController) -> Bool {
+    func configureFlow(controller: UIViewController,
+                       flowController: FlowControllerProtocol) -> Bool {
         for configurator in self.configurators {
-            if configurator.configureFlow(controller) {
+            if configurator.configureFlow(controller,
+                    flowController: flowController) {
                 return true
             }
         }
