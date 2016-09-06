@@ -11,7 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func createAssembler() -> Assembler {
         let assemblies = [CreateTODOAssembly(), FlowAssembly(),
+                          GlobalAssembly(),
                           TODOListAssembly()] as [AssemblyType]
+
         return try! Assembler(assemblies: assemblies)
     }
 

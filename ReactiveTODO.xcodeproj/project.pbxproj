@@ -27,6 +27,7 @@
 		326724EFFDB562D8DAA63B53 /* TODONoteListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727A1E3E971747D875998 /* TODONoteListViewControllerSpec.swift */; };
 		3267251D2BC77FF19D8D3DEA /* PriorityImageNameFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326725CFF549497B382A45E9 /* PriorityImageNameFormatterProtocol.swift */; };
 		32672542515CE31C955CF537 /* TODOListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672BBC6582F1214549032B /* TODOListAssembly.swift */; };
+		3267258B3431728AD5C3EACB /* GlobalAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672BF12639762871798C36 /* GlobalAssembly.swift */; };
 		326725C97AD80DBDF8AEB312 /* TODONoteListCellFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A25006F04C9D2EA2D5D /* TODONoteListCellFactoryProtocol.swift */; };
 		32672610F37FAAB4B40D5A9B /* TODONoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326723D9FD84134D4638FD12 /* TODONoteListViewModel.swift */; };
 		3267263BC7F0166CD764FC38 /* RelativeDateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326721A53A8885D20C22B35B /* RelativeDateFormatterSpec.swift */; };
@@ -177,6 +178,7 @@
 		32672BBC6582F1214549032B /* TODOListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODOListAssembly.swift; sourceTree = "<group>"; };
 		32672BC84FF8E87AB2402029 /* FlowConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowConfigurator.swift; sourceTree = "<group>"; };
 		32672BD35F01F0182D0D9D50 /* PriorityImageNameFormatterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatterMock.swift; sourceTree = "<group>"; };
+		32672BF12639762871798C36 /* GlobalAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalAssembly.swift; sourceTree = "<group>"; };
 		32672C37C5B3E37F269D4586 /* CreateTODONoteListViewModelFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteListViewModelFactorySpec.swift; sourceTree = "<group>"; };
 		32672CB7A3BA680AF28F69AD /* TODONoteListViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewControllerProtocol.swift; sourceTree = "<group>"; };
 		32672CBD5BFF5EBA3A7D9977 /* TODONoteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListView.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				326720C076541708240B696F /* FlowAssembly.swift */,
 				32672BBC6582F1214549032B /* TODOListAssembly.swift */,
 				32672D241515C544B292653C /* CreateTODOAssembly.swift */,
+				32672BF12639762871798C36 /* GlobalAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -922,6 +925,7 @@
 				326724A26E4068B8E4FF32F7 /* CreateTODONoteListViewModelFactory.swift in Sources */,
 				3267235487E22AEF75A6B1F0 /* TestingAppDelegate.swift in Sources */,
 				32672FC0D47F2A980D606BED /* main.swift in Sources */,
+				3267258B3431728AD5C3EACB /* GlobalAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

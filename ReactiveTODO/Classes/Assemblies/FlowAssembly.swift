@@ -17,7 +17,11 @@ class FlowAssembly: AssemblyType {
         }
 
         container.register(UINavigationController.self, name: "root") { _ in
-            UINavigationController(nibName: nil, bundle: nil)
+            let navigationController = UINavigationController(nibName: nil,
+                    bundle: nil)
+            navigationController.navigationBar.translucent = false
+
+            return navigationController
         }
 
         container.register(FlowConfigurator.self, name: "main") { r in
