@@ -1,4 +1,5 @@
 import Cartography
+import ReactiveUIKit
 import UIKit
 
 
@@ -22,6 +23,7 @@ class CreateTODONoteViewController: UIViewController,
         super.viewDidLoad()
 
         self.configureView()
+        self.bindViewModel()
     }
 
     func configureView() {
@@ -30,6 +32,31 @@ class CreateTODONoteViewController: UIViewController,
         constrain(self.createView) { v in
             v.edges == v.superview!.edges
         }
+    }
+
+    func bindViewModel() {
+        self.bindNoteProperty()
+        self.bindPriorityProperty()
+        self.bindDateProperty()
+    }
+
+    func bindNoteProperty() {
+        self.createView.noteTextView.rText.bindTo(self.viewModel.note)
+    }
+
+    func bindPriorityProperty() {
+        let priorityPicker = self.createView.priorityPicker
+
+        priorityPicker.rSelectedSegmentIndex
+            .filter { 0 <= $0 && $0 < 4 }
+            .map { index in
+                let title = priorityPicker.titleForSegmentAtIndex(index)!
+                return Priority(rawValue: title)!
+            }.bindTo(self.viewModel.priority)
+    }
+
+    func bindDateProperty() {
+        self.createView.datePicker.rDate.bindTo(self.viewModel.date)
     }
 
     // MARK: - Required init

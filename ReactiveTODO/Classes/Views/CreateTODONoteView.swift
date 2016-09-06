@@ -41,9 +41,9 @@ class CreateTODONoteView: UIView {
     }
 
     func configureNoteTextView() {
-        self.noteTextView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.noteTextView.layer.borderColor = self.tintColor.CGColor
         self.noteTextView.layer.borderWidth = 1.0
-        self.noteTextView.layer.cornerRadius = 2.0
+        self.noteTextView.layer.cornerRadius = 5.0
         self.noteTextView.returnKeyType = .Done
         self.addSubview(self.noteTextView)
 
