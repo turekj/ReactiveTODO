@@ -40,6 +40,17 @@ class TODONoteListViewController: UIViewController,
     }
 
     func bindViewModel() {
+        self.bindAddTODONoteButton()
+        self.bindTODONotesList()
+    }
+
+    func bindAddTODONoteButton() {
+        self.notesView.addButton.rTap.observeNext { [unowned self] _ in
+            self.onAddTODO?()
+        }.disposeIn(self.rBag)
+    }
+
+    func bindTODONotesList() {
         self.viewModel.notes.bindTo(self.notesView.list) {
                 [unowned self] indexPath, notes, list in
             let note = notes[indexPath.row]

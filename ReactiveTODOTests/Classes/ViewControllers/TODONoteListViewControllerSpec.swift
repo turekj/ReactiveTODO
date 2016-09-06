@@ -27,17 +27,21 @@ class TODONoteListViewControllerSpec: QuickSpec {
             let sut = TODONoteListViewController(view: view,
                     viewModel: viewModel,
                     cellFactory: cellFactory)
+            sut.viewDidLoad()
 
             it("Should invoke callback on add button tap") {
-                var tapped = false
+                var addButtonTapped = false
 
                 sut.onAddTODO = {
-                    tapped = true
+                    addButtonTapped = true
                 }
 
-                view.addButton.sendActionsForControlEvents(.TouchUpInside)
+                dispatch_async(dispatch_get_main_queue()) {
+                    view.addButton.sendActionsForControlEvents(.TouchDown)
+                    view.addButton.sendActionsForControlEvents(.TouchUpInside)
+                }
 
-                expect(tapped).toEventually(beTrue())
+                expect(addButtonTapped).toEventually(beTrue())
             }
         }
     }
