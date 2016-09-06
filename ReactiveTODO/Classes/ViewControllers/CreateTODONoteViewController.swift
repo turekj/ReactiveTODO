@@ -9,6 +9,8 @@ class CreateTODONoteViewController: UIViewController,
     let createView: CreateTODONoteView
     let viewModel: CreateTODONoteViewModel
 
+    var onSave: (Void -> Void)?
+
     init(view: CreateTODONoteView,
          viewModel: CreateTODONoteViewModel) {
         self.createView = view
@@ -22,8 +24,19 @@ class CreateTODONoteViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.configureSaveButton()
         self.configureView()
         self.bindViewModel()
+    }
+
+    func configureSaveButton() {
+        let button = UIBarButtonItem(title: "Save", style: .Plain,
+                target: self, action: #selector(saveButtonPressed(_:)))
+        self.navigationItem.rightBarButtonItem = button
+    }
+
+    func saveButtonPressed(sender: UIBarButtonItem) {
+        self.onSave?()
     }
 
     func configureView() {

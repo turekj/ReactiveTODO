@@ -48,6 +48,26 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
                 expect(viewModel.priority.value?.rawValue)
                     .toEventually(equal(Priority.Low.rawValue))
             }
+
+            it("Should have right bar button item attached") {
+                expect(sut.navigationItem.rightBarButtonItem).toNot(beNil())
+            }
+
+            it("Should invoke on save action when save button is pressed") {
+                var onSaveTriggered = false
+
+                sut.onSave = {
+                    onSaveTriggered = true
+                }
+
+                dispatch_async(dispatch_get_main_queue()) {
+                    let barButton = sut.navigationItem.rightBarButtonItem!
+
+                    barButton.target?.performSelector(barButton.action)
+                }
+
+                expect(onSaveTriggered).toEventually(beTrue())
+            }
         }
     }
 }
