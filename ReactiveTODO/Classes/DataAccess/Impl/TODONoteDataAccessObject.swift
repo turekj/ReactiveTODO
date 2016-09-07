@@ -32,4 +32,18 @@ class TODONoteDataAccessObject: TODONoteDataAccessObjectProtocol {
             .filter("completed == NO")
             .sorted("date", ascending: true)
     }
+
+    func completeTODONote(guid: String) {
+        self.updateTODONote(guid, updates: ["completed": true])
+    }
+
+    func updateTODONote(guid: String, updates: [String: AnyObject]) {
+        let realm = try! Realm()
+        var todoUpdates = updates
+        todoUpdates["guid"] = guid
+
+        try! realm.write {
+            realm.create(TODONote.self, value: todoUpdates, update: true)
+        }
+    }
 }

@@ -135,6 +135,31 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                         .to(equal("note_1_date"))
                 }
             }
+
+            context("When marking note as completed") {
+                it("Should set completed flag to true") {
+                    let realm = try! Realm()
+                    let note = TODONote()
+                    note.guid = "completed_test_guid"
+                    note.date = NSDate(timeIntervalSince1970: 222)
+                    note.note = "Note to complete"
+                    note.priority = .Urgent
+                    note.completed = false
+
+                    try! realm.write {
+                        realm.add(note)
+                    }
+
+                    sut.completeTODONote("completed_test_guid")
+                    let noteQuery = realm.objects(TODONote.self)
+                        .filter("guid = 'completed_test_guid'")
+
+                    expect(noteQuery.count).to(equal(1))
+                    expect(noteQuery.first?.guid)
+                        .to(equal("completed_test_guid"))
+                    expect(noteQuery.first?.completed).to(beTrue())
+                }
+            }
         }
     }
 }
