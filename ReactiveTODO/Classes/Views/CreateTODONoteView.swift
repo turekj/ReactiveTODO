@@ -4,15 +4,26 @@ import UIKit
 
 class CreateTODONoteView: UIView {
 
-    let noteLabel = UILabel()
-    let noteTextView = NoteTextView(validator: Validator(NoteValidator()))
-    let priorityLabel = UILabel()
-    let priorityPicker = UISegmentedControl(items: ["A"])
-    let dateLabel = UILabel()
-    let triggerPickerButton = UIButton(type: .RoundedRect)
-    let datePicker = UIDatePicker()
+    let noteLabel: UILabel
+    let noteTextView: NoteTextView
+    let priorityLabel: UILabel
+    let priorityPicker: PriorityPicker
+    let dateLabel: UILabel
+    let triggerPickerButton: UIButton
+    let datePicker: UIDatePicker
 
-    init() {
+    init(noteLabel: UILabel, noteTextView: NoteTextView,
+         priorityLabel: UILabel, priorityPicker: PriorityPicker,
+         dateLabel: UILabel, triggerPickerButton: UIButton,
+         datePicker: UIDatePicker) {
+        self.noteLabel = noteLabel
+        self.noteTextView = noteTextView
+        self.priorityLabel = priorityLabel
+        self.priorityPicker = priorityPicker
+        self.dateLabel = dateLabel
+        self.triggerPickerButton = triggerPickerButton
+        self.datePicker = datePicker
+
         super.init(frame: CGRectZero)
 
         self.configureView()
