@@ -90,20 +90,39 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
             }
 
             it("Should invoke on save action when save button is pressed") {
-                var onSaveTriggered = false
+                noteTextView.note.value = "Saved Note"
+                datePicker.date.value = NSDate(timeIntervalSince1970: 9999)
+                priorityPicker.priority.value = .Medium
 
-                sut.onSave = {
-                    onSaveTriggered = true
+                var savedDate: NSDate?
+                var savedNote: String?
+                var savedPriority: Priority?
+
+                sut.onSave = { date, note, priority in
+                    savedDate = date
+                    savedNote = note
+                    savedPriority = priority
                 }
 
-                dispatch_async(dispatch_get_main_queue()) {
-                    let barButton = sut.navigationItem.rightBarButtonItem!
+                self.fireRightNavigationButtonClickEvent(sut)
 
-                    barButton.target?.performSelector(barButton.action)
-                }
-
-                expect(onSaveTriggered).toEventually(beTrue())
+                expect(savedDate).toEventuallyNot(beNil())
+                expect(savedDate).toEventually(
+                        equal(NSDate(timeIntervalSince1970: 9999)))
+                expect(savedNote).toEventuallyNot(beNil())
+                expect(savedNote).toEventually(equal("Saved Note"))
+                expect(savedPriority).toEventuallyNot(beNil())
+                expect(savedPriority).toEventually(equal(Priority.Medium))
             }
+        }
+    }
+
+    private func fireRightNavigationButtonClickEvent(
+            viewController: UIViewController) {
+        dispatch_async(dispatch_get_main_queue()) {
+            let barButton = viewController.navigationItem.rightBarButtonItem!
+
+            barButton.target?.performSelector(barButton.action)
         }
     }
 }

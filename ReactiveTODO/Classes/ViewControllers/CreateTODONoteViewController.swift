@@ -13,7 +13,7 @@ class CreateTODONoteViewController: UIViewController,
     let noteValidator: Validator<String?>
     let priorityValidator: Validator<Priority?>
 
-    var onSave: (Void -> Void)?
+    var onSave: ((NSDate, String, Priority) -> Void)?
 
     init(view: CreateTODONoteView,
          viewModel: CreateTODONoteViewModel,
@@ -46,7 +46,9 @@ class CreateTODONoteViewController: UIViewController,
     }
 
     func saveButtonPressed(sender: UIBarButtonItem) {
-        self.onSave?()
+        self.onSave?(self.createView.datePicker.date.value!,
+                self.createView.noteTextView.note.value!,
+                self.createView.priorityPicker.priority.value!)
     }
 
     func configureView() {

@@ -3,5 +3,5 @@ import Foundation
 
 protocol CreateTODONoteViewControllerProtocol {
 
-    var onSave: (Void -> Void)? { get set }
+    var onSave: ((NSDate, String, Priority) -> Void)? { get set }
 }

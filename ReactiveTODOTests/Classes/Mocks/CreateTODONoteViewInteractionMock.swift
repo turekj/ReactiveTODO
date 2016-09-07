@@ -5,5 +5,5 @@ import UIKit
 class CreateTODONoteViewInteractionMock: UIViewController,
         CreateTODONoteViewControllerProtocol {
 
-    var onSave: (Void -> Void)?
+    var onSave: ((NSDate, String, Priority) -> Void)?
 }
