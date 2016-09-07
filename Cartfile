@@ -1,0 +1,17 @@
+# Realm database
+github "realm/realm-cocoa" ~> 1.0
+
+# ReactiveKit
+github "ReactiveKit/ReactiveKit" ~> 2.1
+github "ReactiveKit/ReactiveUIKit" ~> 2.0
+
+# Quick
+github "Quick/Quick" ~> 0.9
+github "Quick/Nimble" ~> 4.1
+
+# Swinject
+github "Swinject/Swinject" ~> 1.1.0
+
+# Carthography
+github "robb/Cartography" ~> 0.6
+
