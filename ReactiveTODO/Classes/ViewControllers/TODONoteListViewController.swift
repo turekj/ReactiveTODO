@@ -55,7 +55,7 @@ class TODONoteListViewController: UIViewController,
                 [unowned self] indexPath, notes, list in
             let note = notes[indexPath.row]
             let cell = list.dequeueReusableCellWithIdentifier(
-                    "TODONoteCellIdentifier") as! TODONoteListCell
+                    ReuseIdentifiers.TODOListCell) as! TODONoteListCell
 
             return self.cellFactory.configureCell(cell, note: note)
         }

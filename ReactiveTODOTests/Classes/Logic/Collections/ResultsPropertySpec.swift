@@ -76,7 +76,7 @@ class ResultsPropertySpec: QuickSpec {
                 expect(deletes).toEventually(equal([0]))
             }
 
-            it("Should subscribe to initial event") {
+            it("Should not subscribe to initial event") {
                 let realm = try! Realm()
                 let results = realm.objects(FakeRealmObject.self)
                 var inserts: [Int] = []
@@ -106,7 +106,7 @@ class ResultsPropertySpec: QuickSpec {
                     realm.delete(firstObject)
                 }
 
-                expect(inserts).toEventually(equal([0]))
+                expect(inserts).toEventually(equal([]))
                 expect(updates).toEventually(equal([]))
                 expect(deletes).toEventually(equal([]))
             }
