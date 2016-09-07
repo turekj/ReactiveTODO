@@ -11,6 +11,11 @@ class CreateTODONoteFlowConfigurator: FlowConfigurator {
 
         controller.title = "Add TODO"
 
+        c.onSave = { _, _, _ in
+            flowController.navigateBackTo(TODONoteListViewController.self,
+                    animated: true)
+        }
+
         return true
     }
 }

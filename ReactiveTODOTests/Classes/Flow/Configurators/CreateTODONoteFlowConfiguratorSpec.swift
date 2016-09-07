@@ -35,6 +35,21 @@ class CreateTODONoteFlowConfiguratorSpec: QuickSpec {
 
                 expect(controller.title).to(equal("Add TODO"))
             }
+
+            it("Should navigate back to notes list on save") {
+                let controller = CreateTODONoteViewInteractionMock()
+                let date = NSDate(timeIntervalSince1970: 222)
+                let note = "Note"
+                let priority = Priority.Urgent
+
+                sut.configureFlow(controller, flowController: flowController)
+                controller.onSave?(date, note, priority)
+
+                expect(controller.onSave).toNot(beNil())
+                expect(flowController.lastNavigatedBackTo).toNot(beNil())
+                expect(flowController.lastNavigatedBackTo)
+                    .to(be(TODONoteListViewController.self))
+            }
         }
     }
 }
