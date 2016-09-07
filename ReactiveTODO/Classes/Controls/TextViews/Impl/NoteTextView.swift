@@ -23,7 +23,6 @@ class NoteTextView: UITextView, NoteTextViewProtocol {
         self.layer.borderColor = self.tintColor.CGColor
         self.layer.borderWidth = 1.0
         self.layer.cornerRadius = 5.0
-        self.returnKeyType = .Done
     }
 
     func bindViewModel() {

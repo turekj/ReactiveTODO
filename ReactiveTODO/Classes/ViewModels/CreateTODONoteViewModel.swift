@@ -4,13 +4,9 @@ import ReactiveKit
 
 class CreateTODONoteViewModel {
 
-    let date: Property<NSDate?>
-    let note: Property<String?>
-    let priority: Property<Priority?>
+    let formValid: Property<Bool>
 
-    init(date: NSDate?, note: String?, priority: Priority?) {
-        self.date = Property(date)
-        self.note = Property(note)
-        self.priority = Property(priority)
+    init(formValid: Bool) {
+        self.formValid = Property(formValid)
     }
 }

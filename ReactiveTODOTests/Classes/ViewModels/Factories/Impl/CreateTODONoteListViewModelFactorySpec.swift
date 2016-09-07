@@ -12,16 +12,8 @@ class CreateTODONoteListViewModelFactorySpec: QuickSpec {
             context("When creating view model") {
                 let viewModel = sut.createViewModel()
 
-                it("Should set date to nil") {
-                    expect(viewModel.date.value).to(beNil())
-                }
-
-                it("Should set note to nil") {
-                    expect(viewModel.note.value).to(beNil())
-                }
-
-                it("Should set priority to nil") {
-                    expect(viewModel.priority.value).to(beNil())
+                it("Should set formValid to false") {
+                    expect(viewModel.formValid.value).to(beFalse())
                 }
             }
         }

@@ -58,7 +58,17 @@ class CreateTODONoteViewController: UIViewController,
     }
 
     func bindViewModel() {
+        self.bindFormValidProperty()
         self.bindSaveButtonEnabled()
+        self.bindNoteTextViewResignFirstResponderOnTap()
+    }
+
+    func bindFormValidProperty() {
+        combineLatest(self.createView.datePicker.date,
+                self.createView.noteTextView.note,
+                self.createView.priorityPicker.priority)
+            .map { d, n, p in d != nil && n != nil && p != nil }
+            .bindTo(self.viewModel.formValid)
     }
 
     func bindSaveButtonEnabled() {
@@ -66,11 +76,15 @@ class CreateTODONoteViewController: UIViewController,
             return
         }
 
-        combineLatest(self.viewModel.note,
-                self.viewModel.date,
-                self.viewModel.priority)
-            .map { $0 != nil && $1 != nil && $2 != nil }
-            .bindTo(saveButton.rEnabled)
+        self.viewModel.formValid.bindTo(saveButton.rEnabled)
+    }
+
+    func bindNoteTextViewResignFirstResponderOnTap() {
+        self.createView.tapStream
+            .observeIn(ImmediateOnMainExecutionContext)
+            .observeNext { _ in
+                self.createView.noteTextView.resignFirstResponder()
+            }.disposeIn(self.rBag)
     }
 
     // MARK: - Required init

@@ -12,7 +12,8 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
             let dateValidator = Validator(DateValidatorMock())
             let noteValidator = Validator(NoteValidatorMock())
             let priorityValidator = Validator(PriorityValidatorMock())
-            let noteTextView = NoteTextView(validator: Validator(noteValidator))
+            let noteTextView = NoteTextViewFirstResponderMock(
+                    validator: Validator(noteValidator))
             let priorityPicker = PriorityPicker(
                     validator: Validator(priorityValidator),
                     priorities: [Priority.Urgent])
@@ -26,8 +27,7 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
                     priorityPicker: priorityPicker,
                     dateLabel: UILabel(),
                     datePicker: datePicker)
-            let viewModel = CreateTODONoteViewModel(date: NSDate(),
-                    note: nil, priority: nil)
+            let viewModel = CreateTODONoteViewModel(formValid: false)
 
             let sut = CreateTODONoteViewController(view: view,
                     viewModel: viewModel,
@@ -36,44 +36,57 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
                     priorityValidator: priorityValidator)
             sut.viewDidLoad()
 
-            it("Should bind datepicker value to view model") {
-                dispatch_async(dispatch_get_main_queue()) {
-                    view.datePicker.date.value =
-                            NSDate(timeIntervalSince1970: 999)
-                    view.datePicker.datePicker
-                        .sendActionsForControlEvents(.ValueChanged)
-                }
-
-                expect(viewModel.date.value)
-                    .toEventually(equal(NSDate(timeIntervalSince1970: 999)))
-            }
-
-            it("Should bind note field value to view model") {
-                dispatch_async(dispatch_get_main_queue()) {
-                    view.noteTextView.text = "Example"
-                    let notification = NSNotification(
-                            name: UITextViewTextDidChangeNotification,
-                            object: view.noteTextView)
-                    NSNotificationCenter.defaultCenter()
-                        .postNotification(notification)
-                }
-
-                expect(viewModel.note.value).toEventually(equal("Example"))
-             }
-
-            it("Should bind priority value to view model") {
-                dispatch_async(dispatch_get_main_queue()) {
-                    view.priorityPicker.selectedSegmentIndex = 3
-                    view.priorityPicker.sendActionsForControlEvents(
-                            .ValueChanged)
-                }
-
-                expect(viewModel.priority.value?.rawValue)
-                    .toEventually(equal(Priority.Low.rawValue))
-            }
-
             it("Should have right bar button item attached") {
                 expect(sut.navigationItem.rightBarButtonItem).toNot(beNil())
+            }
+
+            it("Should block save button if there is no valid date") {
+                sut.navigationItem.rightBarButtonItem!.enabled = true
+                noteTextView.note.value = "Value"
+                priorityPicker.priority.value = Priority.High
+                datePicker.date.value = nil
+
+                expect(sut.navigationItem.rightBarButtonItem!.enabled)
+                    .toEventually(beFalse())
+            }
+
+            it("Should block save button if there is no valid note") {
+                sut.navigationItem.rightBarButtonItem!.enabled = true
+                noteTextView.note.value = nil
+                priorityPicker.priority.value = Priority.High
+                datePicker.date.value = NSDate(timeIntervalSince1970: 123)
+
+                expect(sut.navigationItem.rightBarButtonItem!.enabled)
+                    .toEventually(beFalse())
+            }
+
+            it("Should block save button if there is no valid priority") {
+                sut.navigationItem.rightBarButtonItem!.enabled = true
+                noteTextView.note.value = "Value"
+                priorityPicker.priority.value = nil
+                datePicker.date.value = NSDate(timeIntervalSince1970: 123)
+
+                expect(sut.navigationItem.rightBarButtonItem!.enabled)
+                    .toEventually(beFalse())
+            }
+
+            it("Should unlock save button if all data is valid") {
+                sut.navigationItem.rightBarButtonItem!.enabled = false
+                noteTextView.note.value = "Value"
+                priorityPicker.priority.value = Priority.Low
+                datePicker.date.value = NSDate(timeIntervalSince1970: 123)
+
+                expect(sut.navigationItem.rightBarButtonItem!.enabled)
+                    .toEventually(beTrue())
+            }
+
+            it("Should make note text view resign first responder on tap") {
+                noteTextView.resignedFirstResponder = false
+
+                view.tapStream.next()
+
+                expect(noteTextView.resignedFirstResponder)
+                    .toEventually(beTrue())
             }
 
             it("Should invoke on save action when save button is pressed") {

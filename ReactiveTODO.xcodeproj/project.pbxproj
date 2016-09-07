@@ -19,6 +19,7 @@
 		3267219AB26A0FC61BB36EF5 /* CreateTODONoteViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267283919A641954A4B2CB3 /* CreateTODONoteViewControllerProtocol.swift */; };
 		326722165EBEBC05F42125F2 /* AggregateFlowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326729DD9B9E467E50B526E7 /* AggregateFlowConfiguratorSpec.swift */; };
 		32672286EB0E55627A5A472A /* FlowControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A0C85820BA77699B058 /* FlowControllerMock.swift */; };
+		32672294587EE6CEF9E29958 /* NoteTextViewFirstResponderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326721A54A83C92818376CFB /* NoteTextViewFirstResponderMock.swift */; };
 		326722D9D1B950DFDC487D2D /* DelaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672592B6F473FE03A93D52 /* DelaySpec.swift */; };
 		326722DAAA7E3FFB94391EE3 /* PopupDatePickerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267279AC051F4B2519885C3 /* PopupDatePickerSpec.swift */; };
 		326722EB61637854567FE735 /* ViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */; };
@@ -173,6 +174,7 @@
 		3267215445410D82B1F61A1B /* ReactiveTODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3267219768AAB866D916F159 /* NoteTextViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTextViewSpec.swift; sourceTree = "<group>"; };
 		3267219AF348F7FC5BAE6A80 /* TODONoteListViewModelFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewModelFactorySpec.swift; sourceTree = "<group>"; };
+		326721A54A83C92818376CFB /* NoteTextViewFirstResponderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTextViewFirstResponderMock.swift; sourceTree = "<group>"; };
 		326721AAE94587DB4471BD37 /* CreateTODONoteFlowConfiguratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteFlowConfiguratorSpec.swift; sourceTree = "<group>"; };
 		3267220B0AD5CA8B78F5D603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3267224CB7C4089F5829079D /* FlowControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowControllerSpec.swift; sourceTree = "<group>"; };
@@ -983,6 +985,7 @@
 				32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */,
 				32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */,
 				32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */,
+				326721A54A83C92818376CFB /* NoteTextViewFirstResponderMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1131,6 +1134,7 @@
 				326722DAAA7E3FFB94391EE3 /* PopupDatePickerSpec.swift in Sources */,
 				3267209F0DD0478C5F8140D4 /* TODONoteListCellFactorySpec.swift in Sources */,
 				32672ADAB6BC6D33FE6795C2 /* CreateTODONoteViewSpec.swift in Sources */,
+				32672294587EE6CEF9E29958 /* NoteTextViewFirstResponderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
