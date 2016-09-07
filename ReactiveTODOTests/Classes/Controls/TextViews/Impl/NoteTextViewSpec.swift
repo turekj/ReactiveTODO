@@ -30,18 +30,18 @@ class NoteTextViewSpec: QuickSpec {
                 expect(sut.note.value).toEventually(equal("Some text"))
             }
 
-            it("Should have blue border for valid note") {
+            it("Should have valid value border color for valid note") {
                 sut.note.value = "Valid value"
 
                 expect(sut.layer.borderColor)
-                    .toEventually(be(sut.tintColor.CGColor))
+                    .toEventually(equal(UIColor.validValueColor().CGColor))
             }
 
-            it("Should have red border for invalid note") {
+            it("Should have invalid value border color for invalid note") {
                 sut.note.value = nil
 
                 expect(sut.layer.borderColor)
-                    .toEventually(be(UIColor.redColor().CGColor))
+                    .toEventually(equal(UIColor.invalidValueColor().CGColor))
             }
         }
     }

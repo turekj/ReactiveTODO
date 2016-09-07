@@ -41,6 +41,7 @@
 		326726E4A7C2D75048382FCB /* DateValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672D9797D475F117195828 /* DateValidatorSpec.swift */; };
 		326726E9868926FD0A50DA91 /* AggregateFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AF22BDCDFCE80DEC8C5 /* AggregateFlowConfigurator.swift */; };
 		3267273844694BA9AAF212EF /* AddTODOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727409ABD83AABF88A6E1 /* AddTODOButton.swift */; };
+		326727614C15FC118F92452B /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267283AE3CBCB930D377CC1 /* CGColor.swift */; };
 		3267277510A2612D1C24979B /* TODONoteListViewModelFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672FA9A05827562B9D7E32 /* TODONoteListViewModelFactoryProtocol.swift */; };
 		326727B5F9C7CF4596354FC3 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267245D1792372EBF876060 /* FlowController.swift */; };
 		326727D8E7D75AA00DE10355 /* TODONoteListViewModelFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267219AF348F7FC5BAE6A80 /* TODONoteListViewModelFactorySpec.swift */; };
@@ -62,6 +63,7 @@
 		32672B511D151D05CE13A2F2 /* PriorityPickerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326726CD5EDBF975D860E82A /* PriorityPickerSpec.swift */; };
 		32672B5E7C8F9DA0B4F31BA3 /* CreateTODONoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326723191636737EE2A2433F /* CreateTODONoteViewController.swift */; };
 		32672B8E0D069DE29057CE6E /* CreateTODONoteListViewModelFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672C37C5B3E37F269D4586 /* CreateTODONoteListViewModelFactorySpec.swift */; };
+		32672BD9CF0AF142E83F3449 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672706F111D8DDF57F1291 /* UIColor.swift */; };
 		32672BF288BD0A278AA6E9FF /* ValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326728D0B4DB6CEE9EF1D9B8 /* ValidatorProtocol.swift */; };
 		32672C18A87C16466E320309 /* FlowControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672028E363D148188AEF5E /* FlowControllerProtocol.swift */; };
 		32672C26111F87EDF76B9A3D /* TODONoteListFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267202567C8BB214EC95B96 /* TODONoteListFlowConfigurator.swift */; };
@@ -185,6 +187,7 @@
 		326725C0EED3220DFCC25645 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		326726CD5EDBF975D860E82A /* PriorityPickerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityPickerSpec.swift; sourceTree = "<group>"; };
 		326726FA2899F8F7AC5BE39C /* TODONoteListCellFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactorySpec.swift; sourceTree = "<group>"; };
+		32672706F111D8DDF57F1291 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		326727409ABD83AABF88A6E1 /* AddTODOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTODOButton.swift; sourceTree = "<group>"; };
 		32672777F3CD0B54E209D2DA /* TODONoteListCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactory.swift; sourceTree = "<group>"; };
 		326727A1E3E971747D875998 /* TODONoteListViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -192,6 +195,7 @@
 		326727F2798C9689A03ACA6B /* RelativeDateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativeDateFormatterSpec.swift; sourceTree = "<group>"; };
 		3267281433D582D5846A320C /* PriorityValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityValidatorSpec.swift; sourceTree = "<group>"; };
 		3267283919A641954A4B2CB3 /* CreateTODONoteViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewControllerProtocol.swift; sourceTree = "<group>"; };
+		3267283AE3CBCB930D377CC1 /* CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGColor.swift; sourceTree = "<group>"; };
 		3267285C8635DF5ECEFB4618 /* PriorityValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityValidator.swift; sourceTree = "<group>"; };
 		326728885C18536021B2BB32 /* DateValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
 		3267289B2E3901C87E2DF200 /* DateValidatorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValidatorMock.swift; sourceTree = "<group>"; };
@@ -367,6 +371,15 @@
 				3267202567C8BB214EC95B96 /* TODONoteListFlowConfigurator.swift */,
 			);
 			path = Configurators;
+			sourceTree = "<group>";
+		};
+		3267229BFC990C7DB043EEC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32672706F111D8DDF57F1291 /* UIColor.swift */,
+				3267283AE3CBCB930D377CC1 /* CGColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		326722BE5DCB67A30770EDCF /* Impl */ = {
@@ -781,6 +794,7 @@
 				32672648D3B5E7825D712C31 /* ViewControllers */,
 				326728F65B701316054A9D0E /* ViewModels */,
 				3267274006D002E764A3153B /* Views */,
+				3267229BFC990C7DB043EEC9 /* Extensions */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1110,6 +1124,8 @@
 				32672F57D5976196ABF90BC7 /* NoteTextView.swift in Sources */,
 				32672857FB3FBD025EC36A5D /* PriorityPickerProtocol.swift in Sources */,
 				32672FCB19980E68104E9DB8 /* PriorityPicker.swift in Sources */,
+				32672BD9CF0AF142E83F3449 /* UIColor.swift in Sources */,
+				326727614C15FC118F92452B /* CGColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

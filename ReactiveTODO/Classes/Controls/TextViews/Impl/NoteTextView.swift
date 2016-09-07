@@ -43,11 +43,12 @@ class NoteTextView: UITextView, NoteTextViewProtocol {
     }
 
     func bindNoteValidityStyle() {
-        self.note.map { $0 != nil ? self.tintColor : UIColor.redColor() }
-            .observeIn(ImmediateOnMainExecutionContext)
-            .observeNext { color in
-                self.layer.borderColor = color.CGColor
-            }.disposeIn(self.rBag)
+        self.note.map {
+            $0 != nil ? UIColor.validValueColor() : UIColor.invalidValueColor()
+        }.observeIn(ImmediateOnMainExecutionContext)
+         .observeNext { color in
+            self.layer.borderColor = color.CGColor
+        }.disposeIn(self.rBag)
     }
 
     // MARK: - Required init

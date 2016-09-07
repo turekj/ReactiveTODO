@@ -7,7 +7,7 @@ class CreateTODONoteView: UIView {
     let noteLabel = UILabel()
     let noteTextView = NoteTextView(validator: Validator(NoteValidator()))
     let priorityLabel = UILabel()
-    let priorityPicker = UISegmentedControl()
+    let priorityPicker = UISegmentedControl(items: ["A"])
     let dateLabel = UILabel()
     let triggerPickerButton = UIButton(type: .RoundedRect)
     let datePicker = UIDatePicker()
@@ -65,6 +65,7 @@ class CreateTODONoteView: UIView {
     }
 
     func configurePriorityPicker() {
+        self.priorityPicker.tintColor = UIColor.redColor()
         self.addSubview(self.priorityPicker)
 
         constrain(self.priorityPicker, self.priorityLabel) { p, l in
