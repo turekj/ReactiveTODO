@@ -17,7 +17,10 @@ class CreateTODONoteFlowConfigurator: FlowConfigurator {
 
         controller.title = "Add TODO"
 
-        c.onSave = { _, _, _ in
+        c.onSave = { [unowned self] date, note, priority in
+            self.todoNoteDAO.createTODONote(date,
+                    note: note, priority: priority)
+
             flowController.navigateBackTo(TODONoteListViewController.self,
                     animated: true)
         }

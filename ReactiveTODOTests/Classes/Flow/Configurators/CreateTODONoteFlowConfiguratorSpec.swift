@@ -51,6 +51,25 @@ class CreateTODONoteFlowConfiguratorSpec: QuickSpec {
                 expect(flowController.lastNavigatedBackTo)
                     .to(be(TODONoteListViewController.self))
             }
+
+            it("Should create a new TODO on save") {
+                let controller = CreateTODONoteViewInteractionMock()
+                let date = NSDate(timeIntervalSince1970: 3789)
+                let note = "SUPERB NOTE"
+                let priority = Priority.Low
+
+                sut.configureFlow(controller, flowController: flowController)
+                controller.onSave?(date, note, priority)
+
+                expect(controller.onSave).toNot(beNil())
+                expect(dao.createdDate).toNot(beNil())
+                expect(dao.createdDate)
+                    .to(equal(NSDate(timeIntervalSince1970: 3789)))
+                expect(dao.createdNote).toNot(beNil())
+                expect(dao.createdNote).to(equal("SUPERB NOTE"))
+                expect(dao.createdPriority).toNot(beNil())
+                expect(dao.createdPriority).to(equal(Priority.Low))
+            }
         }
     }
 }

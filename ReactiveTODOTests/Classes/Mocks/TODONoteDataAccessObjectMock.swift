@@ -7,8 +7,16 @@ class TODONoteDataAccessObjectMock: TODONoteDataAccessObjectProtocol {
 
     var targetGuid = ""
 
+    var createdDate: NSDate?
+    var createdNote: String?
+    var createdPriority: Priority?
+
     func createTODONote(date: NSDate, note: String,
                         priority: Priority) -> TODONote {
+        self.createdDate = date
+        self.createdNote = note
+        self.createdPriority = priority
+
         return TODONote()
     }
 
