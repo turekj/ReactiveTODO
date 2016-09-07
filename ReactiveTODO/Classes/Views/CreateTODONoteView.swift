@@ -5,7 +5,7 @@ import UIKit
 class CreateTODONoteView: UIView {
 
     let noteLabel = UILabel()
-    let noteTextView = UITextView()
+    let noteTextView = NoteTextView(validator: Validator(NoteValidator()))
     let priorityLabel = UILabel()
     let priorityPicker = PriorityPicker()
     let dateLabel = UILabel()
@@ -41,11 +41,6 @@ class CreateTODONoteView: UIView {
     }
 
     func configureNoteTextView() {
-        self.noteTextView.autocorrectionType = .No
-        self.noteTextView.layer.borderColor = self.tintColor.CGColor
-        self.noteTextView.layer.borderWidth = 1.0
-        self.noteTextView.layer.cornerRadius = 5.0
-        self.noteTextView.returnKeyType = .Done
         self.addSubview(self.noteTextView)
 
         constrain(self.noteTextView, self.noteLabel) { v, l in

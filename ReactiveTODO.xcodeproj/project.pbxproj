@@ -32,6 +32,7 @@
 		3267244E0A439288B0AF21FD /* RelativeDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326720330D831B8EFB295D37 /* RelativeDateFormatter.swift */; };
 		326724A26E4068B8E4FF32F7 /* CreateTODONoteListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AE4F5681606B0175AD2 /* CreateTODONoteListViewModelFactory.swift */; };
 		326724EFFDB562D8DAA63B53 /* TODONoteListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727A1E3E971747D875998 /* TODONoteListViewControllerSpec.swift */; };
+		32672536472F26F2ADAD1CD8 /* NoteTextViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AA7BD382CF763A9F26F /* NoteTextViewProtocol.swift */; };
 		32672542515CE31C955CF537 /* TODOListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672BBC6582F1214549032B /* TODOListAssembly.swift */; };
 		3267258B3431728AD5C3EACB /* GlobalAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672BF12639762871798C36 /* GlobalAssembly.swift */; };
 		326725C97AD80DBDF8AEB312 /* TODONoteListCellFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A25006F04C9D2EA2D5D /* TODONoteListCellFactoryProtocol.swift */; };
@@ -73,6 +74,7 @@
 		32672DD642CBEF5282AB83C9 /* TODONoteListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326724697DFC8DD976E0A9FB /* TODONoteListViewModelFactory.swift */; };
 		32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */; };
 		32672F12FFEEAB16ABD9F861 /* PriorityPickerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326724696A62843A3DCDAB40 /* PriorityPickerSpec.swift */; };
+		32672F57D5976196ABF90BC7 /* NoteTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B57F48CEBE9BD0C0647 /* NoteTextView.swift */; };
 		32672F8A706C99AA6AF57A83 /* FlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267224CB7C4089F5829079D /* FlowControllerSpec.swift */; };
 		32672F992AFE11670A3318B9 /* DateFormatterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F46320B93FFDEF9AAC3 /* DateFormatterMock.swift */; };
 		32672FC0D47F2A980D606BED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F7118769359FB6A5518 /* main.swift */; };
@@ -200,9 +202,11 @@
 		32672A21AA18CA12B5818075 /* CreateTODONoteViewInteractionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewInteractionMock.swift; sourceTree = "<group>"; };
 		32672A25006F04C9D2EA2D5D /* TODONoteListCellFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactoryProtocol.swift; sourceTree = "<group>"; };
 		32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerMock.swift; sourceTree = "<group>"; };
+		32672AA7BD382CF763A9F26F /* NoteTextViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTextViewProtocol.swift; sourceTree = "<group>"; };
 		32672AE4F5681606B0175AD2 /* CreateTODONoteListViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteListViewModelFactory.swift; sourceTree = "<group>"; };
 		32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMock.swift; sourceTree = "<group>"; };
 		32672AF22BDCDFCE80DEC8C5 /* AggregateFlowConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateFlowConfigurator.swift; sourceTree = "<group>"; };
+		32672B57F48CEBE9BD0C0647 /* NoteTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTextView.swift; sourceTree = "<group>"; };
 		32672B7389F61FF9A6825BB8 /* NoteValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteValidator.swift; sourceTree = "<group>"; };
 		32672B8C8588D21D63F16634 /* CreateTODONoteViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewControllerSpec.swift; sourceTree = "<group>"; };
 		32672BBC6582F1214549032B /* TODOListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODOListAssembly.swift; sourceTree = "<group>"; };
@@ -387,6 +391,14 @@
 			path = Collections;
 			sourceTree = "<group>";
 		};
+		3267239BFA1DB0FAC8F51ACE /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				32672B57F48CEBE9BD0C0647 /* NoteTextView.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
 		326723A168EC5D95B64FAE73 /* Dates */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +445,7 @@
 			children = (
 				326722EE5A364D3506FC6D16 /* Buttons */,
 				32672A30045E04DD4A7438B5 /* SegmentedControls */,
+				32672C9E490691940160DA26 /* TextViews */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -680,6 +693,15 @@
 				326725C0EED3220DFCC25645 /* Delay.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		32672C9E490691940160DA26 /* TextViews */ = {
+			isa = PBXGroup;
+			children = (
+				32672AA7BD382CF763A9F26F /* NoteTextViewProtocol.swift */,
+				3267239BFA1DB0FAC8F51ACE /* Impl */,
+			);
+			path = TextViews;
 			sourceTree = "<group>";
 		};
 		32672D303EA3427036A9F66A /* Formatters */ = {
@@ -1046,6 +1068,8 @@
 				32672FCE03157879ACFF9557 /* PriorityValidator.swift in Sources */,
 				32672DCD79D9EDE5504883DE /* DateValidator.swift in Sources */,
 				3267233FDCCD590113D35B7E /* NoteValidator.swift in Sources */,
+				32672536472F26F2ADAD1CD8 /* NoteTextViewProtocol.swift in Sources */,
+				32672F57D5976196ABF90BC7 /* NoteTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

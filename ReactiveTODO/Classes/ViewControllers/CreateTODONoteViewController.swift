@@ -1,4 +1,5 @@
 import Cartography
+import ReactiveKit
 import ReactiveUIKit
 import UIKit
 
@@ -60,25 +61,46 @@ class CreateTODONoteViewController: UIViewController,
         self.bindNoteProperty()
         self.bindPriorityProperty()
         self.bindDateProperty()
+        self.bindSaveButtonEnabled()
     }
 
     func bindNoteProperty() {
-        self.createView.noteTextView.rText.bindTo(self.viewModel.note)
+        self.createView.noteTextView.rText
+            .filter { self.noteValidator.validate($0) }
+            .bindTo(self.viewModel.note)
     }
 
     func bindPriorityProperty() {
         let priorityPicker = self.createView.priorityPicker
 
         priorityPicker.rSelectedSegmentIndex
-            .filter { 0 <= $0 && $0 < 4 }
-            .map { index in
-                let title = priorityPicker.titleForSegmentAtIndex(index)!
-                return Priority(rawValue: title)!
-            }.bindTo(self.viewModel.priority)
+            .filter { 0 <= $0 && $0 < priorityPicker.numberOfSegments }
+            .map { (i: Int) -> Priority? in
+                guard let t = priorityPicker.titleForSegmentAtIndex(i) else {
+                    return nil
+                }
+
+                return Priority(rawValue: t)
+            }.filter { self.priorityValidator.validate($0) }
+            .bindTo(self.viewModel.priority)
     }
 
     func bindDateProperty() {
-        self.createView.datePicker.rDate.bindTo(self.viewModel.date)
+        self.createView.datePicker.rDate
+            .filter { self.dateValidator.validate($0) }
+            .bindTo(self.viewModel.date)
+    }
+
+    func bindSaveButtonEnabled() {
+        guard let saveButton = self.navigationItem.rightBarButtonItem else {
+            return
+        }
+
+        combineLatest(self.viewModel.note,
+                self.viewModel.date,
+                self.viewModel.priority)
+            .map { $0 != nil && $1 != nil && $2 != nil }
+            .bindTo(saveButton.rEnabled)
     }
 
     // MARK: - Required init
