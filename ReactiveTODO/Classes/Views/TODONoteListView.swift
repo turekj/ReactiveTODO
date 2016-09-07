@@ -19,6 +19,8 @@ class TODONoteListView: UIView {
     }
 
     func configureList() {
+        self.list.registerClass(TODONoteListCell.self,
+                forCellReuseIdentifier: ReuseIdentifiers.TODOListCell)
         self.addSubview(self.list)
 
         constrain(self.list) { v in

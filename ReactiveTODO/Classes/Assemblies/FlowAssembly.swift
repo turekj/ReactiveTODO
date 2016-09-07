@@ -17,19 +17,31 @@ class FlowAssembly: AssemblyType {
         }
 
         container.register(UINavigationController.self, name: "root") { _ in
-            UINavigationController(nibName: nil, bundle: nil)
+            let navigationController = UINavigationController(nibName: nil,
+                    bundle: nil)
+            navigationController.navigationBar.translucent = false
+
+            return navigationController
         }
 
         container.register(FlowConfigurator.self, name: "main") { r in
             let todoListConfigurator = r.resolve(FlowConfigurator.self,
                     name: "todoList")!
-            let configurators = [todoListConfigurator]
+            let createTODOConfigurator = r.resolve(FlowConfigurator.self,
+                    name: "createTODO")!
+            let configurators = [todoListConfigurator, createTODOConfigurator]
 
             return AggregateFlowConfigurator(configurators: configurators)
         }
 
         container.register(FlowConfigurator.self, name: "todoList") { _ in
             TODONoteListFlowConfigurator()
+        }
+
+        container.register(FlowConfigurator.self, name: "createTODO") { r in
+            let dao = r.resolve(TODONoteDataAccessObjectProtocol.self)!
+
+            return CreateTODONoteFlowConfigurator(todoNoteDAO: dao)
         }
     }
 }

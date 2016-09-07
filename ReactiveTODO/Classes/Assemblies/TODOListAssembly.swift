@@ -26,8 +26,10 @@ class TODOListAssembly: AssemblyType {
             return factory.createViewModel()
         }
 
-        container.register(TODONoteListViewModelFactoryProtocol.self) { _ in
-            TODONoteListViewModelFactory()
+        container.register(TODONoteListViewModelFactoryProtocol.self) { r in
+            let dao = r.resolve(TODONoteDataAccessObjectProtocol.self)!
+
+            return TODONoteListViewModelFactory(todoNoteDAO: dao)
         }
 
         container.register(TODONoteListCellFactoryProtocol.self) { r in
@@ -40,10 +42,6 @@ class TODOListAssembly: AssemblyType {
             return TODONoteListCellFactory(bundle: bundle,
                     dateFormatter: dateFormatter,
                     priorityFormatter: priorityFormatter)
-        }
-
-        container.register(DateFormatterProtocol.self, name: "relative") { _ in
-            RelativeDateFormatter()
         }
 
         container.register(PriorityImageNameFormatterProtocol.self) { _ in

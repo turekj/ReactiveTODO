@@ -12,7 +12,8 @@ class TODONoteListViewModelFactorySpec: QuickSpec {
                 .defaultConfiguration
                 .inMemoryIdentifier = self.name
 
-            let sut = TODONoteListViewModelFactory()
+            let dao = TODONoteDataAccessObjectMock()
+            let sut = TODONoteListViewModelFactory(todoNoteDAO: dao)
 
             beforeEach {
                 let realm = try! Realm()
@@ -39,13 +40,13 @@ class TODONoteListViewModelFactorySpec: QuickSpec {
 
             context("When creating a view model") {
 
-                it("Should fetch all notes") {
+                it("Should fetch all current notes from dao") {
+                    dao.targetGuid = "1st"
                     let viewModel = sut.createViewModel()
                     let notes = viewModel.notes.collection
 
-                    expect(notes.count).to(equal(2))
+                    expect(notes.count).to(equal(1))
                     expect(notes[0].guid).to(equal("1st"))
-                    expect(notes[1].guid).to(equal("2nd"))
                 }
             }
         }
