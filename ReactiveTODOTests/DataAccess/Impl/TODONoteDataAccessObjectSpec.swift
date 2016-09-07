@@ -105,6 +105,35 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                     expect(notes.first?.priority).to(equal(Priority.Low))
                     expect(notes.first?.completed).to(beFalse())
                 }
+
+                it("Should order notes by ascending date") {
+                    let realm = try! Realm()
+                    let firstNote = TODONote()
+                    firstNote.guid = "note_1_date"
+                    firstNote.date = NSDate(timeIntervalSince1970: 222)
+                    firstNote.note = "Note One"
+                    firstNote.priority = .Urgent
+                    firstNote.completed = false
+                    let secondNote = TODONote()
+                    secondNote.guid = "note_2_date"
+                    secondNote.date = NSDate(timeIntervalSince1970: 111)
+                    secondNote.note = "Note Two"
+                    secondNote.priority = .Urgent
+                    secondNote.completed = false
+
+                    try! realm.write {
+                        realm.add(firstNote)
+                        realm.add(secondNote)
+                    }
+
+                    let notes = sut.getCurrentTODONotes()
+
+                    expect(notes.count).to(equal(2))
+                    expect(notes.first?.guid)
+                        .to(equal("note_2_date"))
+                    expect(notes.last?.guid)
+                        .to(equal("note_1_date"))
+                }
             }
         }
     }

@@ -28,6 +28,8 @@ class TODONoteDataAccessObject: TODONoteDataAccessObjectProtocol {
 
     func getCurrentTODONotes() -> Results<TODONote> {
         let realm = try! Realm()
-        return realm.objects(TODONote.self).filter("completed == NO")
+        return realm.objects(TODONote.self)
+            .filter("completed == NO")
+            .sorted("date", ascending: true)
     }
 }
