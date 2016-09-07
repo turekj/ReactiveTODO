@@ -26,8 +26,10 @@ class TODOListAssembly: AssemblyType {
             return factory.createViewModel()
         }
 
-        container.register(TODONoteListViewModelFactoryProtocol.self) { _ in
-            TODONoteListViewModelFactory()
+        container.register(TODONoteListViewModelFactoryProtocol.self) { r in
+            let dao = r.resolve(TODONoteDataAccessObjectProtocol.self)!
+
+            return TODONoteListViewModelFactory(todoNoteDAO: dao)
         }
 
         container.register(TODONoteListCellFactoryProtocol.self) { r in

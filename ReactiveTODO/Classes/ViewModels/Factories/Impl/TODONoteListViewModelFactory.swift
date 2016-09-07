@@ -4,10 +4,14 @@ import RealmSwift
 
 class TODONoteListViewModelFactory: TODONoteListViewModelFactoryProtocol {
 
-    func createViewModel() -> TODONoteListViewModel {
-        let realm = try! Realm()
-        let notes = realm.objects(TODONote.self)
+    let todoNoteDAO: TODONoteDataAccessObjectProtocol
 
-        return TODONoteListViewModel(notes: notes)
+    init(todoNoteDAO: TODONoteDataAccessObjectProtocol) {
+        self.todoNoteDAO = todoNoteDAO
+    }
+
+    func createViewModel() -> TODONoteListViewModel {
+        return TODONoteListViewModel(
+                notes: self.todoNoteDAO.getCurrentTODONotes())
     }
 }

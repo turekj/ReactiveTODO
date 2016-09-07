@@ -77,6 +77,7 @@
 		32672C18A87C16466E320309 /* FlowControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672028E363D148188AEF5E /* FlowControllerProtocol.swift */; };
 		32672C26111F87EDF76B9A3D /* TODONoteListFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267202567C8BB214EC95B96 /* TODONoteListFlowConfigurator.swift */; };
 		32672CCCA1AB530F10BC849E /* TODONote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672013E77A7E4A0F60C948 /* TODONote.swift */; };
+		32672CF1CA8B24461D4D7683 /* TODONoteDataAccessObjectMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672D86548D431C953C9DBD /* TODONoteDataAccessObjectMock.swift */; };
 		32672D2181F7C465E9E8BCC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32672C4DBBC6D0EEF5F930C4 /* LaunchScreen.storyboard */; };
 		32672D6A95239F143151939F /* UINavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */; };
 		32672D6BC02E1DA5F6A47C1E /* PriorityImageNameFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672DE8BFC8567FEEEECDEA /* PriorityImageNameFormatterSpec.swift */; };
@@ -241,6 +242,7 @@
 		32672CBD5BFF5EBA3A7D9977 /* TODONoteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListView.swift; sourceTree = "<group>"; };
 		32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteSpec.swift; sourceTree = "<group>"; };
 		32672D241515C544B292653C /* CreateTODOAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODOAssembly.swift; sourceTree = "<group>"; };
+		32672D86548D431C953C9DBD /* TODONoteDataAccessObjectMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteDataAccessObjectMock.swift; sourceTree = "<group>"; };
 		32672D9797D475F117195828 /* DateValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValidatorSpec.swift; sourceTree = "<group>"; };
 		32672DE8BFC8567FEEEECDEA /* PriorityImageNameFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatterSpec.swift; sourceTree = "<group>"; };
 		32672E2DA07CB3DBDB49169E /* PriorityPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityPicker.swift; sourceTree = "<group>"; };
@@ -1030,6 +1032,7 @@
 				32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */,
 				326721A54A83C92818376CFB /* NoteTextViewFirstResponderMock.swift */,
 				326722A7063B99F48903D4FB /* TODONoteFactoryMock.swift */,
+				32672D86548D431C953C9DBD /* TODONoteDataAccessObjectMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1181,6 +1184,7 @@
 				32672294587EE6CEF9E29958 /* NoteTextViewFirstResponderMock.swift in Sources */,
 				32672749647B667A0FC00F7B /* TODONoteDataAccessObjectSpec.swift in Sources */,
 				326723C879506F0B00DB2C12 /* TODONoteFactoryMock.swift in Sources */,
+				32672CF1CA8B24461D4D7683 /* TODONoteDataAccessObjectMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

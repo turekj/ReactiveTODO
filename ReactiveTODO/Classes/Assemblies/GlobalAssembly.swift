@@ -27,5 +27,23 @@ class GlobalAssembly: AssemblyType {
         container.register(DateFormatterProtocol.self, name: "relative") { _ in
             RelativeDateFormatter()
         }
+
+        container.register(TODONoteDataAccessObjectProtocol.self) { r in
+            let factory = r.resolve(TODONoteFactoryProtocol.self)!
+
+            return TODONoteDataAccessObject(factory: factory)
+        }
+
+        container.register(TODONoteFactoryProtocol.self) { r in
+            let dateResolver = r.resolve(DateResolverProtocol.self)!
+            let guidGenerator = r.resolve(GUIDGeneratorProtocol.self)!
+
+            return TODONoteFactory(dateResolver: dateResolver,
+                    guidGenerator: guidGenerator)
+        }
+
+        container.register(GUIDGeneratorProtocol.self) { _ in
+            GUIDGenerator()
+        }
     }
 }
