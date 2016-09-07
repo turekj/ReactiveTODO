@@ -16,6 +16,10 @@ class TODONoteListFlowConfigurator: FlowConfigurator {
                     animated: true)
         }
 
+        c.onSelectTODO = { guid in
+            print("GUID: \(guid)")
+        }
+
         return true
     }
 }

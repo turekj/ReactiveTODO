@@ -12,6 +12,7 @@ class TODONoteListViewController: UIViewController,
     let cellFactory: TODONoteListCellFactoryProtocol
 
     var onAddTODO: (Void -> Void)?
+    var onSelectTODO: (String -> Void)?
 
     init(view: TODONoteListView, viewModel: TODONoteListViewModel,
          cellFactory: TODONoteListCellFactoryProtocol) {
@@ -42,6 +43,7 @@ class TODONoteListViewController: UIViewController,
     func bindViewModel() {
         self.bindAddTODONoteButton()
         self.bindTODONotesList()
+        self.bindRowSelection()
     }
 
     func bindAddTODONoteButton() {
@@ -52,13 +54,22 @@ class TODONoteListViewController: UIViewController,
 
     func bindTODONotesList() {
         self.viewModel.notes.bindTo(self.notesView.list) {
-                [unowned self] indexPath, notes, list in
+                indexPath, notes, list in
             let note = notes[indexPath.row]
             let cell = list.dequeueReusableCellWithIdentifier(
                     ReuseIdentifiers.TODOListCell) as! TODONoteListCell
 
             return self.cellFactory.configureCell(cell, note: note)
         }
+    }
+
+    func bindRowSelection() {
+        self.notesView.list.selectedRow
+            .observeIn(ImmediateOnMainExecutionContext)
+            .observeNext { [unowned self] index in
+                let guid = self.viewModel.notes[index].guid
+                self.onSelectTODO?(guid)
+            }.disposeIn(self.rBag)
     }
 
     // MARK: - Required init
