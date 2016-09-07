@@ -9,19 +9,16 @@ class CreateTODONoteView: UIView {
     let priorityLabel: UILabel
     let priorityPicker: PriorityPicker
     let dateLabel: UILabel
-    let triggerPickerButton: UIButton
-    let datePicker: UIDatePicker
+    let datePicker: PopupDatePicker
 
     init(noteLabel: UILabel, noteTextView: NoteTextView,
          priorityLabel: UILabel, priorityPicker: PriorityPicker,
-         dateLabel: UILabel, triggerPickerButton: UIButton,
-         datePicker: UIDatePicker) {
+         dateLabel: UILabel, datePicker: PopupDatePicker) {
         self.noteLabel = noteLabel
         self.noteTextView = noteTextView
         self.priorityLabel = priorityLabel
         self.priorityPicker = priorityPicker
         self.dateLabel = dateLabel
-        self.triggerPickerButton = triggerPickerButton
         self.datePicker = datePicker
 
         super.init(frame: CGRectZero)
@@ -35,7 +32,6 @@ class CreateTODONoteView: UIView {
         self.configurePriorityLabel()
         self.configurePriorityPicker()
         self.configureDateLabel()
-        self.configureTriggerDatePickerButton()
         self.configureDatePicker()
     }
 
@@ -100,26 +96,14 @@ class CreateTODONoteView: UIView {
         }
     }
 
-    func configureTriggerDatePickerButton() {
-        self.triggerPickerButton.tintColor = UIColor.redColor()
-        self.triggerPickerButton.setTitle("dad", forState: .Normal)
-        self.addSubview(self.triggerPickerButton)
-
-        constrain(self.triggerPickerButton, self.dateLabel) { b, l in
-            b.width == 100
-            b.height == 28
-            b.leading == l.leading
-            b.top == l.bottom + 10
-        }
-    }
-
     func configureDatePicker() {
-        self.datePicker.hidden = true
-        self.datePicker.datePickerMode = .DateAndTime
         self.addSubview(self.datePicker)
 
-        constrain(self.datePicker) { p in
-            p.edges == p.superview!.edges
+        constrain(self.datePicker, self.dateLabel) { p, l in
+            p.leading == l.leading
+            p.bottom == l.bottom + 38
+            p.top == p.superview!.top + 10
+            p.trailing == l.trailing
         }
     }
 

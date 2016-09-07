@@ -59,7 +59,7 @@ class PopupDatePickerSpec: QuickSpec {
                     sut.date.value = nil
 
                     expect(triggerPickerButton.titleForState(.Normal))
-                        .toEventually(equal("Select date"))
+                        .toEventually(equal("Select future date"))
                 }
 
                 it("Should set button's title color to invalid value color") {

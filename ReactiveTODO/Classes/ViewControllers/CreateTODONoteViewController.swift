@@ -58,37 +58,7 @@ class CreateTODONoteViewController: UIViewController,
     }
 
     func bindViewModel() {
-        self.bindNoteProperty()
-        self.bindPriorityProperty()
-        self.bindDateProperty()
         self.bindSaveButtonEnabled()
-    }
-
-    func bindNoteProperty() {
-        self.createView.noteTextView.rText
-            .filter { self.noteValidator.validate($0) }
-            .bindTo(self.viewModel.note)
-    }
-
-    func bindPriorityProperty() {
-        let priorityPicker = self.createView.priorityPicker
-
-        priorityPicker.rSelectedSegmentIndex
-            .filter { 0 <= $0 && $0 < priorityPicker.numberOfSegments }
-            .map { (i: Int) -> Priority? in
-                guard let t = priorityPicker.titleForSegmentAtIndex(i) else {
-                    return nil
-                }
-
-                return Priority(rawValue: t)
-            }.filter { self.priorityValidator.validate($0) }
-            .bindTo(self.viewModel.priority)
-    }
-
-    func bindDateProperty() {
-        self.createView.datePicker.rDate
-            .filter { self.dateValidator.validate($0) }
-            .bindTo(self.viewModel.date)
     }
 
     func bindSaveButtonEnabled() {

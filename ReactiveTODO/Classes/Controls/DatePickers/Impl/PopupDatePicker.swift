@@ -42,7 +42,7 @@ class PopupDatePicker: UIView, PopupDatePickerProtocol {
         self.addSubview(self.triggerPickerButton)
 
         constrain(self.triggerPickerButton) { b in
-            b.width == 100
+            b.width == 200
             b.height == 28
             b.bottom == b.superview!.bottom
             b.leading == b.superview!.leading
@@ -50,13 +50,16 @@ class PopupDatePicker: UIView, PopupDatePickerProtocol {
     }
 
     func configureDatePicker() {
+        self.datePicker.backgroundColor = UIColor.whiteColor()
+        self.datePicker.datePickerMode = .DateAndTime
+        self.datePicker.hidden = true
         self.addSubview(self.datePicker)
 
         constrain(self.datePicker, self.triggerPickerButton) { p, b in
             p.top == p.superview!.top
             p.leading == p.superview!.leading
             p.trailing == p.superview!.trailing
-            p.bottom == p.top - 10
+            p.bottom == b.top - 10
         }
     }
 
@@ -89,7 +92,7 @@ class PopupDatePicker: UIView, PopupDatePickerProtocol {
     func bindButtonCaption() {
         self.date.map { (date: NSDate?) -> String in
             guard let date = date else {
-                return "Select date"
+                return "Select future date"
             }
 
             return self.dateFormatter.format(date)
@@ -104,6 +107,24 @@ class PopupDatePicker: UIView, PopupDatePickerProtocol {
             self.triggerPickerButton.layer.borderColor = color.CGColor
             self.triggerPickerButton.setTitleColor(color, forState: .Normal)
         }.disposeIn(self.rBag)
+    }
+
+    // MARK: - Touch handling
+
+    override func pointInside(point: CGPoint,
+                              withEvent event: UIEvent?) -> Bool {
+        for subview in self.subviews {
+            guard !subview.hidden else {
+                continue
+            }
+
+            let point = self.convertPoint(point, toView: subview)
+            if (subview.pointInside(point, withEvent: event)) {
+                return true
+            }
+        }
+
+        return false
     }
 
     // MARK: - Required init

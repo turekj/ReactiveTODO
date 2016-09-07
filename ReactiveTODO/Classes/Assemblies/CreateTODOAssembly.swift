@@ -1,5 +1,6 @@
 import Foundation
 import Swinject
+import UIKit
 
 
 class CreateTODOAssembly: AssemblyType {
@@ -22,14 +23,14 @@ class CreateTODOAssembly: AssemblyType {
         container.register(CreateTODONoteView.self) { r in
             let noteTextView = r.resolve(NoteTextView.self)!
             let priorityPicker = r.resolve(PriorityPicker.self)!
+            let datePicker = r.resolve(PopupDatePicker.self)!
 
             return CreateTODONoteView(noteLabel: UILabel(),
                     noteTextView: noteTextView,
                     priorityLabel: UILabel(),
                     priorityPicker: priorityPicker,
                     dateLabel: UILabel(),
-                    triggerPickerButton: UIButton(type: .RoundedRect),
-                    datePicker: UIDatePicker())
+                    datePicker: datePicker)
         }
 
         container.register(NoteTextView.self) { r in
@@ -45,6 +46,17 @@ class CreateTODOAssembly: AssemblyType {
 
             return PriorityPicker(validator: priorityValidator,
                     priorities: priorities)
+        }
+
+        container.register(PopupDatePicker.self) { r in
+            let validator = r.resolve(Validator<NSDate?>.self)!
+            let dateFormatter = r.resolve(DateFormatterProtocol.self,
+                    name: "relative")!
+
+            return PopupDatePicker(validator: validator,
+                    dateFormatter: dateFormatter,
+                    datePicker: UIDatePicker(),
+                    triggerPickerButton: UIButton(type: .RoundedRect))
         }
 
         container.register(CreateTODONoteViewModel.self) { r in

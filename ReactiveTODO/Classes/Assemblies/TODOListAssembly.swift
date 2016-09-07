@@ -42,10 +42,6 @@ class TODOListAssembly: AssemblyType {
                     priorityFormatter: priorityFormatter)
         }
 
-        container.register(DateFormatterProtocol.self, name: "relative") { _ in
-            RelativeDateFormatter()
-        }
-
         container.register(PriorityImageNameFormatterProtocol.self) { _ in
             PriorityImageNameFormatter()
         }

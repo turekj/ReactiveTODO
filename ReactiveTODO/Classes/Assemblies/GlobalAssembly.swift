@@ -23,5 +23,9 @@ class GlobalAssembly: AssemblyType {
         container.register(Validator<Priority?>.self) { _ in
             return Validator(PriorityValidator())
         }
+
+        container.register(DateFormatterProtocol.self, name: "relative") { _ in
+            RelativeDateFormatter()
+        }
     }
 }

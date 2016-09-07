@@ -8,6 +8,7 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
 
     override func spec() {
         describe("CreateTODONoteViewController") {
+            let dateFormatter = DateFormatterMock()
             let dateValidator = Validator(DateValidatorMock())
             let noteValidator = Validator(NoteValidatorMock())
             let priorityValidator = Validator(PriorityValidatorMock())
@@ -15,13 +16,16 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
             let priorityPicker = PriorityPicker(
                     validator: Validator(priorityValidator),
                     priorities: [Priority.Urgent])
+            let datePicker = PopupDatePicker(validator: dateValidator,
+                    dateFormatter: dateFormatter,
+                    datePicker: UIDatePicker(),
+                    triggerPickerButton: UIButton(type: .RoundedRect))
             let view = CreateTODONoteView(noteLabel: UILabel(),
                     noteTextView: noteTextView,
                     priorityLabel: UILabel(),
                     priorityPicker: priorityPicker,
                     dateLabel: UILabel(),
-                    triggerPickerButton: UIButton(),
-                    datePicker: UIDatePicker())
+                    datePicker: datePicker)
             let viewModel = CreateTODONoteViewModel(date: NSDate(),
                     note: nil, priority: nil)
 
@@ -34,8 +38,10 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
 
             it("Should bind datepicker value to view model") {
                 dispatch_async(dispatch_get_main_queue()) {
-                    view.datePicker.date = NSDate(timeIntervalSince1970: 999)
-                    view.datePicker.sendActionsForControlEvents(.ValueChanged)
+                    view.datePicker.date.value =
+                            NSDate(timeIntervalSince1970: 999)
+                    view.datePicker.datePicker
+                        .sendActionsForControlEvents(.ValueChanged)
                 }
 
                 expect(viewModel.date.value)
