@@ -61,6 +61,7 @@
 		326729AFE2213A7601B78C6F /* RelativeDateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727F2798C9689A03ACA6B /* RelativeDateFormatterSpec.swift */; };
 		32672A19A0B95CB3ECECF2E2 /* CreateTODONoteViewInteractionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A21AA18CA12B5818075 /* CreateTODONoteViewInteractionMock.swift */; };
 		32672A9F8972DE155AFC5B0D /* PriorityValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672390754E4E1CF924B9A0 /* PriorityValidatorMock.swift */; };
+		32672ADAB6BC6D33FE6795C2 /* CreateTODONoteViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F3C229C669C5509F326 /* CreateTODONoteViewSpec.swift */; };
 		32672B093B967C6B22586728 /* CreateTODONoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326722CC4B24F7D9C136D0E4 /* CreateTODONoteView.swift */; };
 		32672B34626AA276A5EBED55 /* TODONoteListViewInteractionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */; };
 		32672B511D151D05CE13A2F2 /* PriorityPickerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326726CD5EDBF975D860E82A /* PriorityPickerSpec.swift */; };
@@ -238,6 +239,7 @@
 		32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewController.swift; sourceTree = "<group>"; };
 		32672F21C026B687FF752930 /* NoteValidatorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteValidatorMock.swift; sourceTree = "<group>"; };
 		32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewInteractionMock.swift; sourceTree = "<group>"; };
+		32672F3C229C669C5509F326 /* CreateTODONoteViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewSpec.swift; sourceTree = "<group>"; };
 		32672F46320B93FFDEF9AAC3 /* DateFormatterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterMock.swift; sourceTree = "<group>"; };
 		32672F7118769359FB6A5518 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		32672F9D7B0CF0D962B4D82C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 			isa = PBXGroup;
 			children = (
 				32672EB1DB4CE9245FCAB19C /* Factories */,
+				32672F3C229C669C5509F326 /* CreateTODONoteViewSpec.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1127,6 +1130,7 @@
 				32672B511D151D05CE13A2F2 /* PriorityPickerSpec.swift in Sources */,
 				326722DAAA7E3FFB94391EE3 /* PopupDatePickerSpec.swift in Sources */,
 				3267209F0DD0478C5F8140D4 /* TODONoteListCellFactorySpec.swift in Sources */,
+				32672ADAB6BC6D33FE6795C2 /* CreateTODONoteViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

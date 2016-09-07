@@ -1,4 +1,5 @@
 import Cartography
+import ReactiveKit
 import UIKit
 
 
@@ -10,6 +11,7 @@ class CreateTODONoteView: UIView {
     let priorityPicker: PriorityPicker
     let dateLabel: UILabel
     let datePicker: PopupDatePicker
+    let tapStream: PushStream<Void>
 
     init(noteLabel: UILabel, noteTextView: NoteTextView,
          priorityLabel: UILabel, priorityPicker: PriorityPicker,
@@ -20,10 +22,12 @@ class CreateTODONoteView: UIView {
         self.priorityPicker = priorityPicker
         self.dateLabel = dateLabel
         self.datePicker = datePicker
+        self.tapStream = PushStream()
 
         super.init(frame: CGRectZero)
 
         self.configureView()
+        self.attachTapGestureRecognizer()
     }
 
     func configureView() {
@@ -105,6 +109,17 @@ class CreateTODONoteView: UIView {
             p.top == p.superview!.top + 10
             p.trailing == l.trailing
         }
+    }
+
+    func attachTapGestureRecognizer() {
+        let recognizer = UITapGestureRecognizer(target: self,
+                action: #selector(onTap(_:)))
+
+        self.addGestureRecognizer(recognizer)
+    }
+
+    func onTap(sender: UITapGestureRecognizer?) {
+        self.tapStream.next()
     }
 
     // MARK: - Required init
