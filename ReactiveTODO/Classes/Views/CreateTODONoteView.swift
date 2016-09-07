@@ -101,12 +101,8 @@ class CreateTODONoteView: UIView {
     }
 
     func configureTriggerDatePickerButton() {
-        self.triggerPickerButton.titleEdgeInsets =
-                UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0)
-        self.triggerPickerButton.layer.borderColor = self.tintColor.CGColor
-        self.triggerPickerButton.layer.borderWidth = 1.0
-        self.triggerPickerButton.layer.cornerRadius = 5.0
-        self.triggerPickerButton.setTitle("Select date", forState: .Normal)
+        self.triggerPickerButton.tintColor = UIColor.redColor()
+        self.triggerPickerButton.setTitle("dad", forState: .Normal)
         self.addSubview(self.triggerPickerButton)
 
         constrain(self.triggerPickerButton, self.dateLabel) { b, l in

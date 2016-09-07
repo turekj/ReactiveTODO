@@ -8,12 +8,22 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
 
     override func spec() {
         describe("CreateTODONoteViewController") {
-            let view = CreateTODONoteView()
-            let viewModel = CreateTODONoteViewModel(date: NSDate(),
-                    note: nil, priority: nil)
             let dateValidator = Validator(DateValidatorMock())
             let noteValidator = Validator(NoteValidatorMock())
             let priorityValidator = Validator(PriorityValidatorMock())
+            let noteTextView = NoteTextView(validator: Validator(noteValidator))
+            let priorityPicker = PriorityPicker(
+                    validator: Validator(priorityValidator),
+                    priorities: [Priority.Urgent])
+            let view = CreateTODONoteView(noteLabel: UILabel(),
+                    noteTextView: noteTextView,
+                    priorityLabel: UILabel(),
+                    priorityPicker: priorityPicker,
+                    dateLabel: UILabel(),
+                    triggerPickerButton: UIButton(),
+                    datePicker: UIDatePicker())
+            let viewModel = CreateTODONoteViewModel(date: NSDate(),
+                    note: nil, priority: nil)
 
             let sut = CreateTODONoteViewController(view: view,
                     viewModel: viewModel,

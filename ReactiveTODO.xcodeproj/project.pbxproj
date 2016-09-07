@@ -11,6 +11,7 @@
 		3267201DDB6D20FEA22F4DEA /* CreateTODONoteViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B8C8588D21D63F16634 /* CreateTODONoteViewControllerSpec.swift */; };
 		326720520AD3ED033A06827C /* DateFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267202B504A922D51297B8B /* DateFormatterProtocol.swift */; };
 		3267209613114F1F5B44E626 /* NoteValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326723E60013E40271BC5CED /* NoteValidatorSpec.swift */; };
+		3267209F0DD0478C5F8140D4 /* TODONoteListCellFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267254B4AA3F1A2C26822AD /* TODONoteListCellFactorySpec.swift */; };
 		326720E4B9540C57DF0A3177 /* CreateTODOAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672D241515C544B292653C /* CreateTODOAssembly.swift */; };
 		326720E665FC1D9CA1623B11 /* PriorityImageNameFormatterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672BD35F01F0182D0D9D50 /* PriorityImageNameFormatterMock.swift */; };
 		32672111415A1C23039A2648 /* FlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672BC84FF8E87AB2402029 /* FlowConfigurator.swift */; };
@@ -19,13 +20,15 @@
 		326722165EBEBC05F42125F2 /* AggregateFlowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326729DD9B9E467E50B526E7 /* AggregateFlowConfiguratorSpec.swift */; };
 		32672286EB0E55627A5A472A /* FlowControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A0C85820BA77699B058 /* FlowControllerMock.swift */; };
 		326722D9D1B950DFDC487D2D /* DelaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672592B6F473FE03A93D52 /* DelaySpec.swift */; };
+		326722DAAA7E3FFB94391EE3 /* PopupDatePickerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267279AC051F4B2519885C3 /* PopupDatePickerSpec.swift */; };
 		326722EB61637854567FE735 /* ViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */; };
 		326722FC2A9B2A413F42F732 /* CreateTODONoteFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326723ED6932D2EB0AF289AF /* CreateTODONoteFlowConfigurator.swift */; };
+		3267231CF6E43111879BC6E8 /* PopupDatePickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672BAE82AB11D3282BB2F9 /* PopupDatePickerProtocol.swift */; };
 		3267233FDCCD590113D35B7E /* NoteValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B7389F61FF9A6825BB8 /* NoteValidator.swift */; };
 		3267235487E22AEF75A6B1F0 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326720C2555700BAAF4AAAAC /* TestingAppDelegate.swift */; };
 		32672357C48C6D6227248589 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326725C0EED3220DFCC25645 /* Delay.swift */; };
 		326723733A3A26DCFD0630DD /* PriorityImageNameFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267211931B12AC437A0588C /* PriorityImageNameFormatter.swift */; };
-		326723AB82B3846B5B7073FE /* TODONoteListCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672777F3CD0B54E209D2DA /* TODONoteListCellFactory.swift */; };
+		326724014A4654F1BEA09BC1 /* TODONoteListCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A5A2D44C8910B7C721B /* TODONoteListCellFactory.swift */; };
 		32672406F7278C5A01E43579 /* ResultsPropertySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672EFEDA4D23F628BFD697 /* ResultsPropertySpec.swift */; };
 		3267241AC7B1E486CED09578 /* PriorityValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267281433D582D5846A320C /* PriorityValidatorSpec.swift */; };
 		3267243D6AF8734A47BEFAE4 /* FlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326720C076541708240B696F /* FlowAssembly.swift */; };
@@ -50,10 +53,10 @@
 		326728A753F6902838B8386A /* DateValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267289B2E3901C87E2DF200 /* DateValidatorMock.swift */; };
 		326728B1F7A7BD508263C866 /* TODONoteListFlowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326722A59BBC410E360F76E5 /* TODONoteListFlowConfiguratorSpec.swift */; };
 		326728BEC7FC06E6BAB94FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267254A700732E0F7ECE16A /* AppDelegate.swift */; };
-		326728CA300344664177C3F7 /* TODONoteListCellFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326726FA2899F8F7AC5BE39C /* TODONoteListCellFactorySpec.swift */; };
 		326728EF9F409AC30CF38013 /* CreateTODONoteFlowConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326721AAE94587DB4471BD37 /* CreateTODONoteFlowConfiguratorSpec.swift */; };
 		326728F89669C05220759D83 /* CreateTODONoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727A9549842AF77E70D29 /* CreateTODONoteViewModel.swift */; };
 		32672905EA845C5AD9432A5D /* TODONoteListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CB7A3BA680AF28F69AD /* TODONoteListViewControllerProtocol.swift */; };
+		3267296B471F9B2CE1CF1411 /* PopupDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672EC610DA59F2BB9EAFFB /* PopupDatePicker.swift */; };
 		32672978BE265735998536FE /* ResultsProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326729049AD95D343E71F359 /* ResultsProperty.swift */; };
 		326729AFE2213A7601B78C6F /* RelativeDateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727F2798C9689A03ACA6B /* RelativeDateFormatterSpec.swift */; };
 		32672A19A0B95CB3ECECF2E2 /* CreateTODONoteViewInteractionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A21AA18CA12B5818075 /* CreateTODONoteViewInteractionMock.swift */; };
@@ -183,13 +186,13 @@
 		3267245D1792372EBF876060 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		326724697DFC8DD976E0A9FB /* TODONoteListViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewModelFactory.swift; sourceTree = "<group>"; };
 		3267254A700732E0F7ECE16A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3267254B4AA3F1A2C26822AD /* TODONoteListCellFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactorySpec.swift; sourceTree = "<group>"; };
 		32672592B6F473FE03A93D52 /* DelaySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelaySpec.swift; sourceTree = "<group>"; };
 		326725C0EED3220DFCC25645 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		326726CD5EDBF975D860E82A /* PriorityPickerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityPickerSpec.swift; sourceTree = "<group>"; };
-		326726FA2899F8F7AC5BE39C /* TODONoteListCellFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactorySpec.swift; sourceTree = "<group>"; };
 		32672706F111D8DDF57F1291 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		326727409ABD83AABF88A6E1 /* AddTODOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTODOButton.swift; sourceTree = "<group>"; };
-		32672777F3CD0B54E209D2DA /* TODONoteListCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactory.swift; sourceTree = "<group>"; };
+		3267279AC051F4B2519885C3 /* PopupDatePickerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDatePickerSpec.swift; sourceTree = "<group>"; };
 		326727A1E3E971747D875998 /* TODONoteListViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewControllerSpec.swift; sourceTree = "<group>"; };
 		326727A9549842AF77E70D29 /* CreateTODONoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewModel.swift; sourceTree = "<group>"; };
 		326727F2798C9689A03ACA6B /* RelativeDateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativeDateFormatterSpec.swift; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 		32672A0C85820BA77699B058 /* FlowControllerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowControllerMock.swift; sourceTree = "<group>"; };
 		32672A21AA18CA12B5818075 /* CreateTODONoteViewInteractionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewInteractionMock.swift; sourceTree = "<group>"; };
 		32672A25006F04C9D2EA2D5D /* TODONoteListCellFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactoryProtocol.swift; sourceTree = "<group>"; };
+		32672A5A2D44C8910B7C721B /* TODONoteListCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactory.swift; sourceTree = "<group>"; };
 		32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerMock.swift; sourceTree = "<group>"; };
 		32672AA7BD382CF763A9F26F /* NoteTextViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTextViewProtocol.swift; sourceTree = "<group>"; };
 		32672AE4F5681606B0175AD2 /* CreateTODONoteListViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteListViewModelFactory.swift; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 		32672B57F48CEBE9BD0C0647 /* NoteTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTextView.swift; sourceTree = "<group>"; };
 		32672B7389F61FF9A6825BB8 /* NoteValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteValidator.swift; sourceTree = "<group>"; };
 		32672B8C8588D21D63F16634 /* CreateTODONoteViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewControllerSpec.swift; sourceTree = "<group>"; };
+		32672BAE82AB11D3282BB2F9 /* PopupDatePickerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDatePickerProtocol.swift; sourceTree = "<group>"; };
 		32672BBC6582F1214549032B /* TODOListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODOListAssembly.swift; sourceTree = "<group>"; };
 		32672BC84FF8E87AB2402029 /* FlowConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowConfigurator.swift; sourceTree = "<group>"; };
 		32672BD35F01F0182D0D9D50 /* PriorityImageNameFormatterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatterMock.swift; sourceTree = "<group>"; };
@@ -228,6 +233,7 @@
 		32672D9797D475F117195828 /* DateValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValidatorSpec.swift; sourceTree = "<group>"; };
 		32672DE8BFC8567FEEEECDEA /* PriorityImageNameFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatterSpec.swift; sourceTree = "<group>"; };
 		32672E2DA07CB3DBDB49169E /* PriorityPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityPicker.swift; sourceTree = "<group>"; };
+		32672EC610DA59F2BB9EAFFB /* PopupDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDatePicker.swift; sourceTree = "<group>"; };
 		32672EFEDA4D23F628BFD697 /* ResultsPropertySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsPropertySpec.swift; sourceTree = "<group>"; };
 		32672F0A9794D2CB1A30780C /* TODONoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewController.swift; sourceTree = "<group>"; };
 		32672F21C026B687FF752930 /* NoteValidatorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteValidatorMock.swift; sourceTree = "<group>"; };
@@ -347,6 +353,14 @@
 			path = Assemblies;
 			sourceTree = "<group>";
 		};
+		3267220F3A696ED174116AB8 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				3267279AC051F4B2519885C3 /* PopupDatePickerSpec.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
 		32672247FECDBC7F3A70458E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +410,14 @@
 				3267266AFF95ECCDC44B46AF /* Impl */,
 			);
 			path = Validators;
+			sourceTree = "<group>";
+		};
+		326722D6872D37C7A20C108E /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				3267254B4AA3F1A2C26822AD /* TODONoteListCellFactorySpec.swift */,
+			);
+			path = Impl;
 			sourceTree = "<group>";
 		};
 		326722EE5A364D3506FC6D16 /* Buttons */ = {
@@ -487,6 +509,7 @@
 				326722EE5A364D3506FC6D16 /* Buttons */,
 				32672A30045E04DD4A7438B5 /* SegmentedControls */,
 				32672C9E490691940160DA26 /* TextViews */,
+				32672C7D6769AA3C8FDD3158 /* DatePickers */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -552,6 +575,14 @@
 				32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3267254AC3337540B9F27D6E /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				32672A5A2D44C8910B7C721B /* TODONoteListCellFactory.swift */,
+			);
+			path = Impl;
 			sourceTree = "<group>";
 		};
 		326725CA2B5B8659334C7D4F /* ReactiveTODO */ = {
@@ -653,6 +684,7 @@
 			children = (
 				326727A9BC568866AC8283F2 /* SegmentedControls */,
 				3267242C5E7513B3A6BC2816 /* TextViews */,
+				32672B57C92F91D445DC3392 /* DatePickers */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -738,6 +770,23 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		32672B57C92F91D445DC3392 /* DatePickers */ = {
+			isa = PBXGroup;
+			children = (
+				3267220F3A696ED174116AB8 /* Impl */,
+			);
+			path = DatePickers;
+			sourceTree = "<group>";
+		};
+		32672C7D6769AA3C8FDD3158 /* DatePickers */ = {
+			isa = PBXGroup;
+			children = (
+				32672E1F0DAB2D7724495886 /* Impl */,
+				32672BAE82AB11D3282BB2F9 /* PopupDatePickerProtocol.swift */,
+			);
+			path = DatePickers;
+			sourceTree = "<group>";
+		};
 		32672C897E6715AEAE085773 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -764,11 +813,19 @@
 			path = Formatters;
 			sourceTree = "<group>";
 		};
+		32672E1F0DAB2D7724495886 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				32672EC610DA59F2BB9EAFFB /* PopupDatePicker.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
 		32672E20028EC82E534E0E96 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				32672777F3CD0B54E209D2DA /* TODONoteListCellFactory.swift */,
 				32672A25006F04C9D2EA2D5D /* TODONoteListCellFactoryProtocol.swift */,
+				3267254AC3337540B9F27D6E /* Impl */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -776,7 +833,7 @@
 		32672EB1DB4CE9245FCAB19C /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				326726FA2899F8F7AC5BE39C /* TODONoteListCellFactorySpec.swift */,
+				326722D6872D37C7A20C108E /* Impl */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1041,7 +1098,6 @@
 				8C6035E21D7C618D0042C487 /* DateResolverMock.swift in Sources */,
 				32672406F7278C5A01E43579 /* ResultsPropertySpec.swift in Sources */,
 				326722D9D1B950DFDC487D2D /* DelaySpec.swift in Sources */,
-				326728CA300344664177C3F7 /* TODONoteListCellFactorySpec.swift in Sources */,
 				32672F992AFE11670A3318B9 /* DateFormatterMock.swift in Sources */,
 				326720E665FC1D9CA1623B11 /* PriorityImageNameFormatterMock.swift in Sources */,
 				32672015F5C60962B6DAFD81 /* FlowConfiguratorMock.swift in Sources */,
@@ -1069,6 +1125,8 @@
 				32672A9F8972DE155AFC5B0D /* PriorityValidatorMock.swift in Sources */,
 				32672E3E7E9DD3B15CB48D00 /* NoteTextViewSpec.swift in Sources */,
 				32672B511D151D05CE13A2F2 /* PriorityPickerSpec.swift in Sources */,
+				326722DAAA7E3FFB94391EE3 /* PopupDatePickerSpec.swift in Sources */,
+				3267209F0DD0478C5F8140D4 /* TODONoteListCellFactorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,7 +1146,6 @@
 				32672675BB4D83FD59E61398 /* TODONoteListViewController.swift in Sources */,
 				326728224C6388392A53D6DF /* TODONoteListView.swift in Sources */,
 				32672610F37FAAB4B40D5A9B /* TODONoteListViewModel.swift in Sources */,
-				326723AB82B3846B5B7073FE /* TODONoteListCellFactory.swift in Sources */,
 				326725C97AD80DBDF8AEB312 /* TODONoteListCellFactoryProtocol.swift in Sources */,
 				32672111415A1C23039A2648 /* FlowConfigurator.swift in Sources */,
 				326726E9868926FD0A50DA91 /* AggregateFlowConfigurator.swift in Sources */,
@@ -1126,6 +1183,9 @@
 				32672FCB19980E68104E9DB8 /* PriorityPicker.swift in Sources */,
 				32672BD9CF0AF142E83F3449 /* UIColor.swift in Sources */,
 				326727614C15FC118F92452B /* CGColor.swift in Sources */,
+				3267296B471F9B2CE1CF1411 /* PopupDatePicker.swift in Sources */,
+				3267231CF6E43111879BC6E8 /* PopupDatePickerProtocol.swift in Sources */,
+				326724014A4654F1BEA09BC1 /* TODONoteListCellFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

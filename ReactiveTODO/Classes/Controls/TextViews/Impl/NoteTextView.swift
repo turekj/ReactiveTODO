@@ -1,6 +1,6 @@
-import Foundation
 import ReactiveKit
 import ReactiveUIKit
+import UIKit
 
 
 class NoteTextView: UITextView, NoteTextViewProtocol {
