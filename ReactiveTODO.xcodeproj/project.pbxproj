@@ -73,6 +73,7 @@
 		32672DCD79D9EDE5504883DE /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326728885C18536021B2BB32 /* DateValidator.swift */; };
 		32672DD642CBEF5282AB83C9 /* TODONoteListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326724697DFC8DD976E0A9FB /* TODONoteListViewModelFactory.swift */; };
 		32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */; };
+		32672E3E7E9DD3B15CB48D00 /* NoteTextViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267219768AAB866D916F159 /* NoteTextViewSpec.swift */; };
 		32672F12FFEEAB16ABD9F861 /* PriorityPickerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326724696A62843A3DCDAB40 /* PriorityPickerSpec.swift */; };
 		32672F57D5976196ABF90BC7 /* NoteTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B57F48CEBE9BD0C0647 /* NoteTextView.swift */; };
 		32672F8A706C99AA6AF57A83 /* FlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267224CB7C4089F5829079D /* FlowControllerSpec.swift */; };
@@ -163,6 +164,7 @@
 		326720E5CADB574D0EEBBD89 /* CreateTODONoteListViewModelFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteListViewModelFactoryProtocol.swift; sourceTree = "<group>"; };
 		3267211931B12AC437A0588C /* PriorityImageNameFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatter.swift; sourceTree = "<group>"; };
 		3267215445410D82B1F61A1B /* ReactiveTODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3267219768AAB866D916F159 /* NoteTextViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTextViewSpec.swift; sourceTree = "<group>"; };
 		3267219AF348F7FC5BAE6A80 /* TODONoteListViewModelFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListViewModelFactorySpec.swift; sourceTree = "<group>"; };
 		326721AAE94587DB4471BD37 /* CreateTODONoteFlowConfiguratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteFlowConfiguratorSpec.swift; sourceTree = "<group>"; };
 		3267220B0AD5CA8B78F5D603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -357,6 +359,14 @@
 			path = Configurators;
 			sourceTree = "<group>";
 		};
+		326722BE5DCB67A30770EDCF /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				3267219768AAB866D916F159 /* NoteTextViewSpec.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
 		326722D601EF51DD5692CFB6 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +424,14 @@
 				326725CA2B5B8659334C7D4F /* ReactiveTODO */,
 				326722FBAB0DC1760569764F /* ReactiveTODOTests */,
 			);
+			sourceTree = "<group>";
+		};
+		3267242C5E7513B3A6BC2816 /* TextViews */ = {
+			isa = PBXGroup;
+			children = (
+				326722BE5DCB67A30770EDCF /* Impl */,
+			);
+			path = TextViews;
 			sourceTree = "<group>";
 		};
 		32672452B880A85BB8A859D0 /* Assets */ = {
@@ -603,6 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				326727A9BC568866AC8283F2 /* SegmentedControls */,
+				3267242C5E7513B3A6BC2816 /* TextViews */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -1016,6 +1035,7 @@
 				326728A753F6902838B8386A /* DateValidatorMock.swift in Sources */,
 				32672DA1926C0F33F60C9574 /* NoteValidatorMock.swift in Sources */,
 				32672A9F8972DE155AFC5B0D /* PriorityValidatorMock.swift in Sources */,
+				32672E3E7E9DD3B15CB48D00 /* NoteTextViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
