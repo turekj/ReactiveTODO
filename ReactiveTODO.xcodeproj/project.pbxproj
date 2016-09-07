@@ -376,8 +376,8 @@
 		3267229BFC990C7DB043EEC9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				32672706F111D8DDF57F1291 /* UIColor.swift */,
 				3267283AE3CBCB930D377CC1 /* CGColor.swift */,
+				32672706F111D8DDF57F1291 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -705,8 +705,8 @@
 		32672A30045E04DD4A7438B5 /* SegmentedControls */ = {
 			isa = PBXGroup;
 			children = (
-				32672B5024E51200AFF00AE4 /* PriorityPickerProtocol.swift */,
 				32672762107E5345EAC0777D /* Impl */,
+				32672B5024E51200AFF00AE4 /* PriorityPickerProtocol.swift */,
 			);
 			path = SegmentedControls;
 			sourceTree = "<group>";
@@ -749,8 +749,8 @@
 		32672C9E490691940160DA26 /* TextViews */ = {
 			isa = PBXGroup;
 			children = (
-				32672AA7BD382CF763A9F26F /* NoteTextViewProtocol.swift */,
 				3267239BFA1DB0FAC8F51ACE /* Impl */,
+				32672AA7BD382CF763A9F26F /* NoteTextViewProtocol.swift */,
 			);
 			path = TextViews;
 			sourceTree = "<group>";
@@ -787,6 +787,7 @@
 				3267247F96619D83700AE735 /* AppDelegate */,
 				326721DF6459A4A210841AE4 /* Assemblies */,
 				32672464CDC0A0C38CF77F8F /* Controls */,
+				3267229BFC990C7DB043EEC9 /* Extensions */,
 				32672649C1DC77116E4C819B /* Flow */,
 				8C6035CE1D7C5D770042C487 /* Logic */,
 				3267252A74DD4E3459B8E617 /* Main */,
@@ -794,7 +795,6 @@
 				32672648D3B5E7825D712C31 /* ViewControllers */,
 				326728F65B701316054A9D0E /* ViewModels */,
 				3267274006D002E764A3153B /* Views */,
-				3267229BFC990C7DB043EEC9 /* Extensions */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -912,17 +912,17 @@
 				32672A21AA18CA12B5818075 /* CreateTODONoteViewInteractionMock.swift */,
 				32672F46320B93FFDEF9AAC3 /* DateFormatterMock.swift */,
 				8C6035E11D7C618D0042C487 /* DateResolverMock.swift */,
+				3267289B2E3901C87E2DF200 /* DateValidatorMock.swift */,
 				8C2B08CA1D7F0808003C5FEF /* FakeRealmObject.swift */,
 				32672FD47B2EEFD830974961 /* FlowConfiguratorMock.swift */,
 				32672A0C85820BA77699B058 /* FlowControllerMock.swift */,
 				8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */,
+				32672F21C026B687FF752930 /* NoteValidatorMock.swift */,
 				32672BD35F01F0182D0D9D50 /* PriorityImageNameFormatterMock.swift */,
+				32672390754E4E1CF924B9A0 /* PriorityValidatorMock.swift */,
 				32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */,
 				32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */,
 				32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */,
-				3267289B2E3901C87E2DF200 /* DateValidatorMock.swift */,
-				32672F21C026B687FF752930 /* NoteValidatorMock.swift */,
-				32672390754E4E1CF924B9A0 /* PriorityValidatorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
