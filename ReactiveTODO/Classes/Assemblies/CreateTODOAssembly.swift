@@ -9,15 +9,9 @@ class CreateTODOAssembly: AssemblyType {
         container.register(CreateTODONoteViewController.self) { r in
             let view = r.resolve(CreateTODONoteView.self)!
             let viewModel = r.resolve(CreateTODONoteViewModel.self)!
-            let dateValidator = r.resolve(Validator<NSDate?>.self)!
-            let noteValidator = r.resolve(Validator<String?>.self)!
-            let priorityValidator = r.resolve(Validator<Priority?>.self)!
 
             return CreateTODONoteViewController(view: view,
-                    viewModel: viewModel,
-                    dateValidator: dateValidator,
-                    noteValidator: noteValidator,
-                    priorityValidator: priorityValidator)
+                    viewModel: viewModel)
         }
 
         container.register(CreateTODONoteView.self) { r in
