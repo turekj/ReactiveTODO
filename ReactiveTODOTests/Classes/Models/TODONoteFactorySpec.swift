@@ -26,6 +26,10 @@ class TODONoteFactorySpec: QuickSpec {
                 it("Should set low priority") {
                     expect(note.priority).to(equal(Priority.Low))
                 }
+
+                it("Should set completed to false") {
+                    expect(note.completed).to(beFalse())
+                }
             }
         }
     }

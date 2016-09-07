@@ -35,6 +35,7 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                 it("Should save created note in database") {
                     let realm = try! Realm()
                     factory.guid = "FACTORY_GUID"
+                    factory.completed = true
 
                     sut.createTODONote(NSDate(timeIntervalSince1970: 444),
                             note: "Creanote", priority: Priority.Urgent)
@@ -49,10 +50,13 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                         .to(equal("Creanote"))
                     expect(realm.objects(TODONote.self).first?.priority)
                         .to(equal(Priority.Urgent))
+                    expect(realm.objects(TODONote.self).first?.completed)
+                        .to(beTrue())
                 }
 
                 it("Should return created note") {
                     factory.guid = "CREATED_GUID"
+                    factory.completed = true
 
                     let result = sut.createTODONote(
                             NSDate(timeIntervalSince1970: 444),
@@ -64,6 +68,7 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                     expect(result.date).to(
                             equal(NSDate(timeIntervalSince1970: 444)))
                     expect(result.priority).to(equal(Priority.Urgent))
+                    expect(result.completed).to(beTrue())
                 }
             }
 
