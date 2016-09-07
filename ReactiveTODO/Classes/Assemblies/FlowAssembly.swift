@@ -38,8 +38,10 @@ class FlowAssembly: AssemblyType {
             TODONoteListFlowConfigurator()
         }
 
-        container.register(FlowConfigurator.self, name: "createTODO") { _ in
-            CreateTODONoteFlowConfigurator()
+        container.register(FlowConfigurator.self, name: "createTODO") { r in
+            let dao = r.resolve(TODONoteDataAccessObjectProtocol.self)!
+
+            return CreateTODONoteFlowConfigurator(todoNoteDAO: dao)
         }
     }
 }

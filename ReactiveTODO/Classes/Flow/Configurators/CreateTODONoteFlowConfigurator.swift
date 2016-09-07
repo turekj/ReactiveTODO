@@ -3,6 +3,12 @@ import UIKit
 
 class CreateTODONoteFlowConfigurator: FlowConfigurator {
 
+    let todoNoteDAO: TODONoteDataAccessObjectProtocol
+
+    init(todoNoteDAO: TODONoteDataAccessObjectProtocol) {
+        self.todoNoteDAO = todoNoteDAO
+    }
+
     func configureFlow(controller: UIViewController,
                        flowController: FlowControllerProtocol) -> Bool {
         guard var c = controller as? CreateTODONoteViewControllerProtocol else {

@@ -8,7 +8,8 @@ class CreateTODONoteFlowConfiguratorSpec: QuickSpec {
     override func spec() {
         describe("CreateTODONoteFlowConfigurator") {
             let flowController = FlowControllerMock()
-            let sut = CreateTODONoteFlowConfigurator()
+            let dao = TODONoteDataAccessObjectMock()
+            let sut = CreateTODONoteFlowConfigurator(todoNoteDAO: dao)
 
             it("Should return false if controller is not a TODO creator") {
                 let controller = ViewControllerMock(nibName: nil, bundle: nil)
