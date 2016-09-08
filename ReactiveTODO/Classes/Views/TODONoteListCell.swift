@@ -32,8 +32,9 @@ class TODONoteListCell: UITableViewCell {
     }
 
     func configureDateView() {
-        self.dateView.lineBreakMode = .ByTruncatingMiddle
-        self.dateView.numberOfLines = 1
+        self.dateView.font = UIFont.systemFontOfSize(10)
+        self.dateView.lineBreakMode = .ByWordWrapping
+        self.dateView.numberOfLines = 0
         self.dateView.textAlignment = .Center
         self.contentView.addSubview(self.dateView)
 
@@ -45,8 +46,9 @@ class TODONoteListCell: UITableViewCell {
     }
 
     func configureTitleView() {
+        self.titleView.font = UIFont.systemFontOfSize(14)
         self.titleView.lineBreakMode = .ByTruncatingTail
-        self.titleView.numberOfLines = 1
+        self.titleView.numberOfLines = 2
         self.titleView.textAlignment = .Left
         self.contentView.addSubview(self.titleView)
 
