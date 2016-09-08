@@ -6,7 +6,7 @@ Simple TODO note application for the iOS system written in Swift.
 
 ## Goal
 
-The app was not built with amazing features in mind. It was done solely to showcast some top-of-the-line iOS app architecture patterns / tools and methodologies. The app makes use of:
+The app was not built with amazing features in mind. It was done solely to showcast some top-of-the-line iOS app architecture patterns, tools and methodologies. The app makes use of:
 
 - [x] [Swift](https://developer.apple.com/swift/) as a modern iOS programming language
 - [x] [Carthage](https://github.com/Carthage/Carthage) as a dependency manager
