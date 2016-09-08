@@ -11,6 +11,8 @@ class TODONoteDataAccessObjectMock: TODONoteDataAccessObjectProtocol {
     var createdNote: String?
     var createdPriority: Priority?
 
+    var completedGuid: String?
+
     func createTODONote(date: NSDate, note: String,
                         priority: Priority) -> TODONote {
         self.createdDate = date
@@ -25,5 +27,9 @@ class TODONoteDataAccessObjectMock: TODONoteDataAccessObjectProtocol {
 
         return realm.objects(TODONote.self)
             .filter("guid = '\(self.targetGuid)'")
+    }
+
+    func completeTODONote(guid: String) {
+        self.completedGuid = guid
     }
 }

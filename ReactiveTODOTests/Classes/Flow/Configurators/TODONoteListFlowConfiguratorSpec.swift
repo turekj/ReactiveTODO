@@ -7,8 +7,9 @@ class TODONoteListFlowConfiguratorSpec: QuickSpec {
 
     override func spec() {
         describe("TODONoteListFlowConfigurator") {
+            let dao = TODONoteDataAccessObjectMock()
             let flowController = FlowControllerMock()
-            let sut = TODONoteListFlowConfigurator()
+            let sut = TODONoteListFlowConfigurator(todoNoteDAO: dao)
 
             it("Should return false if controller is not a TODO list") {
                 let controller = ViewControllerMock(nibName: nil, bundle: nil)
@@ -46,6 +47,17 @@ class TODONoteListFlowConfiguratorSpec: QuickSpec {
                 expect(flowController.lastNavigatedTo).toNot(beNil())
                 expect(flowController.lastNavigatedTo)
                     .to(be(CreateTODONoteViewController.self))
+            }
+
+            it("Should assign on select TODO action") {
+                let controller = TODONoteListViewInteractionMock()
+
+                sut.configureFlow(controller, flowController: flowController)
+                controller.onSelectTODO?("todo_guid")
+
+                expect(controller.onSelectTODO).toNot(beNil())
+                expect(dao.completedGuid).toNot(beNil())
+                expect(dao.completedGuid).to(equal("todo_guid"))
             }
         }
     }

@@ -24,7 +24,7 @@ class TODONoteListCell: UITableViewCell {
         self.contentView.addSubview(self.priorityView)
 
         constrain(self.priorityView) { v in
-            v.leading == v.superview!.leading
+            v.leading == v.superview!.leading + 15
             v.centerY == v.superview!.centerY
             v.width == 16
             v.height == 16
@@ -32,8 +32,9 @@ class TODONoteListCell: UITableViewCell {
     }
 
     func configureDateView() {
-        self.dateView.lineBreakMode = .ByTruncatingMiddle
-        self.dateView.numberOfLines = 1
+        self.dateView.font = UIFont.systemFontOfSize(10)
+        self.dateView.lineBreakMode = .ByWordWrapping
+        self.dateView.numberOfLines = 0
         self.dateView.textAlignment = .Center
         self.contentView.addSubview(self.dateView)
 
@@ -45,8 +46,9 @@ class TODONoteListCell: UITableViewCell {
     }
 
     func configureTitleView() {
+        self.titleView.font = UIFont.systemFontOfSize(14)
         self.titleView.lineBreakMode = .ByTruncatingTail
-        self.titleView.numberOfLines = 1
+        self.titleView.numberOfLines = 2
         self.titleView.textAlignment = .Left
         self.contentView.addSubview(self.titleView)
 

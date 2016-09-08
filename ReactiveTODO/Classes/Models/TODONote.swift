@@ -7,6 +7,7 @@ class TODONote: Object {
     dynamic var guid = ""
     dynamic var note = ""
     dynamic var date = NSDate(timeIntervalSince1970: 1)
+    dynamic var completed = false
     private dynamic var priorityRaw = ""
     
     var priority: Priority {
