@@ -17,7 +17,8 @@ class CreateTODONoteFlowConfigurator: FlowConfigurator {
 
         controller.title = "Add TODO"
 
-        c.onSave = { [unowned self] date, note, priority in
+        c.onSave = {
+            [unowned self] date, note, priority in
             self.todoNoteDAO.createTODONote(date,
                     note: note, priority: priority)
 

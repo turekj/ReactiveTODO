@@ -35,6 +35,7 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                 it("Should save created note in database") {
                     let realm = try! Realm()
                     factory.guid = "FACTORY_GUID"
+                    factory.completed = true
 
                     sut.createTODONote(NSDate(timeIntervalSince1970: 444),
                             note: "Creanote", priority: Priority.Urgent)
@@ -49,10 +50,13 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                         .to(equal("Creanote"))
                     expect(realm.objects(TODONote.self).first?.priority)
                         .to(equal(Priority.Urgent))
+                    expect(realm.objects(TODONote.self).first?.completed)
+                        .to(beTrue())
                 }
 
                 it("Should return created note") {
                     factory.guid = "CREATED_GUID"
+                    factory.completed = true
 
                     let result = sut.createTODONote(
                             NSDate(timeIntervalSince1970: 444),
@@ -64,30 +68,96 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                     expect(result.date).to(
                             equal(NSDate(timeIntervalSince1970: 444)))
                     expect(result.priority).to(equal(Priority.Urgent))
+                    expect(result.completed).to(beTrue())
                 }
             }
 
             context("When returning current TODONotes") {
-                it("Should return all notes") {
+                it("Should return notes that are not complete") {
                     let realm = try! Realm()
-                    let note = TODONote()
-                    note.guid = "AWESOME_UNIQUE_GUID"
-                    note.date = NSDate(timeIntervalSince1970: 1970)
-                    note.note = "Awesome Note"
-                    note.priority = .Urgent
+                    let completedNote = TODONote()
+                    completedNote.guid = "AWESOME_UNIQUE_GUID"
+                    completedNote.date = NSDate(timeIntervalSince1970: 1970)
+                    completedNote.note = "Awesome Note"
+                    completedNote.priority = .Urgent
+                    completedNote.completed = true
+                    let notCompletedNote = TODONote()
+                    notCompletedNote.guid = "AWESOME_UNIQUE_GUID_NOT_COMPLETED"
+                    notCompletedNote.date = NSDate(timeIntervalSince1970: 111)
+                    notCompletedNote.note = "Awesome Not Completed Note"
+                    notCompletedNote.priority = .Low
+                    notCompletedNote.completed = false
 
                     try! realm.write {
-                        realm.add(note)
+                        realm.add(completedNote)
+                        realm.add(notCompletedNote)
                     }
 
                     let notes = sut.getCurrentTODONotes()
 
                     expect(notes.count).to(equal(1))
-                    expect(notes.first?.guid).to(equal("AWESOME_UNIQUE_GUID"))
+                    expect(notes.first?.guid)
+                        .to(equal("AWESOME_UNIQUE_GUID_NOT_COMPLETED"))
                     expect(notes.first?.date)
-                        .to(equal(NSDate(timeIntervalSince1970: 1970)))
-                    expect(notes.first?.note).to(equal("Awesome Note"))
-                    expect(notes.first?.priority).to(equal(Priority.Urgent))
+                        .to(equal(NSDate(timeIntervalSince1970: 111)))
+                    expect(notes.first?.note)
+                        .to(equal("Awesome Not Completed Note"))
+                    expect(notes.first?.priority).to(equal(Priority.Low))
+                    expect(notes.first?.completed).to(beFalse())
+                }
+
+                it("Should order notes by ascending date") {
+                    let realm = try! Realm()
+                    let firstNote = TODONote()
+                    firstNote.guid = "note_1_date"
+                    firstNote.date = NSDate(timeIntervalSince1970: 222)
+                    firstNote.note = "Note One"
+                    firstNote.priority = .Urgent
+                    firstNote.completed = false
+                    let secondNote = TODONote()
+                    secondNote.guid = "note_2_date"
+                    secondNote.date = NSDate(timeIntervalSince1970: 111)
+                    secondNote.note = "Note Two"
+                    secondNote.priority = .Urgent
+                    secondNote.completed = false
+
+                    try! realm.write {
+                        realm.add(firstNote)
+                        realm.add(secondNote)
+                    }
+
+                    let notes = sut.getCurrentTODONotes()
+
+                    expect(notes.count).to(equal(2))
+                    expect(notes.first?.guid)
+                        .to(equal("note_2_date"))
+                    expect(notes.last?.guid)
+                        .to(equal("note_1_date"))
+                }
+            }
+
+            context("When marking note as completed") {
+                it("Should set completed flag to true") {
+                    let realm = try! Realm()
+                    let note = TODONote()
+                    note.guid = "completed_test_guid"
+                    note.date = NSDate(timeIntervalSince1970: 222)
+                    note.note = "Note to complete"
+                    note.priority = .Urgent
+                    note.completed = false
+
+                    try! realm.write {
+                        realm.add(note)
+                    }
+
+                    sut.completeTODONote("completed_test_guid")
+                    let noteQuery = realm.objects(TODONote.self)
+                        .filter("guid = 'completed_test_guid'")
+
+                    expect(noteQuery.count).to(equal(1))
+                    expect(noteQuery.first?.guid)
+                        .to(equal("completed_test_guid"))
+                    expect(noteQuery.first?.completed).to(beTrue())
                 }
             }
         }

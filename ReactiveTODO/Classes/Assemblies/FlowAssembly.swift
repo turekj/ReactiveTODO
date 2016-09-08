@@ -34,8 +34,10 @@ class FlowAssembly: AssemblyType {
             return AggregateFlowConfigurator(configurators: configurators)
         }
 
-        container.register(FlowConfigurator.self, name: "todoList") { _ in
-            TODONoteListFlowConfigurator()
+        container.register(FlowConfigurator.self, name: "todoList") { r in
+            let dao = r.resolve(TODONoteDataAccessObjectProtocol.self)!
+
+            return TODONoteListFlowConfigurator(todoNoteDAO: dao)
         }
 
         container.register(FlowConfigurator.self, name: "createTODO") { r in

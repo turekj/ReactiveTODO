@@ -23,6 +23,7 @@ class TODONoteFactory: TODONoteFactoryProtocol {
         note.date = self.dateResolver.now()
         note.guid = self.guidGenerator.generateGUID()
         note.priority = Priority.Low
+        note.completed = false
         
         return note
     }

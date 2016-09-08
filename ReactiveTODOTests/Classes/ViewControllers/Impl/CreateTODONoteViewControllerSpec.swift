@@ -30,10 +30,7 @@ class CreateTODONoteViewControllerSpec: QuickSpec {
             let viewModel = CreateTODONoteViewModel(formValid: false)
 
             let sut = CreateTODONoteViewController(view: view,
-                    viewModel: viewModel,
-                    dateValidator: dateValidator,
-                    noteValidator: noteValidator,
-                    priorityValidator: priorityValidator)
+                    viewModel: viewModel)
             sut.viewDidLoad()
 
             it("Should have right bar button item attached") {

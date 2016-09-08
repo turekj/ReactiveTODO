@@ -8,6 +8,7 @@ class TODONoteFactoryMock: TODONoteFactoryProtocol {
     var date = NSDate(timeIntervalSince1970: 789)
     var note = "Note"
     var priority = Priority.Medium
+    var completed = true
 
     func createTODONote() -> TODONote {
         let note = TODONote()
@@ -15,6 +16,7 @@ class TODONoteFactoryMock: TODONoteFactoryProtocol {
         note.date = self.date
         note.note = self.note
         note.priority = self.priority
+        note.completed = self.completed
 
         return note
     }
