@@ -24,7 +24,7 @@ class TODONoteListCell: UITableViewCell {
         self.contentView.addSubview(self.priorityView)
 
         constrain(self.priorityView) { v in
-            v.leading == v.superview!.leading
+            v.leading == v.superview!.leading + 15
             v.centerY == v.superview!.centerY
             v.width == 16
             v.height == 16
