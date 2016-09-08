@@ -16,3 +16,6 @@ The app was not built with amazing features in mind. It was done solely to showc
 - [x] [Quick + Nimble](https://github.com/Quick/Quick) for behavior-driven development methodology
 - [x] [Cartography](https://github.com/robb/Cartography) to create AutoLayout-powered views programatically with ease
 
+## Compatibility
+
+The app was built using **Xcode 7.3** and **Swift 2.2**. If you are looking for a Swift 3 version, do not hesitate to contact the author or file an issue. :)
