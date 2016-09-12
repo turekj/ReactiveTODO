@@ -9,26 +9,6 @@ import RealmSwift
 class ResultsPropertySpec: QuickSpec {
     override func spec() {
         describe("ResultsProperty") {
-            Realm.Configuration
-                .defaultConfiguration
-                .inMemoryIdentifier = self.name
-
-            beforeEach {
-                let realm = try! Realm()
-
-                try! realm.write {
-                    realm.deleteAll()
-                }
-            }
-
-            afterEach {
-                let realm = try! Realm()
-
-                try! realm.write {
-                    realm.deleteAll()
-                }
-            }
-
             it("Should subscribe to update event") {
                 let realm = try! Realm()
                 let results = realm.objects(FakeRealmObject.self)
