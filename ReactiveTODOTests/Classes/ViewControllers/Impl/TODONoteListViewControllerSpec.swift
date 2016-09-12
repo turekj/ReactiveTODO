@@ -8,13 +8,9 @@ class TODONoteListViewControllerSpec: QuickSpec {
 
     override func spec() {
         describe("TODONoteListViewController") {
-            Realm.Configuration
-                .defaultConfiguration
-                .inMemoryIdentifier = self.name
-
             var sut: TODONoteListViewController!
             var viewModel: TODONoteListViewModel!
-            let view = TODONoteListView()
+            var view: TODONoteListView!
             let bundle = NSBundle(
                     forClass: TODONoteListViewControllerSpec.self)
             let dateFormatter = DateFormatterMock()
@@ -24,7 +20,6 @@ class TODONoteListViewControllerSpec: QuickSpec {
                     priorityFormatter: priorityFormatter)
 
             beforeEach {
-                let realm = try! Realm()
                 let note = TODONote()
                 note.guid = "selected_todo"
                 note.note = "Some note"
@@ -32,13 +27,15 @@ class TODONoteListViewControllerSpec: QuickSpec {
                 note.completed = false
                 note.priority = .Urgent
 
+                let realm = try! Realm()
+
                 try! realm.write {
-                    realm.deleteAll()
                     realm.add(note)
                 }
 
                 let notes = realm.objects(TODONote.self)
                 viewModel = TODONoteListViewModel(notes: notes)
+                view = TODONoteListView()
                 sut = TODONoteListViewController(view: view,
                         viewModel: viewModel,
                         cellFactory: cellFactory)
@@ -46,19 +43,12 @@ class TODONoteListViewControllerSpec: QuickSpec {
             }
 
             afterEach {
-                let realm = try! Realm()
-
-                try! realm.write {
-                    realm.deleteAll()
-                }
+                viewModel.notes.notificationToken?.stop()
             }
 
             it("Should invoke callback on add button tap") {
                 var addButtonTapped = false
-
-                sut.onAddTODO = {
-                    addButtonTapped = true
-                }
+                sut.onAddTODO = { addButtonTapped = true }
 
                 self.fireButtonTapEvent(view.addButton)
 

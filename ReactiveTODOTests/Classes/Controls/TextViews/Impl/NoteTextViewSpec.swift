@@ -2,7 +2,6 @@
 import Foundation
 import Nimble
 import Quick
-import RealmSwift
 
 
 class NoteTextViewSpec: QuickSpec {

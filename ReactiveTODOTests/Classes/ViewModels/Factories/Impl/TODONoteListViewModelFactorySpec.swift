@@ -8,10 +8,6 @@ class TODONoteListViewModelFactorySpec: QuickSpec {
 
     override func spec() {
         describe("TODONoteListViewModelFactory") {
-            Realm.Configuration
-                .defaultConfiguration
-                .inMemoryIdentifier = self.name
-
             let dao = TODONoteDataAccessObjectMock()
             let sut = TODONoteListViewModelFactory(todoNoteDAO: dao)
 
@@ -27,14 +23,6 @@ class TODONoteListViewModelFactorySpec: QuickSpec {
                 try! realm.write {
                     realm.add(firstTodo)
                     realm.add(secondTodo)
-                }
-            }
-
-            afterEach {
-                let realm = try! Realm()
-
-                try! realm.write {
-                    realm.deleteAll()
                 }
             }
 
