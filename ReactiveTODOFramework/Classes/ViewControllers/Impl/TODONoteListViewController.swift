@@ -11,8 +11,8 @@ public class TODONoteListViewController: UIViewController,
     let viewModel: TODONoteListViewModel
     let cellFactory: TODONoteListCellFactoryProtocol
 
-    var onAddTODO: (Void -> Void)?
-    var onSelectTODO: (String -> Void)?
+    public var onAddTODO: (Void -> Void)?
+    public var onSelectTODO: (String -> Void)?
 
     init(view: TODONoteListView, viewModel: TODONoteListViewModel,
          cellFactory: TODONoteListCellFactoryProtocol) {

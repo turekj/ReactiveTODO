@@ -51,6 +51,38 @@ class TODONoteDataAccessObjectSpec: QuickSpec {
                     expect(result.completed).to(beTrue())
                 }
             }
+            
+            context("When returning note by GUID") {
+                it("Should return correct note") {
+                    let realm = try! Realm()
+                    let firstNote = TODONote()
+                    firstNote.guid = "note_1_guid"
+                    firstNote.date = NSDate(timeIntervalSince1970: 222)
+                    firstNote.note = "Note One"
+                    firstNote.priority = .Urgent
+                    firstNote.completed = false
+                    let secondNote = TODONote()
+                    secondNote.guid = "note_2_guid"
+                    secondNote.date = NSDate(timeIntervalSince1970: 111)
+                    secondNote.note = "Note Two"
+                    secondNote.priority = .Urgent
+                    secondNote.completed = false
+                    
+                    try! realm.write {
+                        realm.add(firstNote)
+                        realm.add(secondNote)
+                    }
+                    
+                    let note = sut.getNote("note_2_guid")
+                    
+                    expect(note).toNot(beNil())
+                    expect(note?.guid).to(equal("note_2_guid"))
+                    expect(note?.date).to(equal(NSDate(timeIntervalSince1970: 111)))
+                    expect(note?.note).to(equal("Note Two"))
+                    expect(note?.priority).to(equal(Priority.Urgent))
+                    expect(note?.completed).to(beFalse())
+                }
+            }
 
             context("When returning current TODONotes") {
                 it("Should return notes that are not complete") {

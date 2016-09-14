@@ -9,6 +9,21 @@ class TODONoteDataAccessObject: TODONoteDataAccessObjectProtocol {
     init(factory: TODONoteFactoryProtocol) {
         self.factory = factory
     }
+    
+    func getNote(guid: String) -> TODONote? {
+        let realm = try! Realm()
+        
+        return realm.objects(TODONote.self)
+            .filter("guid == '\(guid)'")
+            .first
+    }
+    
+    func getCurrentTODONotes() -> Results<TODONote> {
+        let realm = try! Realm()
+        return realm.objects(TODONote.self)
+            .filter("completed == NO")
+            .sorted("date", ascending: true)
+    }
 
     func createTODONote(date: NSDate, note: String,
                         priority: Priority) -> TODONote {
@@ -24,13 +39,6 @@ class TODONoteDataAccessObject: TODONoteDataAccessObjectProtocol {
         }
 
         return noteModel
-    }
-
-    func getCurrentTODONotes() -> Results<TODONote> {
-        let realm = try! Realm()
-        return realm.objects(TODONote.self)
-            .filter("completed == NO")
-            .sorted("date", ascending: true)
     }
 
     func completeTODONote(guid: String) {
