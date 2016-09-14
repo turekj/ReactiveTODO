@@ -2,7 +2,7 @@ import Foundation
 import RealmSwift
 
 
-class TODONote: Object {
+public class TODONote: Object {
 
     dynamic var guid = ""
     dynamic var note = ""
@@ -19,7 +19,7 @@ class TODONote: Object {
         }
     }
     
-    override static func primaryKey() -> String? {
+    override static public func primaryKey() -> String? {
         return "guid"
     }
 }

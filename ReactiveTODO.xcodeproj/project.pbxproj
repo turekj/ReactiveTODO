@@ -97,6 +97,10 @@
 		8C869FFF1D89C340007C8605 /* MessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FFE1D89C340007C8605 /* MessageFactory.swift */; };
 		8C86A0031D89C3E8007C8605 /* MessageFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0021D89C3E8007C8605 /* MessageFactorySpec.swift */; };
 		8C86A0051D89CA89007C8605 /* MessageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0041D89CA89007C8605 /* MessageAssembly.swift */; };
+		8C86A0071D89D08B007C8605 /* MessageImageFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0061D89D08B007C8605 /* MessageImageFactoryProtocol.swift */; };
+		8C86A0091D89D0C8007C8605 /* MessageImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0081D89D0C8007C8605 /* MessageImageFactory.swift */; };
+		8C86A00B1D89D103007C8605 /* MessageImageFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A00A1D89D103007C8605 /* MessageImageFactorySpec.swift */; };
+		8C86A00D1D89D21D007C8605 /* MessageImageFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A00C1D89D21D007C8605 /* MessageImageFactoryMock.swift */; };
 		8CC65FA31D89936F00D58B26 /* ReactiveTODOFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CC660401D899AAE00D58B26 /* CreateTODOAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC65FEA1D899AAE00D58B26 /* CreateTODOAssembly.swift */; };
 		8CC660411D899AAE00D58B26 /* FlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC65FEB1D899AAE00D58B26 /* FlowAssembly.swift */; };
@@ -297,6 +301,10 @@
 		8C869FFE1D89C340007C8605 /* MessageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactory.swift; sourceTree = "<group>"; };
 		8C86A0021D89C3E8007C8605 /* MessageFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactorySpec.swift; sourceTree = "<group>"; };
 		8C86A0041D89CA89007C8605 /* MessageAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageAssembly.swift; sourceTree = "<group>"; };
+		8C86A0061D89D08B007C8605 /* MessageImageFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageImageFactoryProtocol.swift; sourceTree = "<group>"; };
+		8C86A0081D89D0C8007C8605 /* MessageImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageImageFactory.swift; sourceTree = "<group>"; };
+		8C86A00A1D89D103007C8605 /* MessageImageFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageImageFactorySpec.swift; sourceTree = "<group>"; };
+		8C86A00C1D89D21D007C8605 /* MessageImageFactoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageImageFactoryMock.swift; sourceTree = "<group>"; };
 		8CB05F081D8991A90025F338 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		8CC65F9F1D89936F00D58B26 /* ReactiveTODOFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveTODOFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveTODOFramework.h; sourceTree = "<group>"; };
@@ -858,6 +866,7 @@
 				32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */,
 				32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */,
 				32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */,
+				8C86A00C1D89D21D007C8605 /* MessageImageFactoryMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -976,6 +985,7 @@
 			children = (
 				8C869FFB1D89C2C6007C8605 /* Impl */,
 				8C869FFC1D89C2D1007C8605 /* MessageFactoryProtocol.swift */,
+				8C86A0061D89D08B007C8605 /* MessageImageFactoryProtocol.swift */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -984,6 +994,7 @@
 			isa = PBXGroup;
 			children = (
 				8C869FFE1D89C340007C8605 /* MessageFactory.swift */,
+				8C86A0081D89D0C8007C8605 /* MessageImageFactory.swift */,
 			);
 			name = Impl;
 			sourceTree = "<group>";
@@ -1000,6 +1011,7 @@
 			isa = PBXGroup;
 			children = (
 				8C86A0021D89C3E8007C8605 /* MessageFactorySpec.swift */,
+				8C86A00A1D89D103007C8605 /* MessageImageFactorySpec.swift */,
 			);
 			name = Impl;
 			sourceTree = "<group>";
@@ -1615,6 +1627,7 @@
 			files = (
 				8C6035E41D7C61CD0042C487 /* GUIDGeneratorMock.swift in Sources */,
 				8C6035D51D7C5DF10042C487 /* DateResolverSpec.swift in Sources */,
+				8C86A00D1D89D21D007C8605 /* MessageImageFactoryMock.swift in Sources */,
 				8C6035DB1D7C5FAA0042C487 /* GUIDGeneratorSpec.swift in Sources */,
 				32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */,
 				8C6035DF1D7C60F90042C487 /* TODONoteFactorySpec.swift in Sources */,
@@ -1643,6 +1656,7 @@
 				326726E4A7C2D75048382FCB /* DateValidatorSpec.swift in Sources */,
 				3267241AC7B1E486CED09578 /* PriorityValidatorSpec.swift in Sources */,
 				3267209613114F1F5B44E626 /* NoteValidatorSpec.swift in Sources */,
+				8C86A00B1D89D103007C8605 /* MessageImageFactorySpec.swift in Sources */,
 				326728A753F6902838B8386A /* DateValidatorMock.swift in Sources */,
 				8C86A0031D89C3E8007C8605 /* MessageFactorySpec.swift in Sources */,
 				32672DA1926C0F33F60C9574 /* NoteValidatorMock.swift in Sources */,
@@ -1708,6 +1722,7 @@
 				8CC660601D899AAE00D58B26 /* NoteValidator.swift in Sources */,
 				8C869FFD1D89C2D1007C8605 /* MessageFactoryProtocol.swift in Sources */,
 				8CC6605F1D899AAE00D58B26 /* DateValidator.swift in Sources */,
+				8C86A0071D89D08B007C8605 /* MessageImageFactoryProtocol.swift in Sources */,
 				8CC660491D899AAE00D58B26 /* PriorityPickerProtocol.swift in Sources */,
 				8C869FEF1D89AC63007C8605 /* RealmConfiguratorProtocol.swift in Sources */,
 				8CC660681D899AAE00D58B26 /* TODONoteListViewController.swift in Sources */,
@@ -1735,6 +1750,7 @@
 				8CC660691D899AAE00D58B26 /* TODONoteListViewControllerProtocol.swift in Sources */,
 				8CC660631D899AAE00D58B26 /* Priority.swift in Sources */,
 				8C869FF21D89AC99007C8605 /* AppGroupRealmConfigurationFactory.swift in Sources */,
+				8C86A0091D89D0C8007C8605 /* MessageImageFactory.swift in Sources */,
 				8CC660721D899AAE00D58B26 /* TODONoteListCellFactoryProtocol.swift in Sources */,
 				8CC660441D899AAE00D58B26 /* ReuseIdentifiers.swift in Sources */,
 				8C86A0051D89CA89007C8605 /* MessageAssembly.swift in Sources */,

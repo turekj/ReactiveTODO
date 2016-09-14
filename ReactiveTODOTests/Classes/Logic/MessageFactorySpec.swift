@@ -10,7 +10,6 @@ class MessageFactorySpec: QuickSpec {
     
     override func spec() {
         describe("MessageFactory") {
-            let bundle = NSBundle(forClass: MessageFactorySpec.self)
             let todoNoteDAO = TODONoteDataAccessObjectMock()
             let note = TODONote()
             note.priority = .High
@@ -19,11 +18,16 @@ class MessageFactorySpec: QuickSpec {
             
             let dateFormatter = DateFormatterMock()
             dateFormatter.formatReturnValue = "formatted_D@73"
-            let priorityFormatter = PriorityImageNameFormatterMock()
-            priorityFormatter.formatReturnValue = "white_pixel"
-            let sut = MessageFactory(bundle: bundle, todoNoteDAO: todoNoteDAO,
+            
+            let bundle = NSBundle(forClass: MessageFactorySpec.self)
+            let imageFactory = MessageImageFactoryMock()
+            imageFactory.returnedImage = UIImage(named: "white_pixel",
+                                                 inBundle: bundle,
+                                                 compatibleWithTraitCollection: nil)
+            
+            let sut = MessageFactory(todoNoteDAO: todoNoteDAO,
                                      dateFormatter: dateFormatter,
-                                     priorityFormatter: priorityFormatter)
+                                     messageImageFactory: imageFactory)
             
             it("Should resolve correct note") {
                 sut.createMessage("correct_note_guid")

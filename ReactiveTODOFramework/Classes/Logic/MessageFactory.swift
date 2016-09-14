@@ -5,18 +5,16 @@ import Messages
 @available(iOSApplicationExtension 10.0, *)
 public class MessageFactory: MessageFactoryProtocol {
     
-    let bundle: NSBundle
     let todoNoteDAO: TODONoteDataAccessObjectProtocol
     let dateFormatter: DateFormatterProtocol
-    let priorityFormatter: PriorityImageNameFormatterProtocol
+    let messageImageFactory: MessageImageFactoryProtocol
     
-    init(bundle: NSBundle, todoNoteDAO: TODONoteDataAccessObjectProtocol,
+    init(todoNoteDAO: TODONoteDataAccessObjectProtocol,
          dateFormatter: DateFormatterProtocol,
-         priorityFormatter: PriorityImageNameFormatterProtocol) {
-        self.bundle = bundle
+         messageImageFactory: MessageImageFactoryProtocol) {
         self.todoNoteDAO = todoNoteDAO
         self.dateFormatter = dateFormatter
-        self.priorityFormatter = priorityFormatter
+        self.messageImageFactory = messageImageFactory
     }
     
     public func createMessage(noteGUID: String) -> MSMessage {
@@ -33,12 +31,9 @@ public class MessageFactory: MessageFactoryProtocol {
             return layout
         }
         
-        let imageName = self.priorityFormatter.format(note.priority)
         layout.caption = note.note
         layout.subcaption = self.dateFormatter.format(note.date)
-        layout.image = UIImage(named: imageName,
-                               inBundle: self.bundle,
-                               compatibleWithTraitCollection: nil)
+        layout.image = self.messageImageFactory.createMessageImage(note)
         
         return layout
     }
