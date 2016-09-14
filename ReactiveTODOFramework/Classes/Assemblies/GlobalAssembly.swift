@@ -3,9 +3,11 @@ import Swinject
 import UIKit
 
 
-class GlobalAssembly: AssemblyType {
+public class GlobalAssembly: AssemblyType {
+    
+    public init() { }
 
-    func assemble(container: Container) {
+    public func assemble(container: Container) {
         container.register(DateResolverProtocol.self) { _ in
             DateResolver()
         }

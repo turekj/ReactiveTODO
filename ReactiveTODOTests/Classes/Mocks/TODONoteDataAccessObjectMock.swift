@@ -1,4 +1,4 @@
-@testable import ReactiveTODO
+@testable import ReactiveTODOFramework
 import Foundation
 import RealmSwift
 

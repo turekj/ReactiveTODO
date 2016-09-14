@@ -1,7 +1,7 @@
 import UIKit
 
 
-protocol FlowControllerProtocol {
+public protocol FlowControllerProtocol {
 
     var rootController: UINavigationController { get }
 

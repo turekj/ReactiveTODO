@@ -3,9 +3,11 @@ import Swinject
 import UIKit
 
 
-class TODOListAssembly: AssemblyType {
+public class TODOListAssembly: AssemblyType {
 
-    func assemble(container: Container) {
+    public init() { }
+    
+    public func assemble(container: Container) {
         container.register(TODONoteListViewController.self) { r in
             let view = r.resolve(TODONoteListView.self)!
             let viewModel = r.resolve(TODONoteListViewModel.self)!

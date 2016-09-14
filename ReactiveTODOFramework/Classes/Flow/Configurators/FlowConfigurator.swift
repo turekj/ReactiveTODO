@@ -1,7 +1,7 @@
 import UIKit
 
 
-protocol FlowConfigurator {
+public protocol FlowConfigurator {
 
     func configureFlow(controller: UIViewController,
                        flowController: FlowControllerProtocol) -> Bool
