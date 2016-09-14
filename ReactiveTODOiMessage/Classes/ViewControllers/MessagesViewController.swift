@@ -12,9 +12,7 @@ class MessagesViewController: MSMessagesAppViewController {
     var noteListViewController: TODONoteListViewController?
     
     private func createAssembler() -> Assembler {
-        let assemblies = [CreateTODOAssembly(), FlowAssembly(),
-                          GlobalAssembly(),
-                          TODOListAssembly()] as [AssemblyType]
+        let assemblies = [GlobalAssembly(), TODOListAssembly()] as [AssemblyType]
         
         return try! Assembler(assemblies: assemblies)
     }
