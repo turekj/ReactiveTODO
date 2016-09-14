@@ -18,4 +18,4 @@ The app was not built with amazing features in mind. It was done solely to showc
 
 ## Compatibility
 
-The app was built using **Xcode 7.3** and **Swift 2.2**. If you are looking for a Swift 3 version, do not hesitate to contact the author or file an issue. :)
+The app was originally built using **Swift 2**. The current version was updated to build under **Xcode 8** and **Swift 2.3**. If you are looking for a Swift 3 version, do not hesitate to contact the author or file an issue. :)
