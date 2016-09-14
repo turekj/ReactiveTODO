@@ -440,8 +440,7 @@
 			children = (
 				32672703D48B89D85FFC3503 /* ReactiveTODOTestsConfiguration.swift */,
 			);
-			name = Configuration;
-			path = Classes/Configuration;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		3267219F0B9991808A94BBCD /* Resources */ = {
@@ -505,8 +504,8 @@
 		326722FBAB0DC1760569764F /* ReactiveTODOTests */ = {
 			isa = PBXGroup;
 			children = (
-				32672189F06F87BCB02DE361 /* Configuration */,
 				32672247FECDBC7F3A70458E /* Classes */,
+				32672189F06F87BCB02DE361 /* Configuration */,
 				8C36EB751D7C54B5002F5735 /* Frameworks */,
 				3267219F0B9991808A94BBCD /* Resources */,
 			);
@@ -624,10 +623,10 @@
 		326725CA2B5B8659334C7D4F /* ReactiveTODO */ = {
 			isa = PBXGroup;
 			children = (
-				8C869FE91D89ABE2007C8605 /* ReactiveTODO.entitlements */,
 				32672EC3F7626F0D6B31A3A3 /* Classes */,
 				8C36EB6A1D7C54AD002F5735 /* Frameworks */,
 				32672A8931BD05ACF302A029 /* Resources */,
+				8C869FE91D89ABE2007C8605 /* ReactiveTODO.entitlements */,
 			);
 			path = ReactiveTODO;
 			sourceTree = "<group>";
@@ -840,6 +839,7 @@
 				32672FD47B2EEFD830974961 /* FlowConfiguratorMock.swift */,
 				32672A0C85820BA77699B058 /* FlowControllerMock.swift */,
 				8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */,
+				8C869FF81D89AD8C007C8605 /* NSFileManagerMock.swift */,
 				326721A54A83C92818376CFB /* NoteTextViewFirstResponderMock.swift */,
 				32672F21C026B687FF752930 /* NoteValidatorMock.swift */,
 				32672BD35F01F0182D0D9D50 /* PriorityImageNameFormatterMock.swift */,
@@ -849,7 +849,6 @@
 				32672F30502250B9D445CADC /* TODONoteListViewInteractionMock.swift */,
 				32672A9F258EF2D5D8BB8E70 /* UINavigationControllerMock.swift */,
 				32672AE92A4A00B5CADF66D1 /* ViewControllerMock.swift */,
-				8C869FF81D89AD8C007C8605 /* NSFileManagerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -857,9 +856,9 @@
 		8C869FCC1D89A621007C8605 /* ReactiveTODOiMessage */ = {
 			isa = PBXGroup;
 			children = (
-				8C869FE81D89ABBA007C8605 /* ReactiveTODOiMessage.entitlements */,
 				8C869FE71D89A7A7007C8605 /* Classes */,
 				8C869FE31D89A748007C8605 /* Resources */,
+				8C869FE81D89ABBA007C8605 /* ReactiveTODOiMessage.entitlements */,
 			);
 			path = ReactiveTODOiMessage;
 			sourceTree = "<group>";
@@ -919,7 +918,7 @@
 			children = (
 				8C869FED1D89AC3F007C8605 /* Database */,
 			);
-			name = Configuration;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		8C869FED1D89AC3F007C8605 /* Database */ = {
@@ -928,7 +927,7 @@
 				8C869FF01D89AC6B007C8605 /* Impl */,
 				8C869FEE1D89AC63007C8605 /* RealmConfiguratorProtocol.swift */,
 			);
-			name = Database;
+			path = Database;
 			sourceTree = "<group>";
 		};
 		8C869FF01D89AC6B007C8605 /* Impl */ = {
@@ -936,7 +935,7 @@
 			children = (
 				8C869FF11D89AC99007C8605 /* AppGroupRealmConfigurationFactory.swift */,
 			);
-			name = Impl;
+			path = Impl;
 			sourceTree = "<group>";
 		};
 		8C869FF31D89ACEE007C8605 /* Configuration */ = {
@@ -944,7 +943,7 @@
 			children = (
 				8C869FF41D89ACF9007C8605 /* Database */,
 			);
-			name = Configuration;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		8C869FF41D89ACF9007C8605 /* Database */ = {
@@ -952,7 +951,7 @@
 			children = (
 				8C869FF51D89ACFF007C8605 /* Impl */,
 			);
-			name = Database;
+			path = Database;
 			sourceTree = "<group>";
 		};
 		8C869FF51D89ACFF007C8605 /* Impl */ = {
@@ -960,7 +959,7 @@
 			children = (
 				8C869FF61D89AD12007C8605 /* AppGroupRealmConfigurationFactorySpec.swift */,
 			);
-			name = Impl;
+			path = Impl;
 			sourceTree = "<group>";
 		};
 		8CB05F071D8991A90025F338 /* Frameworks */ = {
@@ -985,8 +984,8 @@
 		8CC65FE81D899AAE00D58B26 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8C869FEC1D89AC37007C8605 /* Configuration */,
 				8CC65FE91D899AAE00D58B26 /* Assemblies */,
+				8C869FEC1D89AC37007C8605 /* Configuration */,
 				8CC65FEE1D899AAE00D58B26 /* Constants */,
 				8CC65FF01D899AAE00D58B26 /* Controls */,
 				8CC65FFF1D899AAE00D58B26 /* DataAccess */,
