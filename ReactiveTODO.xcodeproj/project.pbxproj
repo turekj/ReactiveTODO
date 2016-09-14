@@ -58,36 +58,12 @@
 		8C6035DF1D7C60F90042C487 /* TODONoteFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035DE1D7C60F90042C487 /* TODONoteFactorySpec.swift */; };
 		8C6035E21D7C618D0042C487 /* DateResolverMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035E11D7C618D0042C487 /* DateResolverMock.swift */; };
 		8C6035E41D7C61CD0042C487 /* GUIDGeneratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6035E31D7C61CD0042C487 /* GUIDGeneratorMock.swift */; };
-		8C869FAE1D89A1D1007C8605 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660761D899ACD00D58B26 /* Cartography.framework */; };
-		8C869FAF1D89A1D1007C8605 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660771D899ACD00D58B26 /* ReactiveKit.framework */; };
-		8C869FB01D89A1D1007C8605 /* ReactiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660781D899ACD00D58B26 /* ReactiveUIKit.framework */; };
-		8C869FB11D89A1D1007C8605 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660791D899ACD00D58B26 /* Realm.framework */; };
-		8C869FB21D89A1D1007C8605 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC6607A1D899ACD00D58B26 /* RealmSwift.framework */; };
-		8C869FB31D89A1D1007C8605 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC6607B1D899ACD00D58B26 /* Swinject.framework */; };
 		8C869FB41D89A20E007C8605 /* ReactiveTODOFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC65F9F1D89936F00D58B26 /* ReactiveTODOFramework.framework */; };
-		8C869FB91D89A3A9007C8605 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC6607B1D899ACD00D58B26 /* Swinject.framework */; };
-		8C869FBA1D89A4C5007C8605 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660761D899ACD00D58B26 /* Cartography.framework */; };
-		8C869FBB1D89A4C5007C8605 /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660761D899ACD00D58B26 /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C869FBC1D89A4C5007C8605 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660771D899ACD00D58B26 /* ReactiveKit.framework */; };
-		8C869FBD1D89A4C5007C8605 /* ReactiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660771D899ACD00D58B26 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C869FBE1D89A4C5007C8605 /* ReactiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660781D899ACD00D58B26 /* ReactiveUIKit.framework */; };
-		8C869FBF1D89A4C5007C8605 /* ReactiveUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660781D899ACD00D58B26 /* ReactiveUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C869FC01D89A4C5007C8605 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660791D899ACD00D58B26 /* Realm.framework */; };
-		8C869FC11D89A4C5007C8605 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660791D899ACD00D58B26 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C869FC21D89A4C5007C8605 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC6607A1D899ACD00D58B26 /* RealmSwift.framework */; };
-		8C869FC31D89A4C5007C8605 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC6607A1D899ACD00D58B26 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C869FC51D89A4C5007C8605 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC6607B1D899ACD00D58B26 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C869FCB1D89A621007C8605 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB05F081D8991A90025F338 /* Messages.framework */; };
 		8C869FCE1D89A621007C8605 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FCD1D89A621007C8605 /* MessagesViewController.swift */; };
 		8C869FD11D89A621007C8605 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C869FCF1D89A621007C8605 /* MainInterface.storyboard */; };
 		8C869FD31D89A621007C8605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C869FD21D89A621007C8605 /* Assets.xcassets */; };
 		8C869FD71D89A621007C8605 /* ReactiveTODOiMessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8C869FCA1D89A621007C8605 /* ReactiveTODOiMessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8C869FDB1D89A646007C8605 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660761D899ACD00D58B26 /* Cartography.framework */; };
-		8C869FDC1D89A646007C8605 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660771D899ACD00D58B26 /* ReactiveKit.framework */; };
-		8C869FDD1D89A646007C8605 /* ReactiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660781D899ACD00D58B26 /* ReactiveUIKit.framework */; };
-		8C869FDE1D89A646007C8605 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC660791D899ACD00D58B26 /* Realm.framework */; };
-		8C869FDF1D89A646007C8605 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC6607A1D899ACD00D58B26 /* RealmSwift.framework */; };
-		8C869FE01D89A646007C8605 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC6607B1D899ACD00D58B26 /* Swinject.framework */; };
 		8C869FE11D89A64A007C8605 /* ReactiveTODOFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC65F9F1D89936F00D58B26 /* ReactiveTODOFramework.framework */; };
 		8C869FEF1D89AC63007C8605 /* RealmConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FEE1D89AC63007C8605 /* RealmConfiguratorProtocol.swift */; };
 		8C869FF21D89AC99007C8605 /* AppGroupRealmConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FF11D89AC99007C8605 /* AppGroupRealmConfigurationFactory.swift */; };
@@ -108,6 +84,30 @@
 		8C86A0211D89DEF8007C8605 /* MessageFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0201D89DEF8007C8605 /* MessageFactoryMock.swift */; };
 		8C86A0231D89DFCE007C8605 /* MessagesViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0221D89DFCE007C8605 /* MessagesViewControllerMock.swift */; };
 		8C86A0251D89E127007C8605 /* MSConversationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0241D89E127007C8605 /* MSConversationMock.swift */; };
+		8C86A0261D89E435007C8605 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51958F1D7D8F9600F9638D /* Cartography.framework */; };
+		8C86A0271D89E435007C8605 /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51958F1D7D8F9600F9638D /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C86A0281D89E435007C8605 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6B1D7C54AD002F5735 /* ReactiveKit.framework */; };
+		8C86A0291D89E435007C8605 /* ReactiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6B1D7C54AD002F5735 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C86A02A1D89E435007C8605 /* ReactiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6C1D7C54AD002F5735 /* ReactiveUIKit.framework */; };
+		8C86A02B1D89E435007C8605 /* ReactiveUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6C1D7C54AD002F5735 /* ReactiveUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C86A02C1D89E435007C8605 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6D1D7C54AD002F5735 /* Realm.framework */; };
+		8C86A02D1D89E435007C8605 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6D1D7C54AD002F5735 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C86A02E1D89E435007C8605 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6E1D7C54AD002F5735 /* RealmSwift.framework */; };
+		8C86A02F1D89E435007C8605 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6E1D7C54AD002F5735 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C86A0301D89E435007C8605 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6F1D7C54AD002F5735 /* Swinject.framework */; };
+		8C86A0311D89E435007C8605 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6F1D7C54AD002F5735 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C86A0321D89E446007C8605 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51958F1D7D8F9600F9638D /* Cartography.framework */; };
+		8C86A0331D89E446007C8605 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6B1D7C54AD002F5735 /* ReactiveKit.framework */; };
+		8C86A0341D89E446007C8605 /* ReactiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6C1D7C54AD002F5735 /* ReactiveUIKit.framework */; };
+		8C86A0351D89E446007C8605 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6D1D7C54AD002F5735 /* Realm.framework */; };
+		8C86A0361D89E446007C8605 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6E1D7C54AD002F5735 /* RealmSwift.framework */; };
+		8C86A0371D89E446007C8605 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36EB6F1D7C54AD002F5735 /* Swinject.framework */; };
+		8C86A03F1D89E487007C8605 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C86A0391D89E455007C8605 /* Cartography.framework */; };
+		8C86A0401D89E487007C8605 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C86A03A1D89E455007C8605 /* ReactiveKit.framework */; };
+		8C86A0411D89E487007C8605 /* ReactiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C86A03B1D89E455007C8605 /* ReactiveUIKit.framework */; };
+		8C86A0421D89E487007C8605 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C86A03C1D89E455007C8605 /* Realm.framework */; };
+		8C86A0431D89E487007C8605 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C86A03D1D89E455007C8605 /* RealmSwift.framework */; };
+		8C86A0441D89E487007C8605 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C86A03E1D89E455007C8605 /* Swinject.framework */; };
 		8CC65FA31D89936F00D58B26 /* ReactiveTODOFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CC660401D899AAE00D58B26 /* CreateTODOAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC65FEA1D899AAE00D58B26 /* CreateTODOAssembly.swift */; };
 		8CC660411D899AAE00D58B26 /* FlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC65FEB1D899AAE00D58B26 /* FlowAssembly.swift */; };
@@ -198,13 +198,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8C869FBF1D89A4C5007C8605 /* ReactiveUIKit.framework in Embed Frameworks */,
-				8C869FC51D89A4C5007C8605 /* Swinject.framework in Embed Frameworks */,
+				8C86A02B1D89E435007C8605 /* ReactiveUIKit.framework in Embed Frameworks */,
+				8C86A0311D89E435007C8605 /* Swinject.framework in Embed Frameworks */,
 				8CC6608B1D899B7600D58B26 /* ReactiveTODOFramework.framework in Embed Frameworks */,
-				8C869FC31D89A4C5007C8605 /* RealmSwift.framework in Embed Frameworks */,
-				8C869FBD1D89A4C5007C8605 /* ReactiveKit.framework in Embed Frameworks */,
-				8C869FBB1D89A4C5007C8605 /* Cartography.framework in Embed Frameworks */,
-				8C869FC11D89A4C5007C8605 /* Realm.framework in Embed Frameworks */,
+				8C86A02F1D89E435007C8605 /* RealmSwift.framework in Embed Frameworks */,
+				8C86A0291D89E435007C8605 /* ReactiveKit.framework in Embed Frameworks */,
+				8C86A0271D89E435007C8605 /* Cartography.framework in Embed Frameworks */,
+				8C86A02D1D89E435007C8605 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +319,12 @@
 		8C86A0201D89DEF8007C8605 /* MessageFactoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactoryMock.swift; sourceTree = "<group>"; };
 		8C86A0221D89DFCE007C8605 /* MessagesViewControllerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewControllerMock.swift; sourceTree = "<group>"; };
 		8C86A0241D89E127007C8605 /* MSConversationMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSConversationMock.swift; sourceTree = "<group>"; };
+		8C86A0391D89E455007C8605 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cartography.framework; sourceTree = "<group>"; };
+		8C86A03A1D89E455007C8605 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveKit.framework; sourceTree = "<group>"; };
+		8C86A03B1D89E455007C8605 /* ReactiveUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveUIKit.framework; sourceTree = "<group>"; };
+		8C86A03C1D89E455007C8605 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		8C86A03D1D89E455007C8605 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		8C86A03E1D89E455007C8605 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
 		8CB05F081D8991A90025F338 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		8CC65F9F1D89936F00D58B26 /* ReactiveTODOFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveTODOFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveTODOFramework.h; sourceTree = "<group>"; };
@@ -375,12 +381,6 @@
 		8CC6603D1D899AAE00D58B26 /* TODONoteListCellFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCellFactoryProtocol.swift; sourceTree = "<group>"; };
 		8CC6603E1D899AAE00D58B26 /* TODONoteListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCell.swift; sourceTree = "<group>"; };
 		8CC6603F1D899AAE00D58B26 /* TODONoteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListView.swift; sourceTree = "<group>"; };
-		8CC660761D899ACD00D58B26 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cartography.framework; sourceTree = "<group>"; };
-		8CC660771D899ACD00D58B26 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveKit.framework; sourceTree = "<group>"; };
-		8CC660781D899ACD00D58B26 /* ReactiveUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveUIKit.framework; sourceTree = "<group>"; };
-		8CC660791D899ACD00D58B26 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		8CC6607A1D899ACD00D58B26 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		8CC6607B1D899ACD00D58B26 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
 		8CC660841D899B2300D58B26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CC660861D899B2300D58B26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD7401D1D7DA730008A2A51 /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
@@ -400,13 +400,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C869FC01D89A4C5007C8605 /* Realm.framework in Frameworks */,
-				8C869FBC1D89A4C5007C8605 /* ReactiveKit.framework in Frameworks */,
-				8C869FC21D89A4C5007C8605 /* RealmSwift.framework in Frameworks */,
-				8C869FBE1D89A4C5007C8605 /* ReactiveUIKit.framework in Frameworks */,
-				8C869FB91D89A3A9007C8605 /* Swinject.framework in Frameworks */,
+				8C86A02A1D89E435007C8605 /* ReactiveUIKit.framework in Frameworks */,
+				8C86A0301D89E435007C8605 /* Swinject.framework in Frameworks */,
 				8C869FB41D89A20E007C8605 /* ReactiveTODOFramework.framework in Frameworks */,
-				8C869FBA1D89A4C5007C8605 /* Cartography.framework in Frameworks */,
+				8C86A02E1D89E435007C8605 /* RealmSwift.framework in Frameworks */,
+				8C86A0281D89E435007C8605 /* ReactiveKit.framework in Frameworks */,
+				8C86A0261D89E435007C8605 /* Cartography.framework in Frameworks */,
+				8C86A02C1D89E435007C8605 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,13 +414,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C86A03F1D89E487007C8605 /* Cartography.framework in Frameworks */,
+				8C86A0401D89E487007C8605 /* ReactiveKit.framework in Frameworks */,
+				8C86A0411D89E487007C8605 /* ReactiveUIKit.framework in Frameworks */,
+				8C86A0421D89E487007C8605 /* Realm.framework in Frameworks */,
+				8C86A0431D89E487007C8605 /* RealmSwift.framework in Frameworks */,
+				8C86A0441D89E487007C8605 /* Swinject.framework in Frameworks */,
 				8C869FE11D89A64A007C8605 /* ReactiveTODOFramework.framework in Frameworks */,
-				8C869FDB1D89A646007C8605 /* Cartography.framework in Frameworks */,
-				8C869FDC1D89A646007C8605 /* ReactiveKit.framework in Frameworks */,
-				8C869FDD1D89A646007C8605 /* ReactiveUIKit.framework in Frameworks */,
-				8C869FDE1D89A646007C8605 /* Realm.framework in Frameworks */,
-				8C869FDF1D89A646007C8605 /* RealmSwift.framework in Frameworks */,
-				8C869FE01D89A646007C8605 /* Swinject.framework in Frameworks */,
 				8C869FCB1D89A621007C8605 /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,12 +429,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C869FAE1D89A1D1007C8605 /* Cartography.framework in Frameworks */,
-				8C869FAF1D89A1D1007C8605 /* ReactiveKit.framework in Frameworks */,
-				8C869FB01D89A1D1007C8605 /* ReactiveUIKit.framework in Frameworks */,
-				8C869FB11D89A1D1007C8605 /* Realm.framework in Frameworks */,
-				8C869FB21D89A1D1007C8605 /* RealmSwift.framework in Frameworks */,
-				8C869FB31D89A1D1007C8605 /* Swinject.framework in Frameworks */,
+				8C86A0321D89E446007C8605 /* Cartography.framework in Frameworks */,
+				8C86A0331D89E446007C8605 /* ReactiveKit.framework in Frameworks */,
+				8C86A0341D89E446007C8605 /* ReactiveUIKit.framework in Frameworks */,
+				8C86A0351D89E446007C8605 /* Realm.framework in Frameworks */,
+				8C86A0361D89E446007C8605 /* RealmSwift.framework in Frameworks */,
+				8C86A0371D89E446007C8605 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1059,9 +1059,24 @@
 			path = Impl;
 			sourceTree = "<group>";
 		};
+		8C86A0381D89E455007C8605 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C86A0391D89E455007C8605 /* Cartography.framework */,
+				8C86A03A1D89E455007C8605 /* ReactiveKit.framework */,
+				8C86A03B1D89E455007C8605 /* ReactiveUIKit.framework */,
+				8C86A03C1D89E455007C8605 /* Realm.framework */,
+				8C86A03D1D89E455007C8605 /* RealmSwift.framework */,
+				8C86A03E1D89E455007C8605 /* Swinject.framework */,
+			);
+			name = Frameworks;
+			path = ReactiveTODO/Frameworks;
+			sourceTree = "<group>";
+		};
 		8CB05F071D8991A90025F338 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C86A0381D89E455007C8605 /* Frameworks */,
 				8CB05F081D8991A90025F338 /* Messages.framework */,
 			);
 			name = Frameworks;
@@ -1071,7 +1086,6 @@
 			isa = PBXGroup;
 			children = (
 				8CC65FE81D899AAE00D58B26 /* Classes */,
-				8CC660751D899ACD00D58B26 /* Frameworks */,
 				8CC660821D899B2300D58B26 /* Resources */,
 				8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */,
 			);
@@ -1413,19 +1427,6 @@
 				8CC6603C1D899AAE00D58B26 /* TODONoteListCellFactory.swift */,
 			);
 			path = Impl;
-			sourceTree = "<group>";
-		};
-		8CC660751D899ACD00D58B26 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8CC660761D899ACD00D58B26 /* Cartography.framework */,
-				8CC660771D899ACD00D58B26 /* ReactiveKit.framework */,
-				8CC660781D899ACD00D58B26 /* ReactiveUIKit.framework */,
-				8CC660791D899ACD00D58B26 /* Realm.framework */,
-				8CC6607A1D899ACD00D58B26 /* RealmSwift.framework */,
-				8CC6607B1D899ACD00D58B26 /* Swinject.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		8CC660821D899B2300D58B26 /* Resources */ = {
@@ -1864,7 +1865,7 @@
 				DEVELOPMENT_TEAM = 8863322VPF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
+					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ReactiveTODO/Resources/PropertyList/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1924,7 +1925,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReactiveTODOTests/Frameworks",
-					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
+					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
 				);
 				INFOPLIST_FILE = ReactiveTODOTests/Resources/PropertyList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1991,7 +1992,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReactiveTODOTests/Frameworks",
-					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
+					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
 				);
 				INFOPLIST_FILE = ReactiveTODOTests/Resources/PropertyList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2011,7 +2012,7 @@
 				DEVELOPMENT_TEAM = 8863322VPF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
+					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ReactiveTODO/Resources/PropertyList/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2031,7 +2032,7 @@
 				DEVELOPMENT_TEAM = 8863322VPF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
+					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
 				);
 				INFOPLIST_FILE = ReactiveTODOiMessage/Resources/PropertyList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -2054,7 +2055,7 @@
 				DEVELOPMENT_TEAM = 8863322VPF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
+					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
 				);
 				INFOPLIST_FILE = ReactiveTODOiMessage/Resources/PropertyList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -2081,7 +2082,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
+					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ReactiveTODOFramework/Resources/PropertyList/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -2112,7 +2113,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
+					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ReactiveTODOFramework/Resources/PropertyList/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
