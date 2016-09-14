@@ -24,7 +24,9 @@ public class MessageAssembly: AssemblyType {
             let bundle = NSBundle(forClass: MessageAssembly.self)
             let priorityFormatter = r.resolve(PriorityImageNameFormatterProtocol.self)!
             
-            return MessageImageFactory(bundle: bundle, priorityFormatter: priorityFormatter)
+            return MessageImageFactory(bundle: bundle,
+                                       priorityFormatter: priorityFormatter,
+                                       outputImageSize: CGSizeMake(100, 100))
         }
     }
 }
