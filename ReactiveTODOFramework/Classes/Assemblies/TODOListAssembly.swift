@@ -35,7 +35,7 @@ public class TODOListAssembly: AssemblyType {
         }
 
         container.register(TODONoteListCellFactoryProtocol.self) { r in
-            let bundle = NSBundle.mainBundle()
+            let bundle = NSBundle(forClass: TODONoteListCellFactory.self)
             let dateFormatter = r.resolve(DateFormatterProtocol.self,
                     name: "relative")!
             let priorityFormatter = r.resolve(
