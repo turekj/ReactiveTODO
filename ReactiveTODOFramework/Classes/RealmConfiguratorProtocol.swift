@@ -2,7 +2,7 @@ import Foundation
 import RealmSwift
 
 
-protocol RealmConfigurationFactoryProtocol {
+public protocol RealmConfigurationFactoryProtocol {
     
     func createRealmConfiguration() -> Realm.Configuration
     func updateDefaultRealmConfiguration()

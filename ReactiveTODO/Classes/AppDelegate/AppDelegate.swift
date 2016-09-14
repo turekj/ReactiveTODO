@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions
             launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.initializeKeyWindow()
+        self.configureDatabase()
         self.startApplicationFlow()
 
         return true
@@ -44,6 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
 
         return window
+    }
+    
+    func configureDatabase() {
+        let configurator = self.assembler.resolver.resolve(RealmConfigurationFactoryProtocol.self)!
+        configurator.updateDefaultRealmConfiguration()
     }
 
     func startApplicationFlow() {
