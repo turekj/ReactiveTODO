@@ -19,4 +19,8 @@ public class AppGroupRealmConfigurationFactory: RealmConfigurationFactoryProtoco
         
         return Realm.Configuration(fileURL: databasePath)
     }
+    
+    public func updateDefaultRealmConfiguration() {
+        Realm.Configuration.defaultConfiguration = self.createRealmConfiguration()
+    }
 }
