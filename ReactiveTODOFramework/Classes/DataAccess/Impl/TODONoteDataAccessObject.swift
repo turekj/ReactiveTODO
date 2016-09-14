@@ -11,7 +11,11 @@ class TODONoteDataAccessObject: TODONoteDataAccessObjectProtocol {
     }
     
     func getNote(guid: String) -> TODONote? {
-        return nil
+        let realm = try! Realm()
+        
+        return realm.objects(TODONote.self)
+            .filter("guid == '\(guid)'")
+            .first
     }
     
     func getCurrentTODONotes() -> Results<TODONote> {

@@ -12,7 +12,7 @@ public class MessageAssembly: AssemblyType {
             container.register(MessageFactoryProtocol.self) { r in
                 let bundle = NSBundle(forClass: MessageAssembly.self)
                 let todoNoteDAO = r.resolve(TODONoteDataAccessObjectProtocol.self)!
-                let dateFormatter = r.resolve(DateFormatterProtocol.self)!
+                let dateFormatter = r.resolve(DateFormatterProtocol.self, name: "relative")!
                 let priorityFormatter = r.resolve(PriorityImageNameFormatterProtocol.self)!
             
                 return MessageFactory(bundle: bundle, todoNoteDAO: todoNoteDAO,

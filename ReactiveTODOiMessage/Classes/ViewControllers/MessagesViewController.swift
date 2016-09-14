@@ -12,7 +12,8 @@ class MessagesViewController: MSMessagesAppViewController {
     var noteListViewController: TODONoteListViewController?
     
     private func createAssembler() -> Assembler {
-        let assemblies = [GlobalAssembly(), TODOListAssembly()] as [AssemblyType]
+        let assemblies = [GlobalAssembly(), MessageAssembly(),
+                          TODOListAssembly()] as [AssemblyType]
         
         return try! Assembler(assemblies: assemblies)
     }
@@ -32,8 +33,11 @@ class MessagesViewController: MSMessagesAppViewController {
         self.noteListViewController = self.assembler.resolver.resolve(
             TODONoteListViewController.self)!
         
+        let messageFactory = self.assembler.resolver.resolve(MessageFactoryProtocol.self)!
+        
         self.noteListViewController?.onSelectTODO = { guid in
-            self.activeConversation?.insertText(guid, completionHandler: nil)
+            let message = messageFactory.createMessage(guid)
+            self.activeConversation?.insertMessage(message, completionHandler: nil)
         }
         
         self.addChildController(self.noteListViewController!)

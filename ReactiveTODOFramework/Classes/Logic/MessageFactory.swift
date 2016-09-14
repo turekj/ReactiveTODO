@@ -33,10 +33,12 @@ public class MessageFactory: MessageFactoryProtocol {
             return layout
         }
         
+        let imageName = self.priorityFormatter.format(note.priority)
         layout.imageTitle = note.note
-        layout.image = UIImage(named: self.priorityFormatter.format(note.priority),
+        layout.image = UIImage(named: imageName,
                                inBundle: self.bundle,
                                compatibleWithTraitCollection: nil)
+        
         return layout
     }
 }
