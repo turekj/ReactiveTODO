@@ -93,6 +93,9 @@
 		8C869FF21D89AC99007C8605 /* AppGroupRealmConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FF11D89AC99007C8605 /* AppGroupRealmConfigurationFactory.swift */; };
 		8C869FF71D89AD12007C8605 /* AppGroupRealmConfigurationFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FF61D89AD12007C8605 /* AppGroupRealmConfigurationFactorySpec.swift */; };
 		8C869FF91D89AD8C007C8605 /* NSFileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FF81D89AD8C007C8605 /* NSFileManagerMock.swift */; };
+		8C869FFD1D89C2D1007C8605 /* MessageFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FFC1D89C2D1007C8605 /* MessageFactoryProtocol.swift */; };
+		8C869FFF1D89C340007C8605 /* MessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FFE1D89C340007C8605 /* MessageFactory.swift */; };
+		8C86A0031D89C3E8007C8605 /* MessageFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0021D89C3E8007C8605 /* MessageFactorySpec.swift */; };
 		8CC65FA31D89936F00D58B26 /* ReactiveTODOFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CC660401D899AAE00D58B26 /* CreateTODOAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC65FEA1D899AAE00D58B26 /* CreateTODOAssembly.swift */; };
 		8CC660411D899AAE00D58B26 /* FlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC65FEB1D899AAE00D58B26 /* FlowAssembly.swift */; };
@@ -289,6 +292,9 @@
 		8C869FF11D89AC99007C8605 /* AppGroupRealmConfigurationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppGroupRealmConfigurationFactory.swift; sourceTree = "<group>"; };
 		8C869FF61D89AD12007C8605 /* AppGroupRealmConfigurationFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppGroupRealmConfigurationFactorySpec.swift; sourceTree = "<group>"; };
 		8C869FF81D89AD8C007C8605 /* NSFileManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFileManagerMock.swift; sourceTree = "<group>"; };
+		8C869FFC1D89C2D1007C8605 /* MessageFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactoryProtocol.swift; sourceTree = "<group>"; };
+		8C869FFE1D89C340007C8605 /* MessageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactory.swift; sourceTree = "<group>"; };
+		8C86A0021D89C3E8007C8605 /* MessageFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactorySpec.swift; sourceTree = "<group>"; };
 		8CB05F081D8991A90025F338 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		8CC65F9F1D89936F00D58B26 /* ReactiveTODOFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveTODOFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveTODOFramework.h; sourceTree = "<group>"; };
@@ -802,6 +808,7 @@
 		8C6035D11D7C5DD40042C487 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				8C86A0001D89C3D8007C8605 /* Messages */,
 				32672476D456A1C7571A19ED /* Collections */,
 				8C6035D21D7C5DD80042C487 /* Dates */,
 				32672D303EA3427036A9F66A /* Formatters */,
@@ -960,6 +967,39 @@
 				8C869FF61D89AD12007C8605 /* AppGroupRealmConfigurationFactorySpec.swift */,
 			);
 			path = Impl;
+			sourceTree = "<group>";
+		};
+		8C869FFA1D89C2B9007C8605 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				8C869FFB1D89C2C6007C8605 /* Impl */,
+				8C869FFC1D89C2D1007C8605 /* MessageFactoryProtocol.swift */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
+		8C869FFB1D89C2C6007C8605 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				8C869FFE1D89C340007C8605 /* MessageFactory.swift */,
+			);
+			name = Impl;
+			sourceTree = "<group>";
+		};
+		8C86A0001D89C3D8007C8605 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				8C86A0011D89C3DC007C8605 /* Impl */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
+		8C86A0011D89C3DC007C8605 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				8C86A0021D89C3E8007C8605 /* MessageFactorySpec.swift */,
+			);
+			name = Impl;
 			sourceTree = "<group>";
 		};
 		8CB05F071D8991A90025F338 /* Frameworks */ = {
@@ -1140,6 +1180,7 @@
 		8CC6600F1D899AAE00D58B26 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				8C869FFA1D89C2B9007C8605 /* Messages */,
 				8CC660101D899AAE00D58B26 /* Collections */,
 				8CC660121D899AAE00D58B26 /* Dates */,
 				8CC660141D899AAE00D58B26 /* Formatters */,
@@ -1600,6 +1641,7 @@
 				3267241AC7B1E486CED09578 /* PriorityValidatorSpec.swift in Sources */,
 				3267209613114F1F5B44E626 /* NoteValidatorSpec.swift in Sources */,
 				326728A753F6902838B8386A /* DateValidatorMock.swift in Sources */,
+				8C86A0031D89C3E8007C8605 /* MessageFactorySpec.swift in Sources */,
 				32672DA1926C0F33F60C9574 /* NoteValidatorMock.swift in Sources */,
 				32672A9F8972DE155AFC5B0D /* PriorityValidatorMock.swift in Sources */,
 				32672E3E7E9DD3B15CB48D00 /* NoteTextViewSpec.swift in Sources */,
@@ -1661,6 +1703,7 @@
 				8CC6604E1D899AAE00D58B26 /* CGColor.swift in Sources */,
 				8CC660501D899AAE00D58B26 /* UITableView.swift in Sources */,
 				8CC660601D899AAE00D58B26 /* NoteValidator.swift in Sources */,
+				8C869FFD1D89C2D1007C8605 /* MessageFactoryProtocol.swift in Sources */,
 				8CC6605F1D899AAE00D58B26 /* DateValidator.swift in Sources */,
 				8CC660491D899AAE00D58B26 /* PriorityPickerProtocol.swift in Sources */,
 				8C869FEF1D89AC63007C8605 /* RealmConfiguratorProtocol.swift in Sources */,
@@ -1677,6 +1720,7 @@
 				8CC660641D899AAE00D58B26 /* TODONote.swift in Sources */,
 				8CC6605A1D899AAE00D58B26 /* RelativeDateFormatter.swift in Sources */,
 				8CC660731D899AAE00D58B26 /* TODONoteListCell.swift in Sources */,
+				8C869FFF1D89C340007C8605 /* MessageFactory.swift in Sources */,
 				8CC6606A1D899AAE00D58B26 /* CreateTODONoteViewModel.swift in Sources */,
 				8CC660671D899AAE00D58B26 /* CreateTODONoteViewController.swift in Sources */,
 				8CC660621D899AAE00D58B26 /* ValidatorProtocol.swift in Sources */,
