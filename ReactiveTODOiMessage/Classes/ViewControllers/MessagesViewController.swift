@@ -32,6 +32,10 @@ class MessagesViewController: MSMessagesAppViewController {
         self.noteListViewController = self.assembler.resolver.resolve(
             TODONoteListViewController.self)!
         
+        self.noteListViewController?.onSelectTODO = { guid in
+            self.activeConversation?.insertText(guid, completionHandler: nil)
+        }
+        
         self.addChildController(self.noteListViewController!)
     }
     
