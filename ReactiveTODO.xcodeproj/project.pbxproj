@@ -96,6 +96,7 @@
 		8C869FFD1D89C2D1007C8605 /* MessageFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FFC1D89C2D1007C8605 /* MessageFactoryProtocol.swift */; };
 		8C869FFF1D89C340007C8605 /* MessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C869FFE1D89C340007C8605 /* MessageFactory.swift */; };
 		8C86A0031D89C3E8007C8605 /* MessageFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0021D89C3E8007C8605 /* MessageFactorySpec.swift */; };
+		8C86A0051D89CA89007C8605 /* MessageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86A0041D89CA89007C8605 /* MessageAssembly.swift */; };
 		8CC65FA31D89936F00D58B26 /* ReactiveTODOFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CC660401D899AAE00D58B26 /* CreateTODOAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC65FEA1D899AAE00D58B26 /* CreateTODOAssembly.swift */; };
 		8CC660411D899AAE00D58B26 /* FlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC65FEB1D899AAE00D58B26 /* FlowAssembly.swift */; };
@@ -295,6 +296,7 @@
 		8C869FFC1D89C2D1007C8605 /* MessageFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactoryProtocol.swift; sourceTree = "<group>"; };
 		8C869FFE1D89C340007C8605 /* MessageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactory.swift; sourceTree = "<group>"; };
 		8C86A0021D89C3E8007C8605 /* MessageFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFactorySpec.swift; sourceTree = "<group>"; };
+		8C86A0041D89CA89007C8605 /* MessageAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageAssembly.swift; sourceTree = "<group>"; };
 		8CB05F081D8991A90025F338 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		8CC65F9F1D89936F00D58B26 /* ReactiveTODOFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveTODOFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC65FA11D89936F00D58B26 /* ReactiveTODOFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveTODOFramework.h; sourceTree = "<group>"; };
@@ -1047,6 +1049,7 @@
 				8CC65FEB1D899AAE00D58B26 /* FlowAssembly.swift */,
 				8CC65FEC1D899AAE00D58B26 /* GlobalAssembly.swift */,
 				8CC65FED1D899AAE00D58B26 /* TODOListAssembly.swift */,
+				8C86A0041D89CA89007C8605 /* MessageAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -1734,6 +1737,7 @@
 				8C869FF21D89AC99007C8605 /* AppGroupRealmConfigurationFactory.swift in Sources */,
 				8CC660721D899AAE00D58B26 /* TODONoteListCellFactoryProtocol.swift in Sources */,
 				8CC660441D899AAE00D58B26 /* ReuseIdentifiers.swift in Sources */,
+				8C86A0051D89CA89007C8605 /* MessageAssembly.swift in Sources */,
 				8CC660591D899AAE00D58B26 /* DateFormatterProtocol.swift in Sources */,
 				8CC660541D899AAE00D58B26 /* TODONoteListFlowConfigurator.swift in Sources */,
 				8CC660571D899AAE00D58B26 /* ResultsProperty.swift in Sources */,
