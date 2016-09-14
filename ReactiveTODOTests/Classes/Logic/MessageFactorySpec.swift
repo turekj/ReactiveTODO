@@ -18,6 +18,7 @@ class MessageFactorySpec: QuickSpec {
             todoNoteDAO.resolvedNote = note
             
             let dateFormatter = DateFormatterMock()
+            dateFormatter.formatReturnValue = "formatted_D@73"
             let priorityFormatter = PriorityImageNameFormatterMock()
             priorityFormatter.formatReturnValue = "white_pixel"
             let sut = MessageFactory(bundle: bundle, todoNoteDAO: todoNoteDAO,
@@ -51,11 +52,18 @@ class MessageFactorySpec: QuickSpec {
                         equal(expectedImageData))
             }
             
-            it("Should set message title") {
+            it("Should set title with note") {
                 let message = sut.createMessage("123")
                 
-                expect((message.layout as? MSMessageTemplateLayout)?.imageTitle).to(
+                expect((message.layout as? MSMessageTemplateLayout)?.caption).to(
                         equal("Something to do"))
+            }
+            
+            it("Should set subtitle with date") {
+                let message = sut.createMessage("890")
+                
+                expect((message.layout as? MSMessageTemplateLayout)?.subcaption).to(
+                    equal("formatted_D@73"))
             }
         }
     }

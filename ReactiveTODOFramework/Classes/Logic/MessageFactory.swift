@@ -34,7 +34,8 @@ public class MessageFactory: MessageFactoryProtocol {
         }
         
         let imageName = self.priorityFormatter.format(note.priority)
-        layout.imageTitle = note.note
+        layout.caption = note.note
+        layout.subcaption = self.dateFormatter.format(note.date)
         layout.image = UIImage(named: imageName,
                                inBundle: self.bundle,
                                compatibleWithTraitCollection: nil)
