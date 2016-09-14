@@ -6,10 +6,10 @@ import UIKit
 
 
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, MessagesViewControllerProtocol {
     
     lazy var assembler: Assembler = self.createAssembler()
-    var noteListViewController: TODONoteListViewController?
+    var noteListViewController: TODONoteListViewControllerProtocol?
     
     private func createAssembler() -> Assembler {
         let assemblies = [GlobalAssembly(), MessageAssembly(),
@@ -21,7 +21,8 @@ class MessagesViewController: MSMessagesAppViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureDatabase()
-        self.addNoteListViewController()
+        self.configureNoteListViewController()
+        self.configureFlow()
     }
     
     private func configureDatabase() {
@@ -29,18 +30,16 @@ class MessagesViewController: MSMessagesAppViewController {
         configurator.updateDefaultRealmConfiguration()
     }
     
-    private func addNoteListViewController() {
-        self.noteListViewController = self.assembler.resolver.resolve(
-            TODONoteListViewController.self)!
+    private func configureNoteListViewController() {
+        let viewController = self.createNoteListViewController()
+        self.noteListViewController = viewController
+        self.addChildController(viewController)
+    }
+    
+    private func createNoteListViewController() -> TODONoteListViewController {
+        let resolver = self.assembler.resolver
         
-        let messageFactory = self.assembler.resolver.resolve(MessageFactoryProtocol.self)!
-        
-        self.noteListViewController?.onSelectTODO = { guid in
-            let message = messageFactory.createMessage(guid)
-            self.activeConversation?.insertMessage(message, completionHandler: nil)
-        }
-        
-        self.addChildController(self.noteListViewController!)
+        return resolver.resolve(TODONoteListViewController.self)!
     }
     
     private func addChildController(controller: UIViewController) {
@@ -51,6 +50,13 @@ class MessagesViewController: MSMessagesAppViewController {
         constrain(controller.view) { v in
             v.edges == v.superview!.edges
         }
+    }
+    
+    private func configureFlow() {
+        let resolver = self.assembler.resolver
+        let flowController = resolver.resolve(MessageFlowControllerProtocol.self)!
+        
+        flowController.startFlow(self)
     }
     
     // MARK: - Conversation Handling
