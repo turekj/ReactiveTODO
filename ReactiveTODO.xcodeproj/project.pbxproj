@@ -453,7 +453,9 @@
 		32672247FECDBC7F3A70458E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				32672189F06F87BCB02DE361 /* Configuration */,
 				326727DB0357BC13FF46DE1A /* Controls */,
+				32672CA06DB93D489D35F381 /* DataAccess */,
 				326729F410006C130794DA53 /* Flow */,
 				8C6035D11D7C5DD40042C487 /* Logic */,
 				8C6035E01D7C61840042C487 /* Mocks */,
@@ -461,8 +463,6 @@
 				32672AFCD10A4D8E405CDBDE /* ViewControllers */,
 				32672ACEE73C83BA34657217 /* ViewModels */,
 				3267268CE2C764764DD97E95 /* Views */,
-				32672CA06DB93D489D35F381 /* DataAccess */,
-				32672189F06F87BCB02DE361 /* Configuration */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -512,12 +512,12 @@
 		326723B63A4D08940BFAABE1 = {
 			isa = PBXGroup;
 			children = (
-				8CC65FA01D89936F00D58B26 /* ReactiveTODOFramework */,
-				8C869FCC1D89A621007C8605 /* ReactiveTODOiMessage */,
 				8CB05F071D8991A90025F338 /* Frameworks */,
 				3267249B668CB59FAAD92AD5 /* Products */,
 				326725CA2B5B8659334C7D4F /* ReactiveTODO */,
+				8CC65FA01D89936F00D58B26 /* ReactiveTODOFramework */,
 				326722FBAB0DC1760569764F /* ReactiveTODOTests */,
+				8C869FCC1D89A621007C8605 /* ReactiveTODOiMessage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -843,12 +843,60 @@
 		8C869FCC1D89A621007C8605 /* ReactiveTODOiMessage */ = {
 			isa = PBXGroup;
 			children = (
-				8C869FCD1D89A621007C8605 /* MessagesViewController.swift */,
-				8C869FCF1D89A621007C8605 /* MainInterface.storyboard */,
-				8C869FD21D89A621007C8605 /* Assets.xcassets */,
-				8C869FD41D89A621007C8605 /* Info.plist */,
+				8C869FE71D89A7A7007C8605 /* Classes */,
+				8C869FE31D89A748007C8605 /* Resources */,
 			);
 			path = ReactiveTODOiMessage;
+			sourceTree = "<group>";
+		};
+		8C869FE21D89A737007C8605 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C869FCD1D89A621007C8605 /* MessagesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8C869FE31D89A748007C8605 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C869FE51D89A765007C8605 /* Assets */,
+				8C869FE61D89A76A007C8605 /* PropertyList */,
+				8C869FE41D89A760007C8605 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8C869FE41D89A760007C8605 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8C869FCF1D89A621007C8605 /* MainInterface.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8C869FE51D89A765007C8605 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8C869FD21D89A621007C8605 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8C869FE61D89A76A007C8605 /* PropertyList */ = {
+			isa = PBXGroup;
+			children = (
+				8C869FD41D89A621007C8605 /* Info.plist */,
+			);
+			path = PropertyList;
+			sourceTree = "<group>";
+		};
+		8C869FE71D89A7A7007C8605 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8C869FE21D89A737007C8605 /* ViewControllers */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		8CB05F071D8991A90025F338 /* Frameworks */ = {
@@ -1129,8 +1177,8 @@
 		8CC660291D899AAE00D58B26 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8CC6602A1D899AAE00D58B26 /* CreateTODONoteViewControllerProtocol.swift */,
 				8CC6602B1D899AAE00D58B26 /* Impl */,
+				8CC6602A1D899AAE00D58B26 /* CreateTODONoteViewControllerProtocol.swift */,
 				8CC6602E1D899AAE00D58B26 /* TODONoteListViewControllerProtocol.swift */,
 			);
 			path = ViewControllers;
@@ -1148,8 +1196,8 @@
 		8CC6602F1D899AAE00D58B26 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				8CC660301D899AAE00D58B26 /* CreateTODONoteViewModel.swift */,
 				8CC660311D899AAE00D58B26 /* Factories */,
+				8CC660301D899AAE00D58B26 /* CreateTODONoteViewModel.swift */,
 				8CC660371D899AAE00D58B26 /* TODONoteListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -1158,8 +1206,8 @@
 		8CC660311D899AAE00D58B26 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				8CC660321D899AAE00D58B26 /* CreateTODONoteListViewModelFactoryProtocol.swift */,
 				8CC660331D899AAE00D58B26 /* Impl */,
+				8CC660321D899AAE00D58B26 /* CreateTODONoteListViewModelFactoryProtocol.swift */,
 				8CC660361D899AAE00D58B26 /* TODONoteListViewModelFactoryProtocol.swift */,
 			);
 			path = Factories;
@@ -1177,8 +1225,8 @@
 		8CC660381D899AAE00D58B26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8CC660391D899AAE00D58B26 /* CreateTODONoteView.swift */,
 				8CC6603A1D899AAE00D58B26 /* Factories */,
+				8CC660391D899AAE00D58B26 /* CreateTODONoteView.swift */,
 				8CC6603E1D899AAE00D58B26 /* TODONoteListCell.swift */,
 				8CC6603F1D899AAE00D58B26 /* TODONoteListView.swift */,
 			);
@@ -1607,6 +1655,7 @@
 				8C869FD01D89A621007C8605 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1787,7 +1836,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
 				);
-				INFOPLIST_FILE = ReactiveTODOiMessage/Info.plist;
+				INFOPLIST_FILE = ReactiveTODOiMessage/Resources/PropertyList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODO.ReactiveTODOiMessage;
@@ -1809,7 +1858,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReactiveTODOFramework/Frameworks",
 				);
-				INFOPLIST_FILE = ReactiveTODOiMessage/Info.plist;
+				INFOPLIST_FILE = ReactiveTODOiMessage/Resources/PropertyList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODO.ReactiveTODOiMessage;
@@ -1917,6 +1966,7 @@
 				8C869FDA1D89A621007C8605 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CC65FA81D89936F00D58B26 /* Build configuration list for PBXNativeTarget "ReactiveTODOFramework" */ = {
 			isa = XCConfigurationList;
