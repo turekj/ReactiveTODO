@@ -47,5 +47,13 @@ public class GlobalAssembly: AssemblyType {
         container.register(GUIDGeneratorProtocol.self) { _ in
             GUIDGenerator()
         }
+        
+        container.register(RealmConfigurationFactoryProtocol.self) { _ in
+            let appGroup = "group.com.jakubturek.ReactiveTODO"
+            let fileManager = NSFileManager.defaultManager()
+            
+            return AppGroupRealmConfigurationFactory(appGroupIdentifier: appGroup,
+                                                     fileManager: fileManager)
+        }
     }
 }
