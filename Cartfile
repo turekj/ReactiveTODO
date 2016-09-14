@@ -1,5 +1,5 @@
 # Realm database
-github "realm/realm-cocoa" ~> 1.0
+github "https://github.com/realm/realm-cocoa" "master"
 
 # ReactiveKit
 github "https://github.com/turekj/ReactiveKit" "swift-23"
