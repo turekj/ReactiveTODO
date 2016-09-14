@@ -1,7 +1,7 @@
 import Foundation
 
 
-enum Priority: String {
+public enum Priority: String {
 
     case Urgent
     case High

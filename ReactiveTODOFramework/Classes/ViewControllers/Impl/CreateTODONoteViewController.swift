@@ -10,7 +10,7 @@ public class CreateTODONoteViewController: UIViewController,
     let createView: CreateTODONoteView
     let viewModel: CreateTODONoteViewModel
 
-    var onSave: ((NSDate, String, Priority) -> Void)?
+    public var onSave: ((NSDate, String, Priority) -> Void)?
 
     init(view: CreateTODONoteView,
          viewModel: CreateTODONoteViewModel) {

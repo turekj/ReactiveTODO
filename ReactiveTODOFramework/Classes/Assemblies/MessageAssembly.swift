@@ -18,6 +18,12 @@ public class MessageAssembly: AssemblyType {
                                       dateFormatter: dateFormatter,
                                       messageImageFactory: messageImageFactory)
             }
+            
+            container.register(MessageFlowControllerProtocol.self) { r in
+                let messageFactory = r.resolve(MessageFactoryProtocol.self)!
+                
+                return MessageFlowController(messageFactory: messageFactory)
+            }
         }
         
         container.register(MessageImageFactoryProtocol.self) { r in
