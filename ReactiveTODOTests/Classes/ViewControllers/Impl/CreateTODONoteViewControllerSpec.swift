@@ -1,7 +1,6 @@
 @testable import ReactiveTODO
 import Nimble
 import Quick
-import RealmSwift
 
 
 class CreateTODONoteViewControllerSpec: QuickSpec {

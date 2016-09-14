@@ -43,10 +43,10 @@
 		326725C97AD80DBDF8AEB312 /* TODONoteListCellFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A25006F04C9D2EA2D5D /* TODONoteListCellFactoryProtocol.swift */; };
 		32672610F37FAAB4B40D5A9B /* TODONoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326723D9FD84134D4638FD12 /* TODONoteListViewModel.swift */; };
 		3267261626EB3CE571B9DF2B /* TODONoteDataAccessObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267259267EDF19D589934E9 /* TODONoteDataAccessObjectProtocol.swift */; };
+		3267268CD9A9E7A302118417 /* ReactiveTODOTestsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672703D48B89D85FFC3503 /* ReactiveTODOTestsConfiguration.swift */; };
 		326726E4A7C2D75048382FCB /* DateValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672D9797D475F117195828 /* DateValidatorSpec.swift */; };
 		326726E9868926FD0A50DA91 /* AggregateFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AF22BDCDFCE80DEC8C5 /* AggregateFlowConfigurator.swift */; };
 		3267273844694BA9AAF212EF /* AddTODOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326727409ABD83AABF88A6E1 /* AddTODOButton.swift */; };
-		32672749647B667A0FC00F7B /* TODONoteDataAccessObjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672917ABEFB73247990196 /* TODONoteDataAccessObjectSpec.swift */; };
 		326727614C15FC118F92452B /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267283AE3CBCB930D377CC1 /* CGColor.swift */; };
 		3267277510A2612D1C24979B /* TODONoteListViewModelFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672FA9A05827562B9D7E32 /* TODONoteListViewModelFactoryProtocol.swift */; };
 		326727B21CD2163397AB8949 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326728FD053DED5B7BD9C465 /* UITableView.swift */; };
@@ -89,6 +89,7 @@
 		32672DD642CBEF5282AB83C9 /* TODONoteListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326724697DFC8DD976E0A9FB /* TODONoteListViewModelFactory.swift */; };
 		32672DDA044EA3A7FB67EAEF /* TODONoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672CEA9E4B5CA522CE922A /* TODONoteSpec.swift */; };
 		32672E3E7E9DD3B15CB48D00 /* NoteTextViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267219768AAB866D916F159 /* NoteTextViewSpec.swift */; };
+		32672F318F53196A4DC9A385 /* TODONoteDataAccessObjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326720DBF24002AB9A302516 /* TODONoteDataAccessObjectSpec.swift */; };
 		32672F57D5976196ABF90BC7 /* NoteTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B57F48CEBE9BD0C0647 /* NoteTextView.swift */; };
 		32672F87631C938393E00990 /* CreateTODONoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326726A36FE386EC4D80FF24 /* CreateTODONoteViewController.swift */; };
 		32672F8A706C99AA6AF57A83 /* FlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267224CB7C4089F5829079D /* FlowControllerSpec.swift */; };
@@ -177,6 +178,7 @@
 		3267207E9849DF2F41C76968 /* ReuseIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiers.swift; sourceTree = "<group>"; };
 		326720C076541708240B696F /* FlowAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowAssembly.swift; sourceTree = "<group>"; };
 		326720C2555700BAAF4AAAAC /* TestingAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		326720DBF24002AB9A302516 /* TODONoteDataAccessObjectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteDataAccessObjectSpec.swift; sourceTree = "<group>"; };
 		326720E5CADB574D0EEBBD89 /* CreateTODONoteListViewModelFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteListViewModelFactoryProtocol.swift; sourceTree = "<group>"; };
 		3267211931B12AC437A0588C /* PriorityImageNameFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatter.swift; sourceTree = "<group>"; };
 		3267215445410D82B1F61A1B /* ReactiveTODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +207,7 @@
 		326725C0EED3220DFCC25645 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		326726A36FE386EC4D80FF24 /* CreateTODONoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTODONoteViewController.swift; sourceTree = "<group>"; };
 		326726CD5EDBF975D860E82A /* PriorityPickerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityPickerSpec.swift; sourceTree = "<group>"; };
+		32672703D48B89D85FFC3503 /* ReactiveTODOTestsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTODOTestsConfiguration.swift; sourceTree = "<group>"; };
 		32672706F111D8DDF57F1291 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		326727409ABD83AABF88A6E1 /* AddTODOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTODOButton.swift; sourceTree = "<group>"; };
 		3267279AC051F4B2519885C3 /* PopupDatePickerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDatePickerSpec.swift; sourceTree = "<group>"; };
@@ -219,7 +222,6 @@
 		326728D0B4DB6CEE9EF1D9B8 /* ValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorProtocol.swift; sourceTree = "<group>"; };
 		326728FD053DED5B7BD9C465 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		326729049AD95D343E71F359 /* ResultsProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsProperty.swift; sourceTree = "<group>"; };
-		32672917ABEFB73247990196 /* TODONoteDataAccessObjectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteDataAccessObjectSpec.swift; sourceTree = "<group>"; };
 		32672982EA811F78090E22A4 /* TODONoteListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODONoteListCell.swift; sourceTree = "<group>"; };
 		32672997A9D6520E0E327303 /* PriorityImageNameFormatterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityImageNameFormatterProtocol.swift; sourceTree = "<group>"; };
 		326729DD9B9E467E50B526E7 /* AggregateFlowConfiguratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateFlowConfiguratorSpec.swift; sourceTree = "<group>"; };
@@ -334,14 +336,6 @@
 			path = Impl;
 			sourceTree = "<group>";
 		};
-		326720862410DAB6ABCD4FB4 /* DataAccess */ = {
-			isa = PBXGroup;
-			children = (
-				32672357D9A6A8923B96E6CB /* Impl */,
-			);
-			path = DataAccess;
-			sourceTree = "<group>";
-		};
 		326720AF4D106184A24809DF /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +351,14 @@
 				32672DE8BFC8567FEEEECDEA /* PriorityImageNameFormatterSpec.swift */,
 			);
 			path = Priorities;
+			sourceTree = "<group>";
+		};
+		32672189F06F87BCB02DE361 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				32672703D48B89D85FFC3503 /* ReactiveTODOTestsConfiguration.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		3267219F0B9991808A94BBCD /* Resources */ = {
@@ -398,6 +400,8 @@
 				32672AFCD10A4D8E405CDBDE /* ViewControllers */,
 				32672ACEE73C83BA34657217 /* ViewModels */,
 				3267268CE2C764764DD97E95 /* Views */,
+				32672CA06DB93D489D35F381 /* DataAccess */,
+				32672189F06F87BCB02DE361 /* Configuration */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -468,19 +472,10 @@
 			isa = PBXGroup;
 			children = (
 				32672247FECDBC7F3A70458E /* Classes */,
-				326720862410DAB6ABCD4FB4 /* DataAccess */,
 				8C36EB751D7C54B5002F5735 /* Frameworks */,
 				3267219F0B9991808A94BBCD /* Resources */,
 			);
 			path = ReactiveTODOTests;
-			sourceTree = "<group>";
-		};
-		32672357D9A6A8923B96E6CB /* Impl */ = {
-			isa = PBXGroup;
-			children = (
-				32672917ABEFB73247990196 /* TODONoteDataAccessObjectSpec.swift */,
-			);
-			path = Impl;
 			sourceTree = "<group>";
 		};
 		32672377E65705CF65DB6D65 /* Collections */ = {
@@ -760,6 +755,14 @@
 			path = Impl;
 			sourceTree = "<group>";
 		};
+		326728E5912FA911CF3463E4 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				326720DBF24002AB9A302516 /* TODONoteDataAccessObjectSpec.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
 		326728F65B701316054A9D0E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -872,6 +875,14 @@
 				32672AA7BD382CF763A9F26F /* NoteTextViewProtocol.swift */,
 			);
 			path = TextViews;
+			sourceTree = "<group>";
+		};
+		32672CA06DB93D489D35F381 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				326728E5912FA911CF3463E4 /* Impl */,
+			);
+			path = DataAccess;
 			sourceTree = "<group>";
 		};
 		32672D303EA3427036A9F66A /* Formatters */ = {
@@ -1105,6 +1116,7 @@
 				32672692DB1AB65EB62ABB15 /* Frameworks */,
 				32672F1D08834A1CCC3821DC /* Resources */,
 				8C6035C51D7C5B530042C487 /* Embed Frameworks */,
+				8C264CCF1D8956F400BFCD4C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1122,11 +1134,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jakub Turek";
 				TargetAttributes = {
 					326721E6F05AB6D8F268C03B = {
+						DevelopmentTeam = 8863322VPF;
+						LastSwiftMigration = 0800;
 						TestTargetID = 32672DB98FB712F5CE411E68;
+					};
+					32672DB98FB712F5CE411E68 = {
+						DevelopmentTeam = 8863322VPF;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -1167,6 +1185,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C264CCF1D8956F400BFCD4C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3267235200C041C8A90859C6 /* Sources */ = {
@@ -1210,11 +1244,12 @@
 				3267209F0DD0478C5F8140D4 /* TODONoteListCellFactorySpec.swift in Sources */,
 				32672ADAB6BC6D33FE6795C2 /* CreateTODONoteViewSpec.swift in Sources */,
 				32672294587EE6CEF9E29958 /* NoteTextViewFirstResponderMock.swift in Sources */,
-				32672749647B667A0FC00F7B /* TODONoteDataAccessObjectSpec.swift in Sources */,
 				326723C879506F0B00DB2C12 /* TODONoteFactoryMock.swift in Sources */,
 				32672CF1CA8B24461D4D7683 /* TODONoteDataAccessObjectMock.swift in Sources */,
 				326728B0882ABFC428FC6FD5 /* TODONoteListViewControllerSpec.swift in Sources */,
 				326728592AEE6435E5E88046 /* CreateTODONoteViewControllerSpec.swift in Sources */,
+				32672F318F53196A4DC9A385 /* TODONoteDataAccessObjectSpec.swift in Sources */,
+				3267268CD9A9E7A302118417 /* ReactiveTODOTestsConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1308,6 +1343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8863322VPF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
@@ -1316,6 +1352,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1333,8 +1370,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1353,6 +1392,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1362,6 +1402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8863322VPF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReactiveTODOTests/Frameworks",
@@ -1371,6 +1412,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODOTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveTODO.app/ReactiveTODO";
 			};
 			name = Release;
@@ -1389,8 +1431,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1425,6 +1469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8863322VPF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReactiveTODOTests/Frameworks",
@@ -1434,6 +1479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODOTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveTODO.app/ReactiveTODO";
 			};
 			name = Debug;
@@ -1442,6 +1488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8863322VPF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ReactiveTODO/Frameworks",
@@ -1450,6 +1497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubturek.ReactiveTODO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
