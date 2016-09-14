@@ -19,7 +19,13 @@ class MessagesViewController: MSMessagesAppViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureDatabase()
         self.addNoteListViewController()
+    }
+    
+    private func configureDatabase() {
+        let configurator = self.assembler.resolver.resolve(RealmConfigurationFactoryProtocol.self)!
+        configurator.updateDefaultRealmConfiguration()
     }
     
     private func addNoteListViewController() {
