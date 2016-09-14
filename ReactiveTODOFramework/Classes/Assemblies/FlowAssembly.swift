@@ -3,9 +3,11 @@ import Swinject
 import UIKit
 
 
-class FlowAssembly: AssemblyType {
+public class FlowAssembly: AssemblyType {
 
-    func assemble(container: Container) {
+    public init() { }
+    
+    public func assemble(container: Container) {
         container.register(FlowControllerProtocol.self) { r in
             let configurator = r.resolve(FlowConfigurator.self, name: "main")!
             let rootController = r.resolve(UINavigationController.self,

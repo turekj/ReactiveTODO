@@ -4,7 +4,7 @@ import ReactiveUIKit
 import UIKit
 
 
-class TODONoteListViewController: UIViewController,
+public class TODONoteListViewController: UIViewController,
         TODONoteListViewControllerProtocol {
 
     let notesView: TODONoteListView
@@ -25,7 +25,7 @@ class TODONoteListViewController: UIViewController,
 
     // MARK: - Lifecycle
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         self.configureView()
@@ -74,7 +74,7 @@ class TODONoteListViewController: UIViewController,
 
     // MARK: - Required init
 
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

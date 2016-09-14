@@ -2,13 +2,13 @@ import Swinject
 import UIKit
 
 
-class FlowController: FlowControllerProtocol {
+public class FlowController: FlowControllerProtocol {
 
-    unowned let container: Container
-    let configurator: FlowConfigurator
-    let rootController: UINavigationController
+    public unowned let container: Container
+    public let configurator: FlowConfigurator
+    public let rootController: UINavigationController
 
-    init(container: Container,
+    public init(container: Container,
          configurator: FlowConfigurator,
          rootController: UINavigationController) {
         self.container = container
@@ -16,7 +16,7 @@ class FlowController: FlowControllerProtocol {
         self.rootController = rootController
     }
 
-    func navigateTo<ViewController: UIViewController>(
+    public func navigateTo<ViewController: UIViewController>(
             viewController: ViewController.Type, animated: Bool) {
         guard let controller = self.container.resolve(viewController)
                 as? UIViewController else {
@@ -27,7 +27,7 @@ class FlowController: FlowControllerProtocol {
         self.rootController.pushViewController(controller, animated: animated)
     }
 
-    func navigateBackTo<ViewController: UIViewController>(
+    public func navigateBackTo<ViewController: UIViewController>(
             viewController: ViewController.Type, animated: Bool) {
         for controller in self.rootController.childViewControllers {
             if controller.isKindOfClass(viewController) {
