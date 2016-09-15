@@ -19,3 +19,9 @@ The app was not built with amazing features in mind. It was done solely to showc
 ## Compatibility
 
 The app was originally built using **Swift 2**. The current version was updated to build under **Xcode 8** and **Swift 2.3**. If you are looking for a Swift 3 version, do not hesitate to contact the author or file an issue. :)
+
+## iMessage extension
+
+The application showcases iMessage extension: it allows you to share TODO note with your friends. It reuses TODO note list for that purpose.
+
+![iMessage extension screencast](https://github.com/turekj/ReactiveTODO/blob/master/Docs/Images/imessage_extension_screencast.gif?raw=true)
